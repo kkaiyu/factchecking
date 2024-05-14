@@ -1,0 +1,4 @@
+{
+  "extractdiscrepancies": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |",
+  "output": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance | Cosine Similarity |\n| --- | --- | --- | --- | --- | --- | --- |\n Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Discrepancy in the implementation of stricter emissions standards in California | Neutral | Support | 0.94 |\n Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | Disparity in California's stance on environmental policy | Neutral | Support | 0.53 |"
+}

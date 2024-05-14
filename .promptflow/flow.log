@@ -1,0 +1,16 @@
+2024-05-13 21:34:53 +0800   90912 execution.flow     INFO     Start executing nodes in thread pool mode.
+2024-05-13 21:34:53 +0800   90912 execution.flow     INFO     Start to run 5 nodes with concurrency level 16.
+2024-05-13 21:34:53 +0800   90912 execution.flow     INFO     Executing node examples. node run id: 0871c901-a892-4e8d-8539-6185cc0ade1a_examples_0
+2024-05-13 21:34:53 +0800   90912 execution.flow     INFO     Node examples completes.
+2024-05-13 21:34:53 +0800   90912 execution.flow     INFO     Executing node factchecking. node run id: 0871c901-a892-4e8d-8539-6185cc0ade1a_factchecking_0
+2024-05-13 21:34:59 +0800   90912 execution.flow     INFO     Node factchecking completes.
+2024-05-13 21:34:59 +0800   90912 execution.flow     INFO     Executing node stancedetection. node run id: 0871c901-a892-4e8d-8539-6185cc0ade1a_stancedetection_0
+2024-05-13 21:34:59 +0800   90912 execution.flow     INFO     Executing node extractdiscrepancies. node run id: 0871c901-a892-4e8d-8539-6185cc0ade1a_extractdiscrepancies_0
+2024-05-13 21:34:59 +0800   90912 execution.flow     INFO     Node extractdiscrepancies completes.
+2024-05-13 21:35:15 +0800   90912 execution.flow     INFO     Node stancedetection completes.
+2024-05-13 21:35:15 +0800   90912 execution.flow     INFO     Executing node cosinesim. node run id: 0871c901-a892-4e8d-8539-6185cc0ade1a_cosinesim_0
+2024-05-13 21:35:17 +0800   90912 execution          WARNING  [cosinesim in line 0 (index starts from 0)] stderr> /Users/admin/Downloads/factchecking (1)/pf/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+2024-05-13 21:35:18 +0800   90912 execution          WARNING  [cosinesim in line 0 (index starts from 0)] stderr> /Users/admin/Downloads/factchecking (1)/pf/lib/python3.12/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+2024-05-13 21:35:20 +0800   90912 execution.flow     INFO     Node cosinesim completes.

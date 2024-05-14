@@ -1,0 +1,66 @@
+{
+  "package": {},
+  "code": {
+    "echo.py": {
+      "type": "python",
+      "source": "echo.py",
+      "function": "prepare_examples"
+    },
+    "factchecking.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "Input1": {
+          "type": [
+            "string"
+          ]
+        },
+        "Input2": {
+          "type": [
+            "string"
+          ]
+        },
+        "examples": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "factchecking.jinja2"
+    },
+    "cosinesim.py": {
+      "type": "python",
+      "inputs": {
+        "input": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "cosinesim.py",
+      "function": "my_python_tool"
+    },
+    "stancedetection.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "input": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "stancedetection.jinja2"
+    },
+    "extractdiscrepancies.py": {
+      "type": "python",
+      "inputs": {
+        "input": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "extractdiscrepancies.py",
+      "function": "my_python_tool"
+    }
+  }
+}

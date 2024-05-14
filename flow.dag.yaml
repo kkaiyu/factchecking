@@ -1,0 +1,85 @@
+id: template_standard_flow
+name: Template Standard Flow
+environment:
+  python_requirements_txt: requirements.txt
+inputs:
+  input1:
+    type: string
+    is_chat_input: false
+    default: Setting Up Face-Off With Trump "California's clean-air agency voted on
+      Friday to reevaluate their stricter emissions standards for cars and
+      trucks. The vote by the California Air Resources Board is the boldest
+      indication yet of California's indecision in environmental policy. Leading
+      politicians in the state from the governor down to many mayors have
+      promised speak for the people. Mr. Trump backing industry over
+      environmental concerns said easing emissions rules would help stimulate
+      auto manufacturing. He vowed last week to loosen the regulations.
+      Automakers are aggressively pursuing those changes after years of
+      supporting stricter standards."
+  input2:
+    type: string
+    is_chat_input: false
+    default: Setting Up Face-Off With Trump  "California's clean-air agency voted on
+      Friday to push ahead with stricter emissions standards for cars and
+      trucks  setting up a potential legal battle with the Trump administration
+      over the state's plan to reduce planet-warming gases. The vote  by the
+      California Air Resources Board  is the boldest indication yet of
+      California's plan to stand up to President Trump's agenda. Leading
+      politicians in the state  from the governor down to many mayors  have
+      promised to lead the resistance to Mr. Trump's policies. Mr.
+      Trump  backing industry over environmental concerns  said easing emissions
+      rules would help stimulate auto manufacturing. He vowed last week to
+      loosen the regulations. Automakers are aggressively pursuing those changes
+      after years of supporting stricter standards.
+outputs:
+  extractdiscrepancies:
+    type: string
+    reference: ${extractdiscrepancies.output}
+  output:
+    type: string
+    reference: ${cosinesim.output}
+nodes:
+- name: examples
+  type: python
+  source:
+    type: code
+    path: echo.py
+  inputs: {}
+  use_variants: false
+- name: factchecking
+  type: llm
+  source:
+    type: code
+    path: factchecking.jinja2
+  inputs:
+    deployment_name: gpt-4-32k-demo
+    temperature: 0.1
+    Input1: ${inputs.input1}
+    Input2: ${inputs.input2}
+    examples: ${examples.output}
+  connection: newconnection
+  api: chat
+- name: cosinesim
+  type: python
+  source:
+    type: code
+    path: cosinesim.py
+  inputs:
+    input: ${stancedetection.output}
+- name: stancedetection
+  type: llm
+  source:
+    type: code
+    path: stancedetection.jinja2
+  inputs:
+    deployment_name: gpt-4-32k-demo
+    input: ${factchecking.output}
+  connection: newconnection
+  api: chat
+- name: extractdiscrepancies
+  type: python
+  source:
+    type: code
+    path: extractdiscrepancies.py
+  inputs:
+    input: ${factchecking.output}
