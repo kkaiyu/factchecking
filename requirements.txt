@@ -1,0 +1,6 @@
+promptflow
+promptflow-core
+promptflow-tools
+sentence-transformers
+streamlit
+scipy
