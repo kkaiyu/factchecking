@@ -57,7 +57,7 @@ nodes:
     Input1: ${inputs.input1}
     Input2: ${inputs.input2}
     examples: ${examples.output}
-  connection: newconnection
+  connection: kkaiyu
   api: chat
 - name: cosinesim
   type: python
@@ -74,7 +74,7 @@ nodes:
   inputs:
     deployment_name: gpt-4-32k-demo
     input: ${factchecking.output}
-  connection: newconnection
+  connection: kkaiyu
   api: chat
 - name: extractdiscrepancies
   type: python

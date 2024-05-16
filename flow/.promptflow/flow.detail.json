@@ -1,0 +1,960 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5_0",
+      "status": "Completed",
+      "error": null,
+      "inputs": {
+        "input1": "Setting Up Face-Off With Trump \"California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.\"",
+        "input2": "Setting Up Face-Off With Trump  \"California's clean-air agency voted on Friday to push ahead with stricter emissions standards for cars and trucks  setting up a potential legal battle with the Trump administration over the state's plan to reduce planet-warming gases. The vote  by the California Air Resources Board  is the boldest indication yet of California's plan to stand up to President Trump's agenda. Leading politicians in the state  from the governor down to many mayors  have promised to lead the resistance to Mr. Trump's policies. Mr. Trump  backing industry over environmental concerns  said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards."
+      },
+      "output": {
+        "extractdiscrepancies": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |",
+        "output": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance | Cosine Similarity |\n| --- | --- | --- | --- | --- | --- | --- |\n Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support | 0.94 |\n Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support | 0.53 |"
+      },
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5",
+      "root_run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5",
+      "source_run_id": null,
+      "flow_id": "template_standard_flow",
+      "start_time": "2024-05-15T02:17:03.069634Z",
+      "end_time": "2024-05-15T02:17:28.803208Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "flow",
+          "node_name": "flow",
+          "type": "Flow",
+          "start_time": 1715710623.069634,
+          "end_time": 1715710648.803208,
+          "children": [
+            {
+              "name": "prepare_examples",
+              "type": "Function",
+              "inputs": {},
+              "output": [
+                {
+                  "input1": "The once popular Super Mario Run will be taken out of the Google play and apple app store on Friday.  Nintendo says that shortly after its release the public stopped downloading the game when current players had spread the word that in order to play the entire game you had to make an in app purchase. Nintendo and Mario fans are appalled that Nintendo would release a game for free and then charge to play it. Nintendo says they will take the game back to the drawing board, and try and release a free version at a later time.",
+                  "input2": "Super Mario Run makes leap to Android The wildly popular Super Mario Run smartphone game is now available for play on Android devices, Nintendo said Wednesday. Nintendo said in a tweet that it made the game available for download at the Google Play store a little earlier than it expected. The release comes about three months after Super Mario Run, Nintendo's first-ever smartphone game, was launched on iOS in December. The game was an instant hit with Apple device users, racking up 40 million downloads in its first four days to become the fastest-selling iOS game in the history of the App Store.",
+                  "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | Super Mario Run will be taken out of the Google play and apple app store | Super Mario Run is available for play on Android devices |\n| Time | The game is being removed on Friday | The game is available for download now |\n| Actions | Nintendo is planning to release a free version of the game at a later time | Nintendo has made the game available for download earlier than expected |\n| Object | Super Mario Run is not popular and is being removed from the app stores | Super Mario Run is wildly popular and available on the Google Play store |"
+                },
+                {
+                  "input1": "A man who attempted to get another man to “tailgate” a concertgoer into Taylor Swift’s concert has been jailed for two weeks in what is believed to be the Republic’s first concluded prosecution linked to the American pop star’s Eras Tour. Eleven days after the failed attempt on March 7, Chinese national Wu Zhihong, 55, had to face the music as he pleaded guilty to one charge of criminal trespass. Appearing in court on March 16 via video-link from remand and speaking via a Mandarin interpreter, Wu said: “I never knew that there would be such serious consequences for this.” The court heard that between February and March 2024, Mr Yan Shuqing, 20, searched Chinese e-commerce platforms for resale Singapore Eras Tour tickets. He bought a ticket online for 5000 yuan from a seller on March 6. The seller told him to arrive at the National Stadium ahead of the concert on March 6 – Swift’s fourth show – for his “staff” to help him go through the gates. On the day of the concert, Mr Yan met Wu at the Singapore Sports Hub, where Wu gave him a lanyard and an A4-sized Taylor Swift poster. The two men entered the security check area, where concertgoers’ personal belongings were being checked. Wu was charged with criminal trespass for entering this area as he had intended to dupe security officers into believing that Mr Yan had a valid concert ticket when he did not. After their belongings were checked, Wu gave Mr Yan another concert lanyard with “VIP” imprinted on it. It was genuine and meant for VIP Eras Tour ticket holders. Court documents did not mention how Wu had obtained it. Wu also gave Mr Yan a friendship bracelet, an accessory that was commonly worn and traded by fans at the concerts. To enter the National Stadium, concertgoers had to scan their tickets at a turnstile gate. But Wu told Mr Yan he did not need to do so, and could just “tailgate” any concertgoer who was passing through. Wu told Mr Yan that if he was stopped by security officers, he could still enter by presenting the lanyard and friendship bracelet, and telling the officers that he had friends inside the stadium. CCTV footage played in court shows Wu, who wore a white Eras Tour T-shirt and a black cap, guiding Mr Yan to the queue at the turnstile gate. As the woman in front of Mr Yan scanned her ticket and entered, Wu shoved Mr Yan so that he could also pass through the turnstile gate. At the same time, Wu showed the security officer his phone as if he was trying to communicate with him in a bid to distract the officer from noticing Mr Yan. But another officer noticed the act and stopped Mr Yan, who was escorted out of the National Stadium. After the failed attempt, Wu transferred 3,000 yuan to Mr Yan and told him not to reveal their transaction to the police. Wu then went to another gate and “tailgated” another concertgoer into the National Stadium. An informant subsequently called the police and officers arrested Wu at the scene. Deputy Public Prosecutor Darren Ang said no prosecutorial action was taken against Mr Yan. During investigations, Wu admitted that he is not a Taylor Swift fan. He was unable to explain why he was found with seven other friendship bracelets, similar to the one he had passed to Mr Yan. DPP Ang called for Wu to be jailed for between two and four weeks, noting there is evidence that Wu was involved in an arrangement to target Singapore for criminal activities. Wu had entered Singapore on March 5, 2024, on a social visit pass. He had never entered the country before that.",
+                  "input2": "A man who helped another man illegally enter Taylor Swift's concert in Singapore was jailed for two weeks on Monday (Mar 18). Wu Zhihong, 54, tried to cheat security officers into believing that 20-year-old Yan Shuqing had a valid Singapore Eras Tour concert ticket. He then helped distract a security officer while Yan followed a concertgoer passing through a turnstile gate in front of him at the National Stadium on March 7, 2024. Yan, however, was caught and promptly escorted out. Wu, a Chinese national, pleaded guilty to one count of intending to cheat security officers into believing that Yan had a valid concert ticket, so that the officers would allow Yan entry. Concertgoers were required to undergo two security checks at the Singapore Sports Hub before entering the National Stadium. These were a Person Check Security and a turnstile gate where they would have to scan their tickets. The court heard that Yan searched for re-sold Singapore Eras Tour tickets and came across an offer to purchase a ticket for 3,000 yuan (S$557). Yan was told to arrive at the National Stadium before that start of the concert on Mar 7, 2024 and that someone would help him through the gates. Yan transferred the money. As part of the arrangement, he met Wu at about 3.50pm on Mar 7 around the Singapore Sports Hub. There, Wu handed Yan a lanyard and a Taylor Swift poster.",
+                  "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Person | Wu Zhihong is 55 years old | Wu Zhihong is 54 years old |\n| Object | Mr Yan bought a ticket online for 5000 yuan | Yan came across an offer to purchase a ticket for 3,000 yuan |\n| Time | Wu Zhihong appeared in court on March 16 | Wu Zhihong was jailed on Monday (Mar 18) |\n| Actions | Wu Zhihong gave Mr Yan a lanyard and an A4-sized Taylor Swift poster at the Singapore Sports Hub | Wu handed Yan a lanyard and a Taylor Swift poster at about 3.50pm on Mar 7 around the Singapore Sports Hub |"
+                },
+                {
+                  "input1": "Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'",
+                  "input2": "Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'",
+                  "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+                }
+              ],
+              "start_time": 1715710623.070861,
+              "end_time": 1715710623.071757,
+              "error": null,
+              "children": [],
+              "node_name": "examples",
+              "parent_id": "",
+              "id": "059ab885-726f-464c-a02c-dc805bf0babb",
+              "function": "prepare_examples",
+              "system_metrics": {}
+            },
+            {
+              "name": "AzureOpenAI.chat",
+              "type": "Function",
+              "inputs": {
+                "prompt": "system:\nYou are stepping into the shoes of a detective. Your task is to spot discrepancies/ differences in the given inputs. Take Input1 as the ground truth, and identify the information in Input 2 that differs from Input1.\nThe discrepancies should be regarding a common topic.\nConsider the semantic meaning of the information within the inputs. Paraphrased points with similar semantic meaning do NOT constitute a discrepancy.\nThe type of discrepancies identified MUST ONLY be from the below list: Time, Date, Location, Event Description, Actions, Person, Object.\nPresent your findings in markdown table format with the columns indicating firstly type of discrepancy, secondly what the identified key informaton is within Input1, thirdly what the differing information is within Input2.\nThe extracted information from each input in the second and third column should be concise, and also have enough details. It should be directly extracted from the inputs without paraphrasing.\nFollow the markdown format exactly. Output only a markdown table.\n\nAlways ensure your responses are based on the provided facts, and avoid fabricating information. If you're not sure of an answer, you can say \"I don't know\".\n\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOUTPUT:\n{{ex.output}}\n\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOUTPUT:",
+                "deployment_name": "gpt-4-32k-demo",
+                "temperature": 0.1,
+                "Input1": "Setting Up Face-Off With Trump \"California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.\"",
+                "Input2": "Setting Up Face-Off With Trump  \"California's clean-air agency voted on Friday to push ahead with stricter emissions standards for cars and trucks  setting up a potential legal battle with the Trump administration over the state's plan to reduce planet-warming gases. The vote  by the California Air Resources Board  is the boldest indication yet of California's plan to stand up to President Trump's agenda. Leading politicians in the state  from the governor down to many mayors  have promised to lead the resistance to Mr. Trump's policies. Mr. Trump  backing industry over environmental concerns  said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.",
+                "examples": [
+                  {
+                    "input1": "The once popular Super Mario Run will be taken out of the Google play and apple app store on Friday.  Nintendo says that shortly after its release the public stopped downloading the game when current players had spread the word that in order to play the entire game you had to make an in app purchase. Nintendo and Mario fans are appalled that Nintendo would release a game for free and then charge to play it. Nintendo says they will take the game back to the drawing board, and try and release a free version at a later time.",
+                    "input2": "Super Mario Run makes leap to Android The wildly popular Super Mario Run smartphone game is now available for play on Android devices, Nintendo said Wednesday. Nintendo said in a tweet that it made the game available for download at the Google Play store a little earlier than it expected. The release comes about three months after Super Mario Run, Nintendo's first-ever smartphone game, was launched on iOS in December. The game was an instant hit with Apple device users, racking up 40 million downloads in its first four days to become the fastest-selling iOS game in the history of the App Store.",
+                    "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | Super Mario Run will be taken out of the Google play and apple app store | Super Mario Run is available for play on Android devices |\n| Time | The game is being removed on Friday | The game is available for download now |\n| Actions | Nintendo is planning to release a free version of the game at a later time | Nintendo has made the game available for download earlier than expected |\n| Object | Super Mario Run is not popular and is being removed from the app stores | Super Mario Run is wildly popular and available on the Google Play store |"
+                  },
+                  {
+                    "input1": "A man who attempted to get another man to “tailgate” a concertgoer into Taylor Swift’s concert has been jailed for two weeks in what is believed to be the Republic’s first concluded prosecution linked to the American pop star’s Eras Tour. Eleven days after the failed attempt on March 7, Chinese national Wu Zhihong, 55, had to face the music as he pleaded guilty to one charge of criminal trespass. Appearing in court on March 16 via video-link from remand and speaking via a Mandarin interpreter, Wu said: “I never knew that there would be such serious consequences for this.” The court heard that between February and March 2024, Mr Yan Shuqing, 20, searched Chinese e-commerce platforms for resale Singapore Eras Tour tickets. He bought a ticket online for 5000 yuan from a seller on March 6. The seller told him to arrive at the National Stadium ahead of the concert on March 6 – Swift’s fourth show – for his “staff” to help him go through the gates. On the day of the concert, Mr Yan met Wu at the Singapore Sports Hub, where Wu gave him a lanyard and an A4-sized Taylor Swift poster. The two men entered the security check area, where concertgoers’ personal belongings were being checked. Wu was charged with criminal trespass for entering this area as he had intended to dupe security officers into believing that Mr Yan had a valid concert ticket when he did not. After their belongings were checked, Wu gave Mr Yan another concert lanyard with “VIP” imprinted on it. It was genuine and meant for VIP Eras Tour ticket holders. Court documents did not mention how Wu had obtained it. Wu also gave Mr Yan a friendship bracelet, an accessory that was commonly worn and traded by fans at the concerts. To enter the National Stadium, concertgoers had to scan their tickets at a turnstile gate. But Wu told Mr Yan he did not need to do so, and could just “tailgate” any concertgoer who was passing through. Wu told Mr Yan that if he was stopped by security officers, he could still enter by presenting the lanyard and friendship bracelet, and telling the officers that he had friends inside the stadium. CCTV footage played in court shows Wu, who wore a white Eras Tour T-shirt and a black cap, guiding Mr Yan to the queue at the turnstile gate. As the woman in front of Mr Yan scanned her ticket and entered, Wu shoved Mr Yan so that he could also pass through the turnstile gate. At the same time, Wu showed the security officer his phone as if he was trying to communicate with him in a bid to distract the officer from noticing Mr Yan. But another officer noticed the act and stopped Mr Yan, who was escorted out of the National Stadium. After the failed attempt, Wu transferred 3,000 yuan to Mr Yan and told him not to reveal their transaction to the police. Wu then went to another gate and “tailgated” another concertgoer into the National Stadium. An informant subsequently called the police and officers arrested Wu at the scene. Deputy Public Prosecutor Darren Ang said no prosecutorial action was taken against Mr Yan. During investigations, Wu admitted that he is not a Taylor Swift fan. He was unable to explain why he was found with seven other friendship bracelets, similar to the one he had passed to Mr Yan. DPP Ang called for Wu to be jailed for between two and four weeks, noting there is evidence that Wu was involved in an arrangement to target Singapore for criminal activities. Wu had entered Singapore on March 5, 2024, on a social visit pass. He had never entered the country before that.",
+                    "input2": "A man who helped another man illegally enter Taylor Swift's concert in Singapore was jailed for two weeks on Monday (Mar 18). Wu Zhihong, 54, tried to cheat security officers into believing that 20-year-old Yan Shuqing had a valid Singapore Eras Tour concert ticket. He then helped distract a security officer while Yan followed a concertgoer passing through a turnstile gate in front of him at the National Stadium on March 7, 2024. Yan, however, was caught and promptly escorted out. Wu, a Chinese national, pleaded guilty to one count of intending to cheat security officers into believing that Yan had a valid concert ticket, so that the officers would allow Yan entry. Concertgoers were required to undergo two security checks at the Singapore Sports Hub before entering the National Stadium. These were a Person Check Security and a turnstile gate where they would have to scan their tickets. The court heard that Yan searched for re-sold Singapore Eras Tour tickets and came across an offer to purchase a ticket for 3,000 yuan (S$557). Yan was told to arrive at the National Stadium before that start of the concert on Mar 7, 2024 and that someone would help him through the gates. Yan transferred the money. As part of the arrangement, he met Wu at about 3.50pm on Mar 7 around the Singapore Sports Hub. There, Wu handed Yan a lanyard and a Taylor Swift poster.",
+                    "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Person | Wu Zhihong is 55 years old | Wu Zhihong is 54 years old |\n| Object | Mr Yan bought a ticket online for 5000 yuan | Yan came across an offer to purchase a ticket for 3,000 yuan |\n| Time | Wu Zhihong appeared in court on March 16 | Wu Zhihong was jailed on Monday (Mar 18) |\n| Actions | Wu Zhihong gave Mr Yan a lanyard and an A4-sized Taylor Swift poster at the Singapore Sports Hub | Wu handed Yan a lanyard and a Taylor Swift poster at about 3.50pm on Mar 7 around the Singapore Sports Hub |"
+                  },
+                  {
+                    "input1": "Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'",
+                    "input2": "Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'",
+                    "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+                  }
+                ],
+                "_inputs_to_escape": [
+                  "Input1",
+                  "Input2"
+                ]
+              },
+              "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |",
+              "start_time": 1715710623.07276,
+              "end_time": 1715710631.002039,
+              "error": null,
+              "children": [
+                {
+                  "name": "openai_chat",
+                  "type": "LLM",
+                  "inputs": {
+                    "model": "gpt-4-32k-demo",
+                    "messages": [
+                      {
+                        "role": "system",
+                        "content": "You are stepping into the shoes of a detective. Your task is to spot discrepancies/ differences in the given inputs. Take Input1 as the ground truth, and identify the information in Input 2 that differs from Input1.\nThe discrepancies should be regarding a common topic.\nConsider the semantic meaning of the information within the inputs. Paraphrased points with similar semantic meaning do NOT constitute a discrepancy.\nThe type of discrepancies identified MUST ONLY be from the below list: Time, Date, Location, Event Description, Actions, Person, Object.\nPresent your findings in markdown table format with the columns indicating firstly type of discrepancy, secondly what the identified key informaton is within Input1, thirdly what the differing information is within Input2.\nThe extracted information from each input in the second and third column should be concise, and also have enough details. It should be directly extracted from the inputs without paraphrasing.\nFollow the markdown format exactly. Output only a markdown table.\n\nAlways ensure your responses are based on the provided facts, and avoid fabricating information. If you're not sure of an answer, you can say \"I don't know\".\n\n\nHere are a few examples:\nInput1: The once popular Super Mario Run will be taken out of the Google play and apple app store on Friday.  Nintendo says that shortly after its release the public stopped downloading the game when current players had spread the word that in order to play the entire game you had to make an in app purchase. Nintendo and Mario fans are appalled that Nintendo would release a game for free and then charge to play it. Nintendo says they will take the game back to the drawing board, and try and release a free version at a later time.\nInput2: Super Mario Run makes leap to Android The wildly popular Super Mario Run smartphone game is now available for play on Android devices, Nintendo said Wednesday. Nintendo said in a tweet that it made the game available for download at the Google Play store a little earlier than it expected. The release comes about three months after Super Mario Run, Nintendo's first-ever smartphone game, was launched on iOS in December. The game was an instant hit with Apple device users, racking up 40 million downloads in its first four days to become the fastest-selling iOS game in the history of the App Store.\nOUTPUT:\n| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | Super Mario Run will be taken out of the Google play and apple app store | Super Mario Run is available for play on Android devices |\n| Time | The game is being removed on Friday | The game is available for download now |\n| Actions | Nintendo is planning to release a free version of the game at a later time | Nintendo has made the game available for download earlier than expected |\n| Object | Super Mario Run is not popular and is being removed from the app stores | Super Mario Run is wildly popular and available on the Google Play store |\n\nInput1: A man who attempted to get another man to “tailgate” a concertgoer into Taylor Swift’s concert has been jailed for two weeks in what is believed to be the Republic’s first concluded prosecution linked to the American pop star’s Eras Tour. Eleven days after the failed attempt on March 7, Chinese national Wu Zhihong, 55, had to face the music as he pleaded guilty to one charge of criminal trespass. Appearing in court on March 16 via video-link from remand and speaking via a Mandarin interpreter, Wu said: “I never knew that there would be such serious consequences for this.” The court heard that between February and March 2024, Mr Yan Shuqing, 20, searched Chinese e-commerce platforms for resale Singapore Eras Tour tickets. He bought a ticket online for 5000 yuan from a seller on March 6. The seller told him to arrive at the National Stadium ahead of the concert on March 6 – Swift’s fourth show – for his “staff” to help him go through the gates. On the day of the concert, Mr Yan met Wu at the Singapore Sports Hub, where Wu gave him a lanyard and an A4-sized Taylor Swift poster. The two men entered the security check area, where concertgoers’ personal belongings were being checked. Wu was charged with criminal trespass for entering this area as he had intended to dupe security officers into believing that Mr Yan had a valid concert ticket when he did not. After their belongings were checked, Wu gave Mr Yan another concert lanyard with “VIP” imprinted on it. It was genuine and meant for VIP Eras Tour ticket holders. Court documents did not mention how Wu had obtained it. Wu also gave Mr Yan a friendship bracelet, an accessory that was commonly worn and traded by fans at the concerts. To enter the National Stadium, concertgoers had to scan their tickets at a turnstile gate. But Wu told Mr Yan he did not need to do so, and could just “tailgate” any concertgoer who was passing through. Wu told Mr Yan that if he was stopped by security officers, he could still enter by presenting the lanyard and friendship bracelet, and telling the officers that he had friends inside the stadium. CCTV footage played in court shows Wu, who wore a white Eras Tour T-shirt and a black cap, guiding Mr Yan to the queue at the turnstile gate. As the woman in front of Mr Yan scanned her ticket and entered, Wu shoved Mr Yan so that he could also pass through the turnstile gate. At the same time, Wu showed the security officer his phone as if he was trying to communicate with him in a bid to distract the officer from noticing Mr Yan. But another officer noticed the act and stopped Mr Yan, who was escorted out of the National Stadium. After the failed attempt, Wu transferred 3,000 yuan to Mr Yan and told him not to reveal their transaction to the police. Wu then went to another gate and “tailgated” another concertgoer into the National Stadium. An informant subsequently called the police and officers arrested Wu at the scene. Deputy Public Prosecutor Darren Ang said no prosecutorial action was taken against Mr Yan. During investigations, Wu admitted that he is not a Taylor Swift fan. He was unable to explain why he was found with seven other friendship bracelets, similar to the one he had passed to Mr Yan. DPP Ang called for Wu to be jailed for between two and four weeks, noting there is evidence that Wu was involved in an arrangement to target Singapore for criminal activities. Wu had entered Singapore on March 5, 2024, on a social visit pass. He had never entered the country before that.\nInput2: A man who helped another man illegally enter Taylor Swift's concert in Singapore was jailed for two weeks on Monday (Mar 18). Wu Zhihong, 54, tried to cheat security officers into believing that 20-year-old Yan Shuqing had a valid Singapore Eras Tour concert ticket. He then helped distract a security officer while Yan followed a concertgoer passing through a turnstile gate in front of him at the National Stadium on March 7, 2024. Yan, however, was caught and promptly escorted out. Wu, a Chinese national, pleaded guilty to one count of intending to cheat security officers into believing that Yan had a valid concert ticket, so that the officers would allow Yan entry. Concertgoers were required to undergo two security checks at the Singapore Sports Hub before entering the National Stadium. These were a Person Check Security and a turnstile gate where they would have to scan their tickets. The court heard that Yan searched for re-sold Singapore Eras Tour tickets and came across an offer to purchase a ticket for 3,000 yuan (S$557). Yan was told to arrive at the National Stadium before that start of the concert on Mar 7, 2024 and that someone would help him through the gates. Yan transferred the money. As part of the arrangement, he met Wu at about 3.50pm on Mar 7 around the Singapore Sports Hub. There, Wu handed Yan a lanyard and a Taylor Swift poster.\nOUTPUT:\n| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Person | Wu Zhihong is 55 years old | Wu Zhihong is 54 years old |\n| Object | Mr Yan bought a ticket online for 5000 yuan | Yan came across an offer to purchase a ticket for 3,000 yuan |\n| Time | Wu Zhihong appeared in court on March 16 | Wu Zhihong was jailed on Monday (Mar 18) |\n| Actions | Wu Zhihong gave Mr Yan a lanyard and an A4-sized Taylor Swift poster at the Singapore Sports Hub | Wu handed Yan a lanyard and a Taylor Swift poster at about 3.50pm on Mar 7 around the Singapore Sports Hub |\n\nInput1: Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'\nInput2: Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'\nOUTPUT:\n| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+                      },
+                      {
+                        "role": "user",
+                        "content": "Input1: Setting Up Face-Off With Trump \"California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.\"\nInput2: Setting Up Face-Off With Trump  \"California's clean-air agency voted on Friday to push ahead with stricter emissions standards for cars and trucks  setting up a potential legal battle with the Trump administration over the state's plan to reduce planet-warming gases. The vote  by the California Air Resources Board  is the boldest indication yet of California's plan to stand up to President Trump's agenda. Leading politicians in the state  from the governor down to many mayors  have promised to lead the resistance to Mr. Trump's policies. Mr. Trump  backing industry over environmental concerns  said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.\nOUTPUT:"
+                      }
+                    ],
+                    "temperature": 0.1,
+                    "top_p": 1.0,
+                    "n": 1,
+                    "stream": false,
+                    "presence_penalty": 0.0,
+                    "frequency_penalty": 0.0,
+                    "user": ""
+                  },
+                  "output": {
+                    "id": "chatcmpl-9OyURq7MAHhQIGBeYlfJ1EdI9xtre",
+                    "choices": [
+                      {
+                        "finish_reason": "stop",
+                        "index": 0,
+                        "logprobs": null,
+                        "message": {
+                          "content": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |",
+                          "role": "assistant",
+                          "function_call": null,
+                          "tool_calls": null
+                        },
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ],
+                    "created": 1715739423,
+                    "model": "gpt-4-32k",
+                    "object": "chat.completion",
+                    "system_fingerprint": null,
+                    "usage": {
+                      "completion_tokens": 76,
+                      "prompt_tokens": 2424,
+                      "total_tokens": 2500
+                    },
+                    "prompt_filter_results": [
+                      {
+                        "prompt_index": 0,
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "start_time": 1715710623.077808,
+                  "end_time": 1715710631.001655,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "5f0dedbe-1e70-4381-a7fe-b632ddad0f7f",
+                  "id": "5b912aa9-c2aa-4719-a95f-71a8b4fa71ec",
+                  "function": "openai.resources.chat.completions.Completions.create",
+                  "system_metrics": {
+                    "completion_tokens": 76,
+                    "prompt_tokens": 2424,
+                    "total_tokens": 2500
+                  }
+                }
+              ],
+              "node_name": "factchecking",
+              "parent_id": "",
+              "id": "5f0dedbe-1e70-4381-a7fe-b632ddad0f7f",
+              "function": "AzureOpenAI.chat",
+              "system_metrics": {
+                "completion_tokens": 76,
+                "prompt_tokens": 2424,
+                "total_tokens": 2500
+              }
+            },
+            {
+              "name": "AzureOpenAI.chat",
+              "type": "Function",
+              "inputs": {
+                "prompt": "\nsystem:\nFrom the markdown table {{input}}, extract ONLY the rows labelled \"Actions\" and \"Event Description\".\n\nFrom the extracted rows, parse through the columns \"Input1\" and \"Input2\" and summarise the topic of contention where both inputs differ. Add this topic to a new column \"Explanation\".\nBe precise and succint. Examples of topics of contention include: \"Use of AI in healthcare\", \"Legalization of Abortion\".\nFor discrepancies where the column under Input2 writes \"Not mentioned in Input2\", the output is \"NA\" (not applicable). \n\nAdd 2 new columns with header \"Input1Stance\" and \"Input2Stance\".\nFor outputs in Explanation that are \"NA\", Input1Stance and Input2Stance is \"NA\".\nFor outputs that are NOT \"NA\":\nEvaluate each input's stance (choose only from \"Support\", \"Deny\", or \"Neutral\") towards the topic of each input. Consider the semantic meaning of the input in relation to the topic of contention extracted above.\nAdd the outputs to the corresponding column. Iterate through for every row.\nOutput only the final markdown list.\n\nuser:\n{{input}}\n",
+                "deployment_name": "gpt-4-32k-demo",
+                "input": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+              },
+              "output": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance |\n| --- | --- | --- | --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support |",
+              "start_time": 1715710631.006995,
+              "end_time": 1715710642.286921,
+              "error": null,
+              "children": [
+                {
+                  "name": "openai_chat",
+                  "type": "LLM",
+                  "inputs": {
+                    "model": "gpt-4-32k-demo",
+                    "messages": [
+                      {
+                        "role": "system",
+                        "content": "From the markdown table | Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |, extract ONLY the rows labelled \"Actions\" and \"Event Description\".\n\nFrom the extracted rows, parse through the columns \"Input1\" and \"Input2\" and summarise the topic of contention where both inputs differ. Add this topic to a new column \"Explanation\".\nBe precise and succint. Examples of topics of contention include: \"Use of AI in healthcare\", \"Legalization of Abortion\".\nFor discrepancies where the column under Input2 writes \"Not mentioned in Input2\", the output is \"NA\" (not applicable). \n\nAdd 2 new columns with header \"Input1Stance\" and \"Input2Stance\".\nFor outputs in Explanation that are \"NA\", Input1Stance and Input2Stance is \"NA\".\nFor outputs that are NOT \"NA\":\nEvaluate each input's stance (choose only from \"Support\", \"Deny\", or \"Neutral\") towards the topic of each input. Consider the semantic meaning of the input in relation to the topic of contention extracted above.\nAdd the outputs to the corresponding column. Iterate through for every row.\nOutput only the final markdown list."
+                      },
+                      {
+                        "role": "user",
+                        "content": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+                      }
+                    ],
+                    "temperature": 1.0,
+                    "top_p": 1.0,
+                    "n": 1,
+                    "stream": false,
+                    "presence_penalty": 0.0,
+                    "frequency_penalty": 0.0,
+                    "user": ""
+                  },
+                  "output": {
+                    "id": "chatcmpl-9OyUZYAdMD4zaXENctpEqS80NafnS",
+                    "choices": [
+                      {
+                        "finish_reason": "stop",
+                        "index": 0,
+                        "logprobs": null,
+                        "message": {
+                          "content": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance |\n| --- | --- | --- | --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support |",
+                          "role": "assistant",
+                          "function_call": null,
+                          "tool_calls": null
+                        },
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ],
+                    "created": 1715739431,
+                    "model": "gpt-4-32k",
+                    "object": "chat.completion",
+                    "system_fingerprint": null,
+                    "usage": {
+                      "completion_tokens": 120,
+                      "prompt_tokens": 390,
+                      "total_tokens": 510
+                    },
+                    "prompt_filter_results": [
+                      {
+                        "prompt_index": 0,
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "start_time": 1715710631.0104,
+                  "end_time": 1715710642.286342,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "b686a61c-bcef-4858-9776-69ac2495cbb6",
+                  "id": "a9c7087d-80d3-4cc8-9de6-d44ab8304ce6",
+                  "function": "openai.resources.chat.completions.Completions.create",
+                  "system_metrics": {
+                    "completion_tokens": 120,
+                    "prompt_tokens": 390,
+                    "total_tokens": 510
+                  }
+                }
+              ],
+              "node_name": "stancedetection",
+              "parent_id": "",
+              "id": "b686a61c-bcef-4858-9776-69ac2495cbb6",
+              "function": "AzureOpenAI.chat",
+              "system_metrics": {
+                "completion_tokens": 120,
+                "prompt_tokens": 390,
+                "total_tokens": 510
+              }
+            },
+            {
+              "name": "my_python_tool",
+              "type": "Function",
+              "inputs": {
+                "input": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+              },
+              "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |",
+              "start_time": 1715710631.016885,
+              "end_time": 1715710631.017317,
+              "error": null,
+              "children": [],
+              "node_name": "extractdiscrepancies",
+              "parent_id": "",
+              "id": "1137d399-46d5-4add-bf57-cb76cf027620",
+              "function": "my_python_tool",
+              "system_metrics": {}
+            },
+            {
+              "name": "my_python_tool",
+              "type": "Function",
+              "inputs": {
+                "input": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance |\n| --- | --- | --- | --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support |"
+              },
+              "output": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance | Cosine Similarity |\n| --- | --- | --- | --- | --- | --- | --- |\n Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support | 0.94 |\n Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support | 0.53 |",
+              "start_time": 1715710642.292665,
+              "end_time": 1715710648.802161,
+              "error": null,
+              "children": [],
+              "node_name": "cosinesim",
+              "parent_id": "",
+              "id": "b0927820-9250-4374-b287-d54c9b4720db",
+              "function": "my_python_tool",
+              "system_metrics": {}
+            }
+          ],
+          "system_metrics": {
+            "duration": 25.733574,
+            "prompt_tokens": 2814,
+            "completion_tokens": 196,
+            "total_tokens": 3010
+          },
+          "inputs": {
+            "input1": "Setting Up Face-Off With Trump \"California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.\"",
+            "input2": "Setting Up Face-Off With Trump  \"California's clean-air agency voted on Friday to push ahead with stricter emissions standards for cars and trucks  setting up a potential legal battle with the Trump administration over the state's plan to reduce planet-warming gases. The vote  by the California Air Resources Board  is the boldest indication yet of California's plan to stand up to President Trump's agenda. Leading politicians in the state  from the governor down to many mayors  have promised to lead the resistance to Mr. Trump's policies. Mr. Trump  backing industry over environmental concerns  said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards."
+          },
+          "output": {
+            "extractdiscrepancies": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |",
+            "output": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance | Cosine Similarity |\n| --- | --- | --- | --- | --- | --- | --- |\n Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support | 0.94 |\n Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support | 0.53 |"
+          },
+          "error": null
+        }
+      ],
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 25.733574,
+        "prompt_tokens": 2814,
+        "completion_tokens": 196,
+        "total_tokens": 3010
+      },
+      "result": {
+        "extractdiscrepancies": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |",
+        "output": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance | Cosine Similarity |\n| --- | --- | --- | --- | --- | --- | --- |\n Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support | 0.94 |\n Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support | 0.53 |"
+      },
+      "upload_metrics": false,
+      "otel_trace_id": "0xee8e9e68ecd0229c5fff7739144f0ed8",
+      "message_format": "basic"
+    }
+  ],
+  "node_runs": [
+    {
+      "node": "examples",
+      "flow_run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5",
+      "run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5_examples_0",
+      "status": "Completed",
+      "inputs": {},
+      "output": [
+        {
+          "input1": "The once popular Super Mario Run will be taken out of the Google play and apple app store on Friday.  Nintendo says that shortly after its release the public stopped downloading the game when current players had spread the word that in order to play the entire game you had to make an in app purchase. Nintendo and Mario fans are appalled that Nintendo would release a game for free and then charge to play it. Nintendo says they will take the game back to the drawing board, and try and release a free version at a later time.",
+          "input2": "Super Mario Run makes leap to Android The wildly popular Super Mario Run smartphone game is now available for play on Android devices, Nintendo said Wednesday. Nintendo said in a tweet that it made the game available for download at the Google Play store a little earlier than it expected. The release comes about three months after Super Mario Run, Nintendo's first-ever smartphone game, was launched on iOS in December. The game was an instant hit with Apple device users, racking up 40 million downloads in its first four days to become the fastest-selling iOS game in the history of the App Store.",
+          "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | Super Mario Run will be taken out of the Google play and apple app store | Super Mario Run is available for play on Android devices |\n| Time | The game is being removed on Friday | The game is available for download now |\n| Actions | Nintendo is planning to release a free version of the game at a later time | Nintendo has made the game available for download earlier than expected |\n| Object | Super Mario Run is not popular and is being removed from the app stores | Super Mario Run is wildly popular and available on the Google Play store |"
+        },
+        {
+          "input1": "A man who attempted to get another man to “tailgate” a concertgoer into Taylor Swift’s concert has been jailed for two weeks in what is believed to be the Republic’s first concluded prosecution linked to the American pop star’s Eras Tour. Eleven days after the failed attempt on March 7, Chinese national Wu Zhihong, 55, had to face the music as he pleaded guilty to one charge of criminal trespass. Appearing in court on March 16 via video-link from remand and speaking via a Mandarin interpreter, Wu said: “I never knew that there would be such serious consequences for this.” The court heard that between February and March 2024, Mr Yan Shuqing, 20, searched Chinese e-commerce platforms for resale Singapore Eras Tour tickets. He bought a ticket online for 5000 yuan from a seller on March 6. The seller told him to arrive at the National Stadium ahead of the concert on March 6 – Swift’s fourth show – for his “staff” to help him go through the gates. On the day of the concert, Mr Yan met Wu at the Singapore Sports Hub, where Wu gave him a lanyard and an A4-sized Taylor Swift poster. The two men entered the security check area, where concertgoers’ personal belongings were being checked. Wu was charged with criminal trespass for entering this area as he had intended to dupe security officers into believing that Mr Yan had a valid concert ticket when he did not. After their belongings were checked, Wu gave Mr Yan another concert lanyard with “VIP” imprinted on it. It was genuine and meant for VIP Eras Tour ticket holders. Court documents did not mention how Wu had obtained it. Wu also gave Mr Yan a friendship bracelet, an accessory that was commonly worn and traded by fans at the concerts. To enter the National Stadium, concertgoers had to scan their tickets at a turnstile gate. But Wu told Mr Yan he did not need to do so, and could just “tailgate” any concertgoer who was passing through. Wu told Mr Yan that if he was stopped by security officers, he could still enter by presenting the lanyard and friendship bracelet, and telling the officers that he had friends inside the stadium. CCTV footage played in court shows Wu, who wore a white Eras Tour T-shirt and a black cap, guiding Mr Yan to the queue at the turnstile gate. As the woman in front of Mr Yan scanned her ticket and entered, Wu shoved Mr Yan so that he could also pass through the turnstile gate. At the same time, Wu showed the security officer his phone as if he was trying to communicate with him in a bid to distract the officer from noticing Mr Yan. But another officer noticed the act and stopped Mr Yan, who was escorted out of the National Stadium. After the failed attempt, Wu transferred 3,000 yuan to Mr Yan and told him not to reveal their transaction to the police. Wu then went to another gate and “tailgated” another concertgoer into the National Stadium. An informant subsequently called the police and officers arrested Wu at the scene. Deputy Public Prosecutor Darren Ang said no prosecutorial action was taken against Mr Yan. During investigations, Wu admitted that he is not a Taylor Swift fan. He was unable to explain why he was found with seven other friendship bracelets, similar to the one he had passed to Mr Yan. DPP Ang called for Wu to be jailed for between two and four weeks, noting there is evidence that Wu was involved in an arrangement to target Singapore for criminal activities. Wu had entered Singapore on March 5, 2024, on a social visit pass. He had never entered the country before that.",
+          "input2": "A man who helped another man illegally enter Taylor Swift's concert in Singapore was jailed for two weeks on Monday (Mar 18). Wu Zhihong, 54, tried to cheat security officers into believing that 20-year-old Yan Shuqing had a valid Singapore Eras Tour concert ticket. He then helped distract a security officer while Yan followed a concertgoer passing through a turnstile gate in front of him at the National Stadium on March 7, 2024. Yan, however, was caught and promptly escorted out. Wu, a Chinese national, pleaded guilty to one count of intending to cheat security officers into believing that Yan had a valid concert ticket, so that the officers would allow Yan entry. Concertgoers were required to undergo two security checks at the Singapore Sports Hub before entering the National Stadium. These were a Person Check Security and a turnstile gate where they would have to scan their tickets. The court heard that Yan searched for re-sold Singapore Eras Tour tickets and came across an offer to purchase a ticket for 3,000 yuan (S$557). Yan was told to arrive at the National Stadium before that start of the concert on Mar 7, 2024 and that someone would help him through the gates. Yan transferred the money. As part of the arrangement, he met Wu at about 3.50pm on Mar 7 around the Singapore Sports Hub. There, Wu handed Yan a lanyard and a Taylor Swift poster.",
+          "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Person | Wu Zhihong is 55 years old | Wu Zhihong is 54 years old |\n| Object | Mr Yan bought a ticket online for 5000 yuan | Yan came across an offer to purchase a ticket for 3,000 yuan |\n| Time | Wu Zhihong appeared in court on March 16 | Wu Zhihong was jailed on Monday (Mar 18) |\n| Actions | Wu Zhihong gave Mr Yan a lanyard and an A4-sized Taylor Swift poster at the Singapore Sports Hub | Wu handed Yan a lanyard and a Taylor Swift poster at about 3.50pm on Mar 7 around the Singapore Sports Hub |"
+        },
+        {
+          "input1": "Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'",
+          "input2": "Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'",
+          "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+        }
+      ],
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5_0",
+      "start_time": "2024-05-15T02:17:03.070800Z",
+      "end_time": "2024-05-15T02:17:03.072177Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "prepare_examples",
+          "type": "Function",
+          "inputs": {},
+          "output": [
+            {
+              "input1": "The once popular Super Mario Run will be taken out of the Google play and apple app store on Friday.  Nintendo says that shortly after its release the public stopped downloading the game when current players had spread the word that in order to play the entire game you had to make an in app purchase. Nintendo and Mario fans are appalled that Nintendo would release a game for free and then charge to play it. Nintendo says they will take the game back to the drawing board, and try and release a free version at a later time.",
+              "input2": "Super Mario Run makes leap to Android The wildly popular Super Mario Run smartphone game is now available for play on Android devices, Nintendo said Wednesday. Nintendo said in a tweet that it made the game available for download at the Google Play store a little earlier than it expected. The release comes about three months after Super Mario Run, Nintendo's first-ever smartphone game, was launched on iOS in December. The game was an instant hit with Apple device users, racking up 40 million downloads in its first four days to become the fastest-selling iOS game in the history of the App Store.",
+              "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | Super Mario Run will be taken out of the Google play and apple app store | Super Mario Run is available for play on Android devices |\n| Time | The game is being removed on Friday | The game is available for download now |\n| Actions | Nintendo is planning to release a free version of the game at a later time | Nintendo has made the game available for download earlier than expected |\n| Object | Super Mario Run is not popular and is being removed from the app stores | Super Mario Run is wildly popular and available on the Google Play store |"
+            },
+            {
+              "input1": "A man who attempted to get another man to “tailgate” a concertgoer into Taylor Swift’s concert has been jailed for two weeks in what is believed to be the Republic’s first concluded prosecution linked to the American pop star’s Eras Tour. Eleven days after the failed attempt on March 7, Chinese national Wu Zhihong, 55, had to face the music as he pleaded guilty to one charge of criminal trespass. Appearing in court on March 16 via video-link from remand and speaking via a Mandarin interpreter, Wu said: “I never knew that there would be such serious consequences for this.” The court heard that between February and March 2024, Mr Yan Shuqing, 20, searched Chinese e-commerce platforms for resale Singapore Eras Tour tickets. He bought a ticket online for 5000 yuan from a seller on March 6. The seller told him to arrive at the National Stadium ahead of the concert on March 6 – Swift’s fourth show – for his “staff” to help him go through the gates. On the day of the concert, Mr Yan met Wu at the Singapore Sports Hub, where Wu gave him a lanyard and an A4-sized Taylor Swift poster. The two men entered the security check area, where concertgoers’ personal belongings were being checked. Wu was charged with criminal trespass for entering this area as he had intended to dupe security officers into believing that Mr Yan had a valid concert ticket when he did not. After their belongings were checked, Wu gave Mr Yan another concert lanyard with “VIP” imprinted on it. It was genuine and meant for VIP Eras Tour ticket holders. Court documents did not mention how Wu had obtained it. Wu also gave Mr Yan a friendship bracelet, an accessory that was commonly worn and traded by fans at the concerts. To enter the National Stadium, concertgoers had to scan their tickets at a turnstile gate. But Wu told Mr Yan he did not need to do so, and could just “tailgate” any concertgoer who was passing through. Wu told Mr Yan that if he was stopped by security officers, he could still enter by presenting the lanyard and friendship bracelet, and telling the officers that he had friends inside the stadium. CCTV footage played in court shows Wu, who wore a white Eras Tour T-shirt and a black cap, guiding Mr Yan to the queue at the turnstile gate. As the woman in front of Mr Yan scanned her ticket and entered, Wu shoved Mr Yan so that he could also pass through the turnstile gate. At the same time, Wu showed the security officer his phone as if he was trying to communicate with him in a bid to distract the officer from noticing Mr Yan. But another officer noticed the act and stopped Mr Yan, who was escorted out of the National Stadium. After the failed attempt, Wu transferred 3,000 yuan to Mr Yan and told him not to reveal their transaction to the police. Wu then went to another gate and “tailgated” another concertgoer into the National Stadium. An informant subsequently called the police and officers arrested Wu at the scene. Deputy Public Prosecutor Darren Ang said no prosecutorial action was taken against Mr Yan. During investigations, Wu admitted that he is not a Taylor Swift fan. He was unable to explain why he was found with seven other friendship bracelets, similar to the one he had passed to Mr Yan. DPP Ang called for Wu to be jailed for between two and four weeks, noting there is evidence that Wu was involved in an arrangement to target Singapore for criminal activities. Wu had entered Singapore on March 5, 2024, on a social visit pass. He had never entered the country before that.",
+              "input2": "A man who helped another man illegally enter Taylor Swift's concert in Singapore was jailed for two weeks on Monday (Mar 18). Wu Zhihong, 54, tried to cheat security officers into believing that 20-year-old Yan Shuqing had a valid Singapore Eras Tour concert ticket. He then helped distract a security officer while Yan followed a concertgoer passing through a turnstile gate in front of him at the National Stadium on March 7, 2024. Yan, however, was caught and promptly escorted out. Wu, a Chinese national, pleaded guilty to one count of intending to cheat security officers into believing that Yan had a valid concert ticket, so that the officers would allow Yan entry. Concertgoers were required to undergo two security checks at the Singapore Sports Hub before entering the National Stadium. These were a Person Check Security and a turnstile gate where they would have to scan their tickets. The court heard that Yan searched for re-sold Singapore Eras Tour tickets and came across an offer to purchase a ticket for 3,000 yuan (S$557). Yan was told to arrive at the National Stadium before that start of the concert on Mar 7, 2024 and that someone would help him through the gates. Yan transferred the money. As part of the arrangement, he met Wu at about 3.50pm on Mar 7 around the Singapore Sports Hub. There, Wu handed Yan a lanyard and a Taylor Swift poster.",
+              "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Person | Wu Zhihong is 55 years old | Wu Zhihong is 54 years old |\n| Object | Mr Yan bought a ticket online for 5000 yuan | Yan came across an offer to purchase a ticket for 3,000 yuan |\n| Time | Wu Zhihong appeared in court on March 16 | Wu Zhihong was jailed on Monday (Mar 18) |\n| Actions | Wu Zhihong gave Mr Yan a lanyard and an A4-sized Taylor Swift poster at the Singapore Sports Hub | Wu handed Yan a lanyard and a Taylor Swift poster at about 3.50pm on Mar 7 around the Singapore Sports Hub |"
+            },
+            {
+              "input1": "Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'",
+              "input2": "Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'",
+              "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+            }
+          ],
+          "start_time": 1715710623.070861,
+          "end_time": 1715710623.071757,
+          "error": null,
+          "children": [],
+          "node_name": "examples",
+          "parent_id": "",
+          "id": "059ab885-726f-464c-a02c-dc805bf0babb",
+          "function": "prepare_examples",
+          "system_metrics": {}
+        }
+      ],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 0.001377
+      },
+      "result": [
+        {
+          "input1": "The once popular Super Mario Run will be taken out of the Google play and apple app store on Friday.  Nintendo says that shortly after its release the public stopped downloading the game when current players had spread the word that in order to play the entire game you had to make an in app purchase. Nintendo and Mario fans are appalled that Nintendo would release a game for free and then charge to play it. Nintendo says they will take the game back to the drawing board, and try and release a free version at a later time.",
+          "input2": "Super Mario Run makes leap to Android The wildly popular Super Mario Run smartphone game is now available for play on Android devices, Nintendo said Wednesday. Nintendo said in a tweet that it made the game available for download at the Google Play store a little earlier than it expected. The release comes about three months after Super Mario Run, Nintendo's first-ever smartphone game, was launched on iOS in December. The game was an instant hit with Apple device users, racking up 40 million downloads in its first four days to become the fastest-selling iOS game in the history of the App Store.",
+          "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | Super Mario Run will be taken out of the Google play and apple app store | Super Mario Run is available for play on Android devices |\n| Time | The game is being removed on Friday | The game is available for download now |\n| Actions | Nintendo is planning to release a free version of the game at a later time | Nintendo has made the game available for download earlier than expected |\n| Object | Super Mario Run is not popular and is being removed from the app stores | Super Mario Run is wildly popular and available on the Google Play store |"
+        },
+        {
+          "input1": "A man who attempted to get another man to “tailgate” a concertgoer into Taylor Swift’s concert has been jailed for two weeks in what is believed to be the Republic’s first concluded prosecution linked to the American pop star’s Eras Tour. Eleven days after the failed attempt on March 7, Chinese national Wu Zhihong, 55, had to face the music as he pleaded guilty to one charge of criminal trespass. Appearing in court on March 16 via video-link from remand and speaking via a Mandarin interpreter, Wu said: “I never knew that there would be such serious consequences for this.” The court heard that between February and March 2024, Mr Yan Shuqing, 20, searched Chinese e-commerce platforms for resale Singapore Eras Tour tickets. He bought a ticket online for 5000 yuan from a seller on March 6. The seller told him to arrive at the National Stadium ahead of the concert on March 6 – Swift’s fourth show – for his “staff” to help him go through the gates. On the day of the concert, Mr Yan met Wu at the Singapore Sports Hub, where Wu gave him a lanyard and an A4-sized Taylor Swift poster. The two men entered the security check area, where concertgoers’ personal belongings were being checked. Wu was charged with criminal trespass for entering this area as he had intended to dupe security officers into believing that Mr Yan had a valid concert ticket when he did not. After their belongings were checked, Wu gave Mr Yan another concert lanyard with “VIP” imprinted on it. It was genuine and meant for VIP Eras Tour ticket holders. Court documents did not mention how Wu had obtained it. Wu also gave Mr Yan a friendship bracelet, an accessory that was commonly worn and traded by fans at the concerts. To enter the National Stadium, concertgoers had to scan their tickets at a turnstile gate. But Wu told Mr Yan he did not need to do so, and could just “tailgate” any concertgoer who was passing through. Wu told Mr Yan that if he was stopped by security officers, he could still enter by presenting the lanyard and friendship bracelet, and telling the officers that he had friends inside the stadium. CCTV footage played in court shows Wu, who wore a white Eras Tour T-shirt and a black cap, guiding Mr Yan to the queue at the turnstile gate. As the woman in front of Mr Yan scanned her ticket and entered, Wu shoved Mr Yan so that he could also pass through the turnstile gate. At the same time, Wu showed the security officer his phone as if he was trying to communicate with him in a bid to distract the officer from noticing Mr Yan. But another officer noticed the act and stopped Mr Yan, who was escorted out of the National Stadium. After the failed attempt, Wu transferred 3,000 yuan to Mr Yan and told him not to reveal their transaction to the police. Wu then went to another gate and “tailgated” another concertgoer into the National Stadium. An informant subsequently called the police and officers arrested Wu at the scene. Deputy Public Prosecutor Darren Ang said no prosecutorial action was taken against Mr Yan. During investigations, Wu admitted that he is not a Taylor Swift fan. He was unable to explain why he was found with seven other friendship bracelets, similar to the one he had passed to Mr Yan. DPP Ang called for Wu to be jailed for between two and four weeks, noting there is evidence that Wu was involved in an arrangement to target Singapore for criminal activities. Wu had entered Singapore on March 5, 2024, on a social visit pass. He had never entered the country before that.",
+          "input2": "A man who helped another man illegally enter Taylor Swift's concert in Singapore was jailed for two weeks on Monday (Mar 18). Wu Zhihong, 54, tried to cheat security officers into believing that 20-year-old Yan Shuqing had a valid Singapore Eras Tour concert ticket. He then helped distract a security officer while Yan followed a concertgoer passing through a turnstile gate in front of him at the National Stadium on March 7, 2024. Yan, however, was caught and promptly escorted out. Wu, a Chinese national, pleaded guilty to one count of intending to cheat security officers into believing that Yan had a valid concert ticket, so that the officers would allow Yan entry. Concertgoers were required to undergo two security checks at the Singapore Sports Hub before entering the National Stadium. These were a Person Check Security and a turnstile gate where they would have to scan their tickets. The court heard that Yan searched for re-sold Singapore Eras Tour tickets and came across an offer to purchase a ticket for 3,000 yuan (S$557). Yan was told to arrive at the National Stadium before that start of the concert on Mar 7, 2024 and that someone would help him through the gates. Yan transferred the money. As part of the arrangement, he met Wu at about 3.50pm on Mar 7 around the Singapore Sports Hub. There, Wu handed Yan a lanyard and a Taylor Swift poster.",
+          "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Person | Wu Zhihong is 55 years old | Wu Zhihong is 54 years old |\n| Object | Mr Yan bought a ticket online for 5000 yuan | Yan came across an offer to purchase a ticket for 3,000 yuan |\n| Time | Wu Zhihong appeared in court on March 16 | Wu Zhihong was jailed on Monday (Mar 18) |\n| Actions | Wu Zhihong gave Mr Yan a lanyard and an A4-sized Taylor Swift poster at the Singapore Sports Hub | Wu handed Yan a lanyard and a Taylor Swift poster at about 3.50pm on Mar 7 around the Singapore Sports Hub |"
+        },
+        {
+          "input1": "Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'",
+          "input2": "Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'",
+          "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+        }
+      ],
+      "message_format": "basic"
+    },
+    {
+      "node": "factchecking",
+      "flow_run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5",
+      "run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5_factchecking_0",
+      "status": "Completed",
+      "inputs": {
+        "deployment_name": "gpt-4-32k-demo",
+        "temperature": 0.1,
+        "Input1": "Setting Up Face-Off With Trump \"California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.\"",
+        "Input2": "Setting Up Face-Off With Trump  \"California's clean-air agency voted on Friday to push ahead with stricter emissions standards for cars and trucks  setting up a potential legal battle with the Trump administration over the state's plan to reduce planet-warming gases. The vote  by the California Air Resources Board  is the boldest indication yet of California's plan to stand up to President Trump's agenda. Leading politicians in the state  from the governor down to many mayors  have promised to lead the resistance to Mr. Trump's policies. Mr. Trump  backing industry over environmental concerns  said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.",
+        "examples": [
+          {
+            "input1": "The once popular Super Mario Run will be taken out of the Google play and apple app store on Friday.  Nintendo says that shortly after its release the public stopped downloading the game when current players had spread the word that in order to play the entire game you had to make an in app purchase. Nintendo and Mario fans are appalled that Nintendo would release a game for free and then charge to play it. Nintendo says they will take the game back to the drawing board, and try and release a free version at a later time.",
+            "input2": "Super Mario Run makes leap to Android The wildly popular Super Mario Run smartphone game is now available for play on Android devices, Nintendo said Wednesday. Nintendo said in a tweet that it made the game available for download at the Google Play store a little earlier than it expected. The release comes about three months after Super Mario Run, Nintendo's first-ever smartphone game, was launched on iOS in December. The game was an instant hit with Apple device users, racking up 40 million downloads in its first four days to become the fastest-selling iOS game in the history of the App Store.",
+            "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | Super Mario Run will be taken out of the Google play and apple app store | Super Mario Run is available for play on Android devices |\n| Time | The game is being removed on Friday | The game is available for download now |\n| Actions | Nintendo is planning to release a free version of the game at a later time | Nintendo has made the game available for download earlier than expected |\n| Object | Super Mario Run is not popular and is being removed from the app stores | Super Mario Run is wildly popular and available on the Google Play store |"
+          },
+          {
+            "input1": "A man who attempted to get another man to “tailgate” a concertgoer into Taylor Swift’s concert has been jailed for two weeks in what is believed to be the Republic’s first concluded prosecution linked to the American pop star’s Eras Tour. Eleven days after the failed attempt on March 7, Chinese national Wu Zhihong, 55, had to face the music as he pleaded guilty to one charge of criminal trespass. Appearing in court on March 16 via video-link from remand and speaking via a Mandarin interpreter, Wu said: “I never knew that there would be such serious consequences for this.” The court heard that between February and March 2024, Mr Yan Shuqing, 20, searched Chinese e-commerce platforms for resale Singapore Eras Tour tickets. He bought a ticket online for 5000 yuan from a seller on March 6. The seller told him to arrive at the National Stadium ahead of the concert on March 6 – Swift’s fourth show – for his “staff” to help him go through the gates. On the day of the concert, Mr Yan met Wu at the Singapore Sports Hub, where Wu gave him a lanyard and an A4-sized Taylor Swift poster. The two men entered the security check area, where concertgoers’ personal belongings were being checked. Wu was charged with criminal trespass for entering this area as he had intended to dupe security officers into believing that Mr Yan had a valid concert ticket when he did not. After their belongings were checked, Wu gave Mr Yan another concert lanyard with “VIP” imprinted on it. It was genuine and meant for VIP Eras Tour ticket holders. Court documents did not mention how Wu had obtained it. Wu also gave Mr Yan a friendship bracelet, an accessory that was commonly worn and traded by fans at the concerts. To enter the National Stadium, concertgoers had to scan their tickets at a turnstile gate. But Wu told Mr Yan he did not need to do so, and could just “tailgate” any concertgoer who was passing through. Wu told Mr Yan that if he was stopped by security officers, he could still enter by presenting the lanyard and friendship bracelet, and telling the officers that he had friends inside the stadium. CCTV footage played in court shows Wu, who wore a white Eras Tour T-shirt and a black cap, guiding Mr Yan to the queue at the turnstile gate. As the woman in front of Mr Yan scanned her ticket and entered, Wu shoved Mr Yan so that he could also pass through the turnstile gate. At the same time, Wu showed the security officer his phone as if he was trying to communicate with him in a bid to distract the officer from noticing Mr Yan. But another officer noticed the act and stopped Mr Yan, who was escorted out of the National Stadium. After the failed attempt, Wu transferred 3,000 yuan to Mr Yan and told him not to reveal their transaction to the police. Wu then went to another gate and “tailgated” another concertgoer into the National Stadium. An informant subsequently called the police and officers arrested Wu at the scene. Deputy Public Prosecutor Darren Ang said no prosecutorial action was taken against Mr Yan. During investigations, Wu admitted that he is not a Taylor Swift fan. He was unable to explain why he was found with seven other friendship bracelets, similar to the one he had passed to Mr Yan. DPP Ang called for Wu to be jailed for between two and four weeks, noting there is evidence that Wu was involved in an arrangement to target Singapore for criminal activities. Wu had entered Singapore on March 5, 2024, on a social visit pass. He had never entered the country before that.",
+            "input2": "A man who helped another man illegally enter Taylor Swift's concert in Singapore was jailed for two weeks on Monday (Mar 18). Wu Zhihong, 54, tried to cheat security officers into believing that 20-year-old Yan Shuqing had a valid Singapore Eras Tour concert ticket. He then helped distract a security officer while Yan followed a concertgoer passing through a turnstile gate in front of him at the National Stadium on March 7, 2024. Yan, however, was caught and promptly escorted out. Wu, a Chinese national, pleaded guilty to one count of intending to cheat security officers into believing that Yan had a valid concert ticket, so that the officers would allow Yan entry. Concertgoers were required to undergo two security checks at the Singapore Sports Hub before entering the National Stadium. These were a Person Check Security and a turnstile gate where they would have to scan their tickets. The court heard that Yan searched for re-sold Singapore Eras Tour tickets and came across an offer to purchase a ticket for 3,000 yuan (S$557). Yan was told to arrive at the National Stadium before that start of the concert on Mar 7, 2024 and that someone would help him through the gates. Yan transferred the money. As part of the arrangement, he met Wu at about 3.50pm on Mar 7 around the Singapore Sports Hub. There, Wu handed Yan a lanyard and a Taylor Swift poster.",
+            "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Person | Wu Zhihong is 55 years old | Wu Zhihong is 54 years old |\n| Object | Mr Yan bought a ticket online for 5000 yuan | Yan came across an offer to purchase a ticket for 3,000 yuan |\n| Time | Wu Zhihong appeared in court on March 16 | Wu Zhihong was jailed on Monday (Mar 18) |\n| Actions | Wu Zhihong gave Mr Yan a lanyard and an A4-sized Taylor Swift poster at the Singapore Sports Hub | Wu handed Yan a lanyard and a Taylor Swift poster at about 3.50pm on Mar 7 around the Singapore Sports Hub |"
+          },
+          {
+            "input1": "Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'",
+            "input2": "Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'",
+            "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+          }
+        ],
+        "_inputs_to_escape": [
+          "Input1",
+          "Input2"
+        ]
+      },
+      "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5_0",
+      "start_time": "2024-05-15T02:17:03.072666Z",
+      "end_time": "2024-05-15T02:17:11.005180Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.chat",
+          "type": "Function",
+          "inputs": {
+            "prompt": "system:\nYou are stepping into the shoes of a detective. Your task is to spot discrepancies/ differences in the given inputs. Take Input1 as the ground truth, and identify the information in Input 2 that differs from Input1.\nThe discrepancies should be regarding a common topic.\nConsider the semantic meaning of the information within the inputs. Paraphrased points with similar semantic meaning do NOT constitute a discrepancy.\nThe type of discrepancies identified MUST ONLY be from the below list: Time, Date, Location, Event Description, Actions, Person, Object.\nPresent your findings in markdown table format with the columns indicating firstly type of discrepancy, secondly what the identified key informaton is within Input1, thirdly what the differing information is within Input2.\nThe extracted information from each input in the second and third column should be concise, and also have enough details. It should be directly extracted from the inputs without paraphrasing.\nFollow the markdown format exactly. Output only a markdown table.\n\nAlways ensure your responses are based on the provided facts, and avoid fabricating information. If you're not sure of an answer, you can say \"I don't know\".\n\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOUTPUT:\n{{ex.output}}\n\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOUTPUT:",
+            "deployment_name": "gpt-4-32k-demo",
+            "temperature": 0.1,
+            "Input1": "Setting Up Face-Off With Trump \"California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.\"",
+            "Input2": "Setting Up Face-Off With Trump  \"California's clean-air agency voted on Friday to push ahead with stricter emissions standards for cars and trucks  setting up a potential legal battle with the Trump administration over the state's plan to reduce planet-warming gases. The vote  by the California Air Resources Board  is the boldest indication yet of California's plan to stand up to President Trump's agenda. Leading politicians in the state  from the governor down to many mayors  have promised to lead the resistance to Mr. Trump's policies. Mr. Trump  backing industry over environmental concerns  said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.",
+            "examples": [
+              {
+                "input1": "The once popular Super Mario Run will be taken out of the Google play and apple app store on Friday.  Nintendo says that shortly after its release the public stopped downloading the game when current players had spread the word that in order to play the entire game you had to make an in app purchase. Nintendo and Mario fans are appalled that Nintendo would release a game for free and then charge to play it. Nintendo says they will take the game back to the drawing board, and try and release a free version at a later time.",
+                "input2": "Super Mario Run makes leap to Android The wildly popular Super Mario Run smartphone game is now available for play on Android devices, Nintendo said Wednesday. Nintendo said in a tweet that it made the game available for download at the Google Play store a little earlier than it expected. The release comes about three months after Super Mario Run, Nintendo's first-ever smartphone game, was launched on iOS in December. The game was an instant hit with Apple device users, racking up 40 million downloads in its first four days to become the fastest-selling iOS game in the history of the App Store.",
+                "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | Super Mario Run will be taken out of the Google play and apple app store | Super Mario Run is available for play on Android devices |\n| Time | The game is being removed on Friday | The game is available for download now |\n| Actions | Nintendo is planning to release a free version of the game at a later time | Nintendo has made the game available for download earlier than expected |\n| Object | Super Mario Run is not popular and is being removed from the app stores | Super Mario Run is wildly popular and available on the Google Play store |"
+              },
+              {
+                "input1": "A man who attempted to get another man to “tailgate” a concertgoer into Taylor Swift’s concert has been jailed for two weeks in what is believed to be the Republic’s first concluded prosecution linked to the American pop star’s Eras Tour. Eleven days after the failed attempt on March 7, Chinese national Wu Zhihong, 55, had to face the music as he pleaded guilty to one charge of criminal trespass. Appearing in court on March 16 via video-link from remand and speaking via a Mandarin interpreter, Wu said: “I never knew that there would be such serious consequences for this.” The court heard that between February and March 2024, Mr Yan Shuqing, 20, searched Chinese e-commerce platforms for resale Singapore Eras Tour tickets. He bought a ticket online for 5000 yuan from a seller on March 6. The seller told him to arrive at the National Stadium ahead of the concert on March 6 – Swift’s fourth show – for his “staff” to help him go through the gates. On the day of the concert, Mr Yan met Wu at the Singapore Sports Hub, where Wu gave him a lanyard and an A4-sized Taylor Swift poster. The two men entered the security check area, where concertgoers’ personal belongings were being checked. Wu was charged with criminal trespass for entering this area as he had intended to dupe security officers into believing that Mr Yan had a valid concert ticket when he did not. After their belongings were checked, Wu gave Mr Yan another concert lanyard with “VIP” imprinted on it. It was genuine and meant for VIP Eras Tour ticket holders. Court documents did not mention how Wu had obtained it. Wu also gave Mr Yan a friendship bracelet, an accessory that was commonly worn and traded by fans at the concerts. To enter the National Stadium, concertgoers had to scan their tickets at a turnstile gate. But Wu told Mr Yan he did not need to do so, and could just “tailgate” any concertgoer who was passing through. Wu told Mr Yan that if he was stopped by security officers, he could still enter by presenting the lanyard and friendship bracelet, and telling the officers that he had friends inside the stadium. CCTV footage played in court shows Wu, who wore a white Eras Tour T-shirt and a black cap, guiding Mr Yan to the queue at the turnstile gate. As the woman in front of Mr Yan scanned her ticket and entered, Wu shoved Mr Yan so that he could also pass through the turnstile gate. At the same time, Wu showed the security officer his phone as if he was trying to communicate with him in a bid to distract the officer from noticing Mr Yan. But another officer noticed the act and stopped Mr Yan, who was escorted out of the National Stadium. After the failed attempt, Wu transferred 3,000 yuan to Mr Yan and told him not to reveal their transaction to the police. Wu then went to another gate and “tailgated” another concertgoer into the National Stadium. An informant subsequently called the police and officers arrested Wu at the scene. Deputy Public Prosecutor Darren Ang said no prosecutorial action was taken against Mr Yan. During investigations, Wu admitted that he is not a Taylor Swift fan. He was unable to explain why he was found with seven other friendship bracelets, similar to the one he had passed to Mr Yan. DPP Ang called for Wu to be jailed for between two and four weeks, noting there is evidence that Wu was involved in an arrangement to target Singapore for criminal activities. Wu had entered Singapore on March 5, 2024, on a social visit pass. He had never entered the country before that.",
+                "input2": "A man who helped another man illegally enter Taylor Swift's concert in Singapore was jailed for two weeks on Monday (Mar 18). Wu Zhihong, 54, tried to cheat security officers into believing that 20-year-old Yan Shuqing had a valid Singapore Eras Tour concert ticket. He then helped distract a security officer while Yan followed a concertgoer passing through a turnstile gate in front of him at the National Stadium on March 7, 2024. Yan, however, was caught and promptly escorted out. Wu, a Chinese national, pleaded guilty to one count of intending to cheat security officers into believing that Yan had a valid concert ticket, so that the officers would allow Yan entry. Concertgoers were required to undergo two security checks at the Singapore Sports Hub before entering the National Stadium. These were a Person Check Security and a turnstile gate where they would have to scan their tickets. The court heard that Yan searched for re-sold Singapore Eras Tour tickets and came across an offer to purchase a ticket for 3,000 yuan (S$557). Yan was told to arrive at the National Stadium before that start of the concert on Mar 7, 2024 and that someone would help him through the gates. Yan transferred the money. As part of the arrangement, he met Wu at about 3.50pm on Mar 7 around the Singapore Sports Hub. There, Wu handed Yan a lanyard and a Taylor Swift poster.",
+                "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Person | Wu Zhihong is 55 years old | Wu Zhihong is 54 years old |\n| Object | Mr Yan bought a ticket online for 5000 yuan | Yan came across an offer to purchase a ticket for 3,000 yuan |\n| Time | Wu Zhihong appeared in court on March 16 | Wu Zhihong was jailed on Monday (Mar 18) |\n| Actions | Wu Zhihong gave Mr Yan a lanyard and an A4-sized Taylor Swift poster at the Singapore Sports Hub | Wu handed Yan a lanyard and a Taylor Swift poster at about 3.50pm on Mar 7 around the Singapore Sports Hub |"
+              },
+              {
+                "input1": "Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'",
+                "input2": "Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'",
+                "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+              }
+            ],
+            "_inputs_to_escape": [
+              "Input1",
+              "Input2"
+            ]
+          },
+          "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |",
+          "start_time": 1715710623.07276,
+          "end_time": 1715710631.002039,
+          "error": null,
+          "children": [
+            {
+              "name": "openai_chat",
+              "type": "LLM",
+              "inputs": {
+                "model": "gpt-4-32k-demo",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are stepping into the shoes of a detective. Your task is to spot discrepancies/ differences in the given inputs. Take Input1 as the ground truth, and identify the information in Input 2 that differs from Input1.\nThe discrepancies should be regarding a common topic.\nConsider the semantic meaning of the information within the inputs. Paraphrased points with similar semantic meaning do NOT constitute a discrepancy.\nThe type of discrepancies identified MUST ONLY be from the below list: Time, Date, Location, Event Description, Actions, Person, Object.\nPresent your findings in markdown table format with the columns indicating firstly type of discrepancy, secondly what the identified key informaton is within Input1, thirdly what the differing information is within Input2.\nThe extracted information from each input in the second and third column should be concise, and also have enough details. It should be directly extracted from the inputs without paraphrasing.\nFollow the markdown format exactly. Output only a markdown table.\n\nAlways ensure your responses are based on the provided facts, and avoid fabricating information. If you're not sure of an answer, you can say \"I don't know\".\n\n\nHere are a few examples:\nInput1: The once popular Super Mario Run will be taken out of the Google play and apple app store on Friday.  Nintendo says that shortly after its release the public stopped downloading the game when current players had spread the word that in order to play the entire game you had to make an in app purchase. Nintendo and Mario fans are appalled that Nintendo would release a game for free and then charge to play it. Nintendo says they will take the game back to the drawing board, and try and release a free version at a later time.\nInput2: Super Mario Run makes leap to Android The wildly popular Super Mario Run smartphone game is now available for play on Android devices, Nintendo said Wednesday. Nintendo said in a tweet that it made the game available for download at the Google Play store a little earlier than it expected. The release comes about three months after Super Mario Run, Nintendo's first-ever smartphone game, was launched on iOS in December. The game was an instant hit with Apple device users, racking up 40 million downloads in its first four days to become the fastest-selling iOS game in the history of the App Store.\nOUTPUT:\n| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | Super Mario Run will be taken out of the Google play and apple app store | Super Mario Run is available for play on Android devices |\n| Time | The game is being removed on Friday | The game is available for download now |\n| Actions | Nintendo is planning to release a free version of the game at a later time | Nintendo has made the game available for download earlier than expected |\n| Object | Super Mario Run is not popular and is being removed from the app stores | Super Mario Run is wildly popular and available on the Google Play store |\n\nInput1: A man who attempted to get another man to “tailgate” a concertgoer into Taylor Swift’s concert has been jailed for two weeks in what is believed to be the Republic’s first concluded prosecution linked to the American pop star’s Eras Tour. Eleven days after the failed attempt on March 7, Chinese national Wu Zhihong, 55, had to face the music as he pleaded guilty to one charge of criminal trespass. Appearing in court on March 16 via video-link from remand and speaking via a Mandarin interpreter, Wu said: “I never knew that there would be such serious consequences for this.” The court heard that between February and March 2024, Mr Yan Shuqing, 20, searched Chinese e-commerce platforms for resale Singapore Eras Tour tickets. He bought a ticket online for 5000 yuan from a seller on March 6. The seller told him to arrive at the National Stadium ahead of the concert on March 6 – Swift’s fourth show – for his “staff” to help him go through the gates. On the day of the concert, Mr Yan met Wu at the Singapore Sports Hub, where Wu gave him a lanyard and an A4-sized Taylor Swift poster. The two men entered the security check area, where concertgoers’ personal belongings were being checked. Wu was charged with criminal trespass for entering this area as he had intended to dupe security officers into believing that Mr Yan had a valid concert ticket when he did not. After their belongings were checked, Wu gave Mr Yan another concert lanyard with “VIP” imprinted on it. It was genuine and meant for VIP Eras Tour ticket holders. Court documents did not mention how Wu had obtained it. Wu also gave Mr Yan a friendship bracelet, an accessory that was commonly worn and traded by fans at the concerts. To enter the National Stadium, concertgoers had to scan their tickets at a turnstile gate. But Wu told Mr Yan he did not need to do so, and could just “tailgate” any concertgoer who was passing through. Wu told Mr Yan that if he was stopped by security officers, he could still enter by presenting the lanyard and friendship bracelet, and telling the officers that he had friends inside the stadium. CCTV footage played in court shows Wu, who wore a white Eras Tour T-shirt and a black cap, guiding Mr Yan to the queue at the turnstile gate. As the woman in front of Mr Yan scanned her ticket and entered, Wu shoved Mr Yan so that he could also pass through the turnstile gate. At the same time, Wu showed the security officer his phone as if he was trying to communicate with him in a bid to distract the officer from noticing Mr Yan. But another officer noticed the act and stopped Mr Yan, who was escorted out of the National Stadium. After the failed attempt, Wu transferred 3,000 yuan to Mr Yan and told him not to reveal their transaction to the police. Wu then went to another gate and “tailgated” another concertgoer into the National Stadium. An informant subsequently called the police and officers arrested Wu at the scene. Deputy Public Prosecutor Darren Ang said no prosecutorial action was taken against Mr Yan. During investigations, Wu admitted that he is not a Taylor Swift fan. He was unable to explain why he was found with seven other friendship bracelets, similar to the one he had passed to Mr Yan. DPP Ang called for Wu to be jailed for between two and four weeks, noting there is evidence that Wu was involved in an arrangement to target Singapore for criminal activities. Wu had entered Singapore on March 5, 2024, on a social visit pass. He had never entered the country before that.\nInput2: A man who helped another man illegally enter Taylor Swift's concert in Singapore was jailed for two weeks on Monday (Mar 18). Wu Zhihong, 54, tried to cheat security officers into believing that 20-year-old Yan Shuqing had a valid Singapore Eras Tour concert ticket. He then helped distract a security officer while Yan followed a concertgoer passing through a turnstile gate in front of him at the National Stadium on March 7, 2024. Yan, however, was caught and promptly escorted out. Wu, a Chinese national, pleaded guilty to one count of intending to cheat security officers into believing that Yan had a valid concert ticket, so that the officers would allow Yan entry. Concertgoers were required to undergo two security checks at the Singapore Sports Hub before entering the National Stadium. These were a Person Check Security and a turnstile gate where they would have to scan their tickets. The court heard that Yan searched for re-sold Singapore Eras Tour tickets and came across an offer to purchase a ticket for 3,000 yuan (S$557). Yan was told to arrive at the National Stadium before that start of the concert on Mar 7, 2024 and that someone would help him through the gates. Yan transferred the money. As part of the arrangement, he met Wu at about 3.50pm on Mar 7 around the Singapore Sports Hub. There, Wu handed Yan a lanyard and a Taylor Swift poster.\nOUTPUT:\n| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Person | Wu Zhihong is 55 years old | Wu Zhihong is 54 years old |\n| Object | Mr Yan bought a ticket online for 5000 yuan | Yan came across an offer to purchase a ticket for 3,000 yuan |\n| Time | Wu Zhihong appeared in court on March 16 | Wu Zhihong was jailed on Monday (Mar 18) |\n| Actions | Wu Zhihong gave Mr Yan a lanyard and an A4-sized Taylor Swift poster at the Singapore Sports Hub | Wu handed Yan a lanyard and a Taylor Swift poster at about 3.50pm on Mar 7 around the Singapore Sports Hub |\n\nInput1: Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'\nInput2: Setting Up Face-Off With Trump 'California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.'\nOUTPUT:\n| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+                  },
+                  {
+                    "role": "user",
+                    "content": "Input1: Setting Up Face-Off With Trump \"California's clean-air agency voted on Friday to reevaluate their stricter emissions standards for cars and trucks. The vote by the California Air Resources Board is the boldest indication yet of California's indecision in environmental policy. Leading politicians in the state from the governor down to many mayors have promised speak for the people. Mr. Trump backing industry over environmental concerns said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.\"\nInput2: Setting Up Face-Off With Trump  \"California's clean-air agency voted on Friday to push ahead with stricter emissions standards for cars and trucks  setting up a potential legal battle with the Trump administration over the state's plan to reduce planet-warming gases. The vote  by the California Air Resources Board  is the boldest indication yet of California's plan to stand up to President Trump's agenda. Leading politicians in the state  from the governor down to many mayors  have promised to lead the resistance to Mr. Trump's policies. Mr. Trump  backing industry over environmental concerns  said easing emissions rules would help stimulate auto manufacturing. He vowed last week to loosen the regulations. Automakers are aggressively pursuing those changes after years of supporting stricter standards.\nOUTPUT:"
+                  }
+                ],
+                "temperature": 0.1,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "user": ""
+              },
+              "output": {
+                "id": "chatcmpl-9OyURq7MAHhQIGBeYlfJ1EdI9xtre",
+                "choices": [
+                  {
+                    "finish_reason": "stop",
+                    "index": 0,
+                    "logprobs": null,
+                    "message": {
+                      "content": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |",
+                      "role": "assistant",
+                      "function_call": null,
+                      "tool_calls": null
+                    },
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "created": 1715739423,
+                "model": "gpt-4-32k",
+                "object": "chat.completion",
+                "system_fingerprint": null,
+                "usage": {
+                  "completion_tokens": 76,
+                  "prompt_tokens": 2424,
+                  "total_tokens": 2500
+                },
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ]
+              },
+              "start_time": 1715710623.077808,
+              "end_time": 1715710631.001655,
+              "error": null,
+              "children": [],
+              "node_name": null,
+              "parent_id": "5f0dedbe-1e70-4381-a7fe-b632ddad0f7f",
+              "id": "5b912aa9-c2aa-4719-a95f-71a8b4fa71ec",
+              "function": "openai.resources.chat.completions.Completions.create",
+              "system_metrics": {
+                "completion_tokens": 76,
+                "prompt_tokens": 2424,
+                "total_tokens": 2500
+              }
+            }
+          ],
+          "node_name": "factchecking",
+          "parent_id": "",
+          "id": "5f0dedbe-1e70-4381-a7fe-b632ddad0f7f",
+          "function": "AzureOpenAI.chat",
+          "system_metrics": {
+            "completion_tokens": 76,
+            "prompt_tokens": 2424,
+            "total_tokens": 2500
+          }
+        }
+      ],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "completion_tokens": 76,
+        "prompt_tokens": 2424,
+        "total_tokens": 2500,
+        "duration": 7.932514
+      },
+      "result": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |",
+      "message_format": "basic"
+    },
+    {
+      "node": "stancedetection",
+      "flow_run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5",
+      "run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5_stancedetection_0",
+      "status": "Completed",
+      "inputs": {
+        "deployment_name": "gpt-4-32k-demo",
+        "input": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+      },
+      "output": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance |\n| --- | --- | --- | --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support |",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5_0",
+      "start_time": "2024-05-15T02:17:11.006847Z",
+      "end_time": "2024-05-15T02:17:22.291368Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.chat",
+          "type": "Function",
+          "inputs": {
+            "prompt": "\nsystem:\nFrom the markdown table {{input}}, extract ONLY the rows labelled \"Actions\" and \"Event Description\".\n\nFrom the extracted rows, parse through the columns \"Input1\" and \"Input2\" and summarise the topic of contention where both inputs differ. Add this topic to a new column \"Explanation\".\nBe precise and succint. Examples of topics of contention include: \"Use of AI in healthcare\", \"Legalization of Abortion\".\nFor discrepancies where the column under Input2 writes \"Not mentioned in Input2\", the output is \"NA\" (not applicable). \n\nAdd 2 new columns with header \"Input1Stance\" and \"Input2Stance\".\nFor outputs in Explanation that are \"NA\", Input1Stance and Input2Stance is \"NA\".\nFor outputs that are NOT \"NA\":\nEvaluate each input's stance (choose only from \"Support\", \"Deny\", or \"Neutral\") towards the topic of each input. Consider the semantic meaning of the input in relation to the topic of contention extracted above.\nAdd the outputs to the corresponding column. Iterate through for every row.\nOutput only the final markdown list.\n\nuser:\n{{input}}\n",
+            "deployment_name": "gpt-4-32k-demo",
+            "input": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+          },
+          "output": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance |\n| --- | --- | --- | --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support |",
+          "start_time": 1715710631.006995,
+          "end_time": 1715710642.286921,
+          "error": null,
+          "children": [
+            {
+              "name": "openai_chat",
+              "type": "LLM",
+              "inputs": {
+                "model": "gpt-4-32k-demo",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "From the markdown table | Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |, extract ONLY the rows labelled \"Actions\" and \"Event Description\".\n\nFrom the extracted rows, parse through the columns \"Input1\" and \"Input2\" and summarise the topic of contention where both inputs differ. Add this topic to a new column \"Explanation\".\nBe precise and succint. Examples of topics of contention include: \"Use of AI in healthcare\", \"Legalization of Abortion\".\nFor discrepancies where the column under Input2 writes \"Not mentioned in Input2\", the output is \"NA\" (not applicable). \n\nAdd 2 new columns with header \"Input1Stance\" and \"Input2Stance\".\nFor outputs in Explanation that are \"NA\", Input1Stance and Input2Stance is \"NA\".\nFor outputs that are NOT \"NA\":\nEvaluate each input's stance (choose only from \"Support\", \"Deny\", or \"Neutral\") towards the topic of each input. Consider the semantic meaning of the input in relation to the topic of contention extracted above.\nAdd the outputs to the corresponding column. Iterate through for every row.\nOutput only the final markdown list."
+                  },
+                  {
+                    "role": "user",
+                    "content": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+                  }
+                ],
+                "temperature": 1.0,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "user": ""
+              },
+              "output": {
+                "id": "chatcmpl-9OyUZYAdMD4zaXENctpEqS80NafnS",
+                "choices": [
+                  {
+                    "finish_reason": "stop",
+                    "index": 0,
+                    "logprobs": null,
+                    "message": {
+                      "content": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance |\n| --- | --- | --- | --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support |",
+                      "role": "assistant",
+                      "function_call": null,
+                      "tool_calls": null
+                    },
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "created": 1715739431,
+                "model": "gpt-4-32k",
+                "object": "chat.completion",
+                "system_fingerprint": null,
+                "usage": {
+                  "completion_tokens": 120,
+                  "prompt_tokens": 390,
+                  "total_tokens": 510
+                },
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ]
+              },
+              "start_time": 1715710631.0104,
+              "end_time": 1715710642.286342,
+              "error": null,
+              "children": [],
+              "node_name": null,
+              "parent_id": "b686a61c-bcef-4858-9776-69ac2495cbb6",
+              "id": "a9c7087d-80d3-4cc8-9de6-d44ab8304ce6",
+              "function": "openai.resources.chat.completions.Completions.create",
+              "system_metrics": {
+                "completion_tokens": 120,
+                "prompt_tokens": 390,
+                "total_tokens": 510
+              }
+            }
+          ],
+          "node_name": "stancedetection",
+          "parent_id": "",
+          "id": "b686a61c-bcef-4858-9776-69ac2495cbb6",
+          "function": "AzureOpenAI.chat",
+          "system_metrics": {
+            "completion_tokens": 120,
+            "prompt_tokens": 390,
+            "total_tokens": 510
+          }
+        }
+      ],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "completion_tokens": 120,
+        "prompt_tokens": 390,
+        "total_tokens": 510,
+        "duration": 11.284521
+      },
+      "result": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance |\n| --- | --- | --- | --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support |",
+      "message_format": "basic"
+    },
+    {
+      "node": "extractdiscrepancies",
+      "flow_run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5",
+      "run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5_extractdiscrepancies_0",
+      "status": "Completed",
+      "inputs": {
+        "input": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+      },
+      "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5_0",
+      "start_time": "2024-05-15T02:17:11.016818Z",
+      "end_time": "2024-05-15T02:17:11.017664Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "my_python_tool",
+          "type": "Function",
+          "inputs": {
+            "input": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda |"
+          },
+          "output": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |",
+          "start_time": 1715710631.016885,
+          "end_time": 1715710631.017317,
+          "error": null,
+          "children": [],
+          "node_name": "extractdiscrepancies",
+          "parent_id": "",
+          "id": "1137d399-46d5-4add-bf57-cb76cf027620",
+          "function": "my_python_tool",
+          "system_metrics": {}
+        }
+      ],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 0.000846
+      },
+      "result": "| Type of Discrepancy | Input1 | Input2 |\n| --- | --- | --- |",
+      "message_format": "basic"
+    },
+    {
+      "node": "cosinesim",
+      "flow_run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5",
+      "run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5_cosinesim_0",
+      "status": "Completed",
+      "inputs": {
+        "input": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance |\n| --- | --- | --- | --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support |"
+      },
+      "output": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance | Cosine Similarity |\n| --- | --- | --- | --- | --- | --- | --- |\n Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support | 0.94 |\n Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support | 0.53 |",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "82e0226d-4c8b-48b3-9220-b4e20b3b28c5_0",
+      "start_time": "2024-05-15T02:17:22.292515Z",
+      "end_time": "2024-05-15T02:17:28.802520Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "my_python_tool",
+          "type": "Function",
+          "inputs": {
+            "input": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance |\n| --- | --- | --- | --- | --- | --- |\n| Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support |\n| Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support |"
+          },
+          "output": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance | Cosine Similarity |\n| --- | --- | --- | --- | --- | --- | --- |\n Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support | 0.94 |\n Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support | 0.53 |",
+          "start_time": 1715710642.292665,
+          "end_time": 1715710648.802161,
+          "error": null,
+          "children": [],
+          "node_name": "cosinesim",
+          "parent_id": "",
+          "id": "b0927820-9250-4374-b287-d54c9b4720db",
+          "function": "my_python_tool",
+          "system_metrics": {}
+        }
+      ],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": "[2024-05-15T02:17:23+0000] /Users/kkaiyu/Downloads/factchecking/pf/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.\n  warnings.warn(\n"
+      },
+      "system_metrics": {
+        "duration": 6.510005
+      },
+      "result": "| Type of Discrepancy | Input1 | Input2 | Explanation | Input1Stance | Input2Stance | Cosine Similarity |\n| --- | --- | --- | --- | --- | --- | --- |\n Event Description | California's clean-air agency voted to reevaluate their stricter emissions standards | California's clean-air agency voted to push ahead with stricter emissions standards | Future of California's stricter emissions standards | Neutral | Support | 0.94 |\n Actions | California's indecision in environmental policy | California's plan to stand up to President Trump's agenda | California's response to President Trump's environmental policy | Neutral | Support | 0.53 |",
+      "message_format": "basic"
+    }
+  ]
+}
