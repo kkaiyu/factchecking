@@ -1,3 +1,10 @@
 inputs: {}
 outputs: {}
-nodes: []
+nodes:
+- name: datechecking
+  type: llm
+  source:
+    type: code
+    path: datechecking.jinja2
+  inputs: {}
+  connection: kkaiyu
