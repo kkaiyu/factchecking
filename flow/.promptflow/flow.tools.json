@@ -46,12 +46,17 @@
     "locationchecking.jinja2": {
       "type": "llm",
       "inputs": {
-        "chat_history": {
+        "Input1": {
           "type": [
             "string"
           ]
         },
-        "question": {
+        "Input2": {
+          "type": [
+            "string"
+          ]
+        },
+        "examples": {
           "type": [
             "string"
           ]
