@@ -44,3 +44,20 @@ nodes:
     Input2: ${inputs.input2}
   connection: kkaiyu
   api: chat
+- name: objectchecking
+  type: llm
+  source:
+    type: code
+    path: objectchecking.jinja2
+  inputs:
+    deployment_name: gpt-4-32k-demo
+    temperature: 0.1
+  connection: kkaiyu
+  api: chat
+- name: personchecking
+  type: llm
+  source:
+    type: code
+    path: personchecking.jinja2
+  inputs: {}
+  connection: kkaiyu
