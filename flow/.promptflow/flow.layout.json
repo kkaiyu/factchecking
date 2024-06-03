@@ -11,9 +11,19 @@
       "index": -1
     },
     "datechecking": {
+      "x": 140,
+      "y": 176,
+      "index": 0
+    },
+    "timechecking": {
       "x": 800,
       "y": 42,
-      "index": 0
+      "index": 1
+    },
+    "locationchecking": {
+      "x": 1130,
+      "y": 42,
+      "index": 2
     }
   },
   "orientation": "Vertical"

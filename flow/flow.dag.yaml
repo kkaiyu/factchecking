@@ -1,4 +1,10 @@
-inputs: {}
+inputs:
+  input1:
+    type: string
+    default: ""
+  input2:
+    type: string
+    default: ""
 outputs: {}
 nodes:
 - name: datechecking
@@ -6,5 +12,28 @@ nodes:
   source:
     type: code
     path: datechecking.jinja2
+  inputs:
+    deployment_name: gpt-4-32k-demo
+    temperature: 0.1
+    Input1: ${inputs.input1}
+    Input2: ${inputs.input2}
+    examples: ""
+  connection: kkaiyu
+  api: chat
+- name: timechecking
+  type: llm
+  source:
+    type: code
+    path: timechecking.jinja2
+  inputs:
+    deployment_name: gpt-4-32k-demo
+    temperature: 0.1
+  connection: kkaiyu
+  api: chat
+- name: locationchecking
+  type: llm
+  source:
+    type: code
+    path: locationchecking.jinja2
   inputs: {}
   connection: kkaiyu
