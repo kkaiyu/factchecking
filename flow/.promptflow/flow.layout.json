@@ -1,12 +1,12 @@
 {
   "nodeLayouts": {
     "inputs": {
-      "x": 950,
+      "x": 1280,
       "y": 42,
       "index": -1
     },
     "outputs": {
-      "x": 550,
+      "x": 880,
       "y": 310,
       "index": -1
     },
@@ -36,13 +36,13 @@
       "index": 4
     },
     "eventchecking": {
-      "x": 1130,
-      "y": 42,
+      "x": 1790,
+      "y": 176,
       "index": 5
     },
     "actionchecking": {
-      "x": 1460,
-      "y": 42,
+      "x": 2120,
+      "y": 176,
       "index": 6
     }
   },
