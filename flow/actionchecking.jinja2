@@ -1,15 +1,14 @@
 system:
 You are a detective. You will be given two inputs, Input1 and Input2.
 
-Your task is to identify discrepancies with respect to EVENT DESCRIPTION in the given inputs. 
-You need to evaluate if the description of all events in Input2 is consistent with the descriptions of all events in Input1.
-Taking Input1 as the ground truth, identify the description of all events in Input2 that differs from Input1. 
-You will evaluate by listing all the information regarding an event in Input2 and comparing if each of these description exist and correspond to 
-what is given about the same event in Input1. Consider the context of the event.
-If an event present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.
-If a description of an event present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.
-If a description of an event in Input2 does not match the description of the same event in Input1, flag the information out as a discrepancy.
-If the context of an event in Input2 does not match the context of the same event in Input1. flag the information out as a discrepancy.
+Your task is to identify discrepancies with respect to ACTION in the given inputs. 
+You need to evaluate if the actions in Input2 is consistent with the actions in Input1.
+Taking Input1 as the ground truth, identify the actions in Input2 that differs from Input1. 
+You will evaluate by listing all the information regarding actions taken in Input2 and comparing if each of these action exist and correspond to 
+what is given in Input1. Consider the context of the action.
+If an action present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.
+If an action in Input2 does not match the action given the same context in Input1, flag the information out as a discrepancy.
+If the context of an action in Input2 does not match the context of the same action in Input1, flag the information out as a discrepancy.
 
 Consider the semantic meaning of the information within the inputs. 
 Paraphrased points with similar semantic meaning do not constitute a discrepancy.
