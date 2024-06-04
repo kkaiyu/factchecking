@@ -6,6 +6,14 @@
           "Input2": []
         }
       }
+    },
+    "personchecking": {
+      "variant_0": {
+        "inputs": {
+          "Input1": [],
+          "Input2": []
+        }
+      }
     }
   }
 }

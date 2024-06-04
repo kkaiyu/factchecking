@@ -5,7 +5,22 @@ inputs:
   input2:
     type: string
     default: ""
-outputs: {}
+outputs:
+  dateoutput:
+    type: string
+    reference: ${datechecking.output}
+  timeoutput:
+    type: string
+    reference: ${timechecking.output}
+  locationoutput:
+    type: string
+    reference: ${locationchecking.output}
+  objectoutput:
+    type: string
+    reference: ${objectchecking.output}
+  personoutput:
+    type: string
+    reference: ${personchecking.output}
 nodes:
 - name: datechecking
   type: llm
@@ -64,5 +79,24 @@ nodes:
   inputs:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1
+    Input1: ${inputs.input1}
+    Input2: ${inputs.input2}
   connection: kkaiyu
   api: chat
+- name: eventchecking
+  type: llm
+  source:
+    type: code
+    path: eventchecking.jinja2
+  inputs:
+    deployment_name: gpt-4-32k-demo
+    temperature: 0.1
+  connection: kkaiyu
+  api: chat
+- name: actionchecking
+  type: llm
+  source:
+    type: code
+    path: actionchecking.jinja2
+  inputs: {}
+  connection: kkaiyu
