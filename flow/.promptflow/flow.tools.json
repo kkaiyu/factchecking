@@ -147,6 +147,11 @@
         }
       },
       "source": "actionchecking.jinja2"
+    },
+    "dateexamples.py": {
+      "type": "python",
+      "source": "dateexamples.py",
+      "function": "date_examples"
     }
   }
 }

@@ -30,6 +30,13 @@
           "Input2": []
         }
       }
+    },
+    "datechecking": {
+      "variant_0": {
+        "inputs": {
+          "examples": []
+        }
+      }
     }
   }
 }

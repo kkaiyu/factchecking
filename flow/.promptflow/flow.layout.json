@@ -1,49 +1,54 @@
 {
   "nodeLayouts": {
     "inputs": {
-      "x": 1280,
+      "x": 1290,
       "y": 42,
       "index": -1
     },
     "outputs": {
-      "x": 880,
+      "x": 230,
       "y": 310,
       "index": -1
     },
     "datechecking": {
-      "x": 140,
+      "x": 150,
       "y": 176,
       "index": 0
     },
     "timechecking": {
-      "x": 470,
-      "y": 176,
-      "index": 1
-    },
-    "locationchecking": {
-      "x": 800,
+      "x": 480,
       "y": 176,
       "index": 2
     },
-    "objectchecking": {
-      "x": 1130,
+    "locationchecking": {
+      "x": 810,
       "y": 176,
       "index": 3
     },
-    "personchecking": {
-      "x": 1460,
+    "objectchecking": {
+      "x": 1140,
       "y": 176,
       "index": 4
     },
-    "eventchecking": {
-      "x": 1790,
+    "personchecking": {
+      "x": 1470,
       "y": 176,
       "index": 5
     },
-    "actionchecking": {
-      "x": 2120,
+    "eventchecking": {
+      "x": 1800,
       "y": 176,
       "index": 6
+    },
+    "actionchecking": {
+      "x": 2130,
+      "y": 176,
+      "index": 7
+    },
+    "dateexamples": {
+      "x": 140,
+      "y": 42,
+      "index": 1
     }
   },
   "orientation": "Vertical"

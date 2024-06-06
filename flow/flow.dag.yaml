@@ -9,18 +9,6 @@ outputs:
   dateoutput:
     type: string
     reference: ${datechecking.output}
-  timeoutput:
-    type: string
-    reference: ${timechecking.output}
-  locationoutput:
-    type: string
-    reference: ${locationchecking.output}
-  objectoutput:
-    type: string
-    reference: ${objectchecking.output}
-  personoutput:
-    type: string
-    reference: ${personchecking.output}
 nodes:
 - name: datechecking
   type: llm
@@ -35,6 +23,12 @@ nodes:
     examples: ""
   connection: kkaiyu
   api: chat
+- name: examples
+  type: python
+  source:
+    type: code
+    path: dateexamples.py
+  inputs: {}
 - name: timechecking
   type: llm
   source:
