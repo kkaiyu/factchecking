@@ -10,9 +10,9 @@ inputs:
       pay a state visit to China on May 1-2 as his first foreign trip after
       taking office,” the Kremlin said.
 outputs:
-  datetimeoutput:
+  locationchecking:
     type: string
-    reference: ${datetimechecking.output}
+    reference: ${locationchecking.output}
 nodes:
 - name: datetimechecking
   type: llm
@@ -41,10 +41,16 @@ nodes:
   inputs:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1
-    Input1: ${inputs.input1}
-    Input2: ${inputs.input2}
+    Input: ${datetimechecking.output}
+    examples: ${locationexamples.output}
   connection: kkaiyu
   api: chat
+- name: locationexamples
+  type: python
+  source:
+    type: code
+    path: locationexamples.py
+  inputs: {}
 - name: objectchecking
   type: llm
   source:
@@ -53,8 +59,8 @@ nodes:
   inputs:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1
-    Input1: ${inputs.input1}
-    Input2: ${inputs.input2}
+    Input1: ""
+    Input2: ""
   connection: kkaiyu
   api: chat
 - name: personchecking
@@ -65,8 +71,8 @@ nodes:
   inputs:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1
-    Input1: ${inputs.input1}
-    Input2: ${inputs.input2}
+    Input1: ""
+    Input2: ""
   connection: kkaiyu
   api: chat
 - name: eventchecking
@@ -77,8 +83,8 @@ nodes:
   inputs:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1
-    Input1: ${inputs.input1}
-    Input2: ${inputs.input2}
+    Input1: ""
+    Input2: ""
   connection: kkaiyu
   api: chat
 - name: actionchecking
@@ -89,7 +95,7 @@ nodes:
   inputs:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1
-    Input1: ${inputs.input1}
-    Input2: ${inputs.input2}
+    Input1: ""
+    Input2: ""
   connection: kkaiyu
   api: chat

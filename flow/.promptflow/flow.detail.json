@@ -1,7 +1,7 @@
 {
   "flow_runs": [
     {
-      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
+      "run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_0",
       "status": "Completed",
       "error": null,
       "inputs": {
@@ -9,27 +9,27 @@
         "input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said."
       },
       "output": {
-        "datetimeoutput": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}"
+        "locationchecking": "{\"type of discrepancy\": [\n    {\"sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"\n    }\n  ]\n}"
       },
       "metrics": null,
       "request": null,
-      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
-      "root_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
+      "parent_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47",
+      "root_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47",
       "source_run_id": null,
       "flow_id": "default_flow_id",
-      "start_time": "2024-06-08T16:50:01.356542Z",
-      "end_time": "2024-06-08T16:50:10.925197Z",
+      "start_time": "2024-06-08T17:02:57.083110Z",
+      "end_time": "2024-06-08T17:03:16.005893Z",
       "index": 0,
       "api_calls": [
         {
           "name": "flow",
           "node_name": "flow",
           "type": "Flow",
-          "start_time": 1717836601.356542,
-          "end_time": 1717836610.925197,
+          "start_time": 1717837377.08311,
+          "end_time": 1717837396.005893,
           "children": [
             {
-              "name": "date_examples",
+              "name": "datetime_examples",
               "type": "Function",
               "inputs": {},
               "output": [
@@ -54,148 +54,30 @@
                   "output": "Input1: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.\n\nInput2: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.\n\n{\"DateTime\": [{\"Sentence1\": \"The incident reportedly took place in High Street before 11.30pm on May 4.\", \"Sentence2\": \"The incident reportedly took place in High Street before 12.45pm on June 19.\", \"Reason\": \"The date and time of the incident in Sentence2 (June 19, 12.45pm) does not match with the date and time in Sentence1 (May 4, 11.30pm).\"}]}"
                 }
               ],
-              "start_time": 1717836601.357876,
-              "end_time": 1717836601.358993,
+              "start_time": 1717837377.084545,
+              "end_time": 1717837377.085675,
               "error": null,
               "children": [],
               "node_name": "datetimeexamples",
               "parent_id": "",
-              "id": "220e788c-4df0-4629-bfae-7c5b2875591e",
-              "function": "date_examples",
+              "id": "73ed6352-3859-48c4-9c1a-f55b03fd9117",
+              "function": "datetime_examples",
               "system_metrics": {}
             },
             {
-              "name": "AzureOpenAI.chat",
+              "name": "location_examples",
               "type": "Function",
-              "inputs": {
-                "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to LOCATION in the given inputs. \nYou need to evaluate if the locations in Input2 is consistent with the locations in Input1.\nTaking Input1 as the ground truth, identify the locations in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding locations in Input2 and comparing if each of these locations exist and correspond to \nwhat is given in Input1.\nIf a location present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a location in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n",
-                "deployment_name": "gpt-4-32k-demo",
-                "temperature": 0.1,
-                "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
-                "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
-                "_inputs_to_escape": [
-                  "Input1",
-                  "Input2"
-                ]
-              },
-              "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Putin's visit to China in Input2 do not match with the dates given in Input1\"\n    },\n  ]\n}",
-              "start_time": 1717836601.359884,
-              "end_time": 1717836607.676996,
+              "inputs": {},
+              "output": [],
+              "start_time": 1717837377.086427,
+              "end_time": 1717837377.086583,
               "error": null,
-              "children": [
-                {
-                  "name": "openai_chat",
-                  "type": "LLM",
-                  "inputs": {
-                    "model": "gpt-4-32k-demo",
-                    "messages": [
-                      {
-                        "role": "system",
-                        "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to LOCATION in the given inputs. \nYou need to evaluate if the locations in Input2 is consistent with the locations in Input1.\nTaking Input1 as the ground truth, identify the locations in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding locations in Input2 and comparing if each of these locations exist and correspond to \nwhat is given in Input1.\nIf a location present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a location in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:"
-                      },
-                      {
-                        "role": "user",
-                        "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
-                      }
-                    ],
-                    "temperature": 0.1,
-                    "top_p": 1.0,
-                    "n": 1,
-                    "stream": false,
-                    "presence_penalty": 0.0,
-                    "frequency_penalty": 0.0,
-                    "user": ""
-                  },
-                  "output": {
-                    "id": "chatcmpl-9XtYQQ5oSypWF9kKiWYqj6nk2MQoV",
-                    "choices": [
-                      {
-                        "finish_reason": "stop",
-                        "index": 0,
-                        "logprobs": null,
-                        "message": {
-                          "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Putin's visit to China in Input2 do not match with the dates given in Input1\"\n    },\n  ]\n}",
-                          "role": "assistant",
-                          "function_call": null,
-                          "tool_calls": null
-                        },
-                        "content_filter_results": {
-                          "hate": {
-                            "filtered": false,
-                            "severity": "safe"
-                          },
-                          "self_harm": {
-                            "filtered": false,
-                            "severity": "safe"
-                          },
-                          "sexual": {
-                            "filtered": false,
-                            "severity": "safe"
-                          },
-                          "violence": {
-                            "filtered": false,
-                            "severity": "safe"
-                          }
-                        }
-                      }
-                    ],
-                    "created": 1717865402,
-                    "model": "gpt-4-32k",
-                    "object": "chat.completion",
-                    "system_fingerprint": null,
-                    "usage": {
-                      "completion_tokens": 123,
-                      "prompt_tokens": 419,
-                      "total_tokens": 542
-                    },
-                    "prompt_filter_results": [
-                      {
-                        "prompt_index": 0,
-                        "content_filter_results": {
-                          "hate": {
-                            "filtered": false,
-                            "severity": "safe"
-                          },
-                          "self_harm": {
-                            "filtered": false,
-                            "severity": "safe"
-                          },
-                          "sexual": {
-                            "filtered": false,
-                            "severity": "safe"
-                          },
-                          "violence": {
-                            "filtered": false,
-                            "severity": "safe"
-                          }
-                        }
-                      }
-                    ]
-                  },
-                  "start_time": 1717836601.363429,
-                  "end_time": 1717836607.676358,
-                  "error": null,
-                  "children": [],
-                  "node_name": null,
-                  "parent_id": "2f593969-05e5-49e3-b634-961ac582b6aa",
-                  "id": "ec030458-1099-4fa7-85dc-a20fc7d358b4",
-                  "function": "openai.resources.chat.completions.Completions.create",
-                  "system_metrics": {
-                    "completion_tokens": 123,
-                    "prompt_tokens": 419,
-                    "total_tokens": 542
-                  }
-                }
-              ],
-              "node_name": "locationchecking",
+              "children": [],
+              "node_name": "locationexamples",
               "parent_id": "",
-              "id": "2f593969-05e5-49e3-b634-961ac582b6aa",
-              "function": "AzureOpenAI.chat",
-              "system_metrics": {
-                "completion_tokens": 123,
-                "prompt_tokens": 419,
-                "total_tokens": 542
-              }
+              "id": "55896dfa-0a99-4594-8634-a293be1a487a",
+              "function": "location_examples",
+              "system_metrics": {}
             },
             {
               "name": "AzureOpenAI.chat",
@@ -203,17 +85,11 @@
               "inputs": {
                 "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to OBJECTS in the given inputs. People are not objects.\nYou need to evaluate if the objects in Input2 is consistent with the objects in Input1.\nTaking Input1 as the ground truth, identify the objects in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding objects in Input2 and comparing if each of these objects correspond to \nwhat is given in Input1. Consider the context in which these objects are present.\nIf an object present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf an object in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n",
                 "deployment_name": "gpt-4-32k-demo",
-                "temperature": 0.1,
-                "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
-                "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
-                "_inputs_to_escape": [
-                  "Input1",
-                  "Input2"
-                ]
+                "temperature": 0.1
               },
-              "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China in Input2 do not match with the dates given in Input1.\"\n    },\n  ]\n}",
-              "start_time": 1717836601.369468,
-              "end_time": 1717836607.415458,
+              "output": "You didn't provide any inputs. Please provide the inputs so I can help you.",
+              "start_time": 1717837377.087883,
+              "end_time": 1717837379.063562,
               "error": null,
               "children": [
                 {
@@ -228,7 +104,7 @@
                       },
                       {
                         "role": "user",
-                        "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                        "content": "Input1: \nInput2: \nOutput:"
                       }
                     ],
                     "temperature": 0.1,
@@ -240,14 +116,14 @@
                     "user": ""
                   },
                   "output": {
-                    "id": "chatcmpl-9XtYQQhR9beCiDeK3BJPYeWHgPNt7",
+                    "id": "chatcmpl-9XtkvKfnmIlnchPAS2WfcC1Jj2RTE",
                     "choices": [
                       {
                         "finish_reason": "stop",
                         "index": 0,
                         "logprobs": null,
                         "message": {
-                          "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China in Input2 do not match with the dates given in Input1.\"\n    },\n  ]\n}",
+                          "content": "You didn't provide any inputs. Please provide the inputs so I can help you.",
                           "role": "assistant",
                           "function_call": null,
                           "tool_calls": null
@@ -272,14 +148,14 @@
                         }
                       }
                     ],
-                    "created": 1717865402,
+                    "created": 1717866177,
                     "model": "gpt-4-32k",
                     "object": "chat.completion",
                     "system_fingerprint": null,
                     "usage": {
-                      "completion_tokens": 123,
-                      "prompt_tokens": 432,
-                      "total_tokens": 555
+                      "completion_tokens": 17,
+                      "prompt_tokens": 358,
+                      "total_tokens": 375
                     },
                     "prompt_filter_results": [
                       {
@@ -305,29 +181,29 @@
                       }
                     ]
                   },
-                  "start_time": 1717836601.380505,
-                  "end_time": 1717836607.415253,
+                  "start_time": 1717837377.091723,
+                  "end_time": 1717837379.0633,
                   "error": null,
                   "children": [],
                   "node_name": null,
-                  "parent_id": "60450d23-89b1-424c-8eec-46558b1d3588",
-                  "id": "2b56ccbb-05c2-4caf-b595-61935ae411cc",
+                  "parent_id": "b44c304b-322d-4418-a601-5656d8ccb0c1",
+                  "id": "d6ae5d43-86d7-4bf0-87f1-be50715dc76e",
                   "function": "openai.resources.chat.completions.Completions.create",
                   "system_metrics": {
-                    "completion_tokens": 123,
-                    "prompt_tokens": 432,
-                    "total_tokens": 555
+                    "completion_tokens": 17,
+                    "prompt_tokens": 358,
+                    "total_tokens": 375
                   }
                 }
               ],
               "node_name": "objectchecking",
               "parent_id": "",
-              "id": "60450d23-89b1-424c-8eec-46558b1d3588",
+              "id": "b44c304b-322d-4418-a601-5656d8ccb0c1",
               "function": "AzureOpenAI.chat",
               "system_metrics": {
-                "completion_tokens": 123,
-                "prompt_tokens": 432,
-                "total_tokens": 555
+                "completion_tokens": 17,
+                "prompt_tokens": 358,
+                "total_tokens": 375
               }
             },
             {
@@ -336,17 +212,11 @@
               "inputs": {
                 "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to PERSON in the given inputs. \nYou need to evaluate if the description about all persons in Input2 is consistent with the descriptions about all persons in Input1.\nTaking Input1 as the ground truth, identify the description about all persons in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding a person in Input2 and comparing if each of these description exist and correspond to \nwhat is given about the same person in Input1.\nConsider these attributes of a person: Name, Date of Birth, Nationality, Physical Features (eg. height, weight, hair colour), Indentifying Marks (eg. tattoos, scars), Clothing and Accessories.\nIf a person present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of a person present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of a person in Input2 does not match the description of the same person in Input1, flag the information out as a discrepancy.\nIf the description of a person in Input2 matches the description of a different person in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n\n",
                 "deployment_name": "gpt-4-32k-demo",
-                "temperature": 0.1,
-                "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
-                "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
-                "_inputs_to_escape": [
-                  "Input1",
-                  "Input2"
-                ]
+                "temperature": 0.1
               },
-              "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match in both sentences.\"\n    },\n  ]\n}",
-              "start_time": 1717836601.394166,
-              "end_time": 1717836608.507478,
+              "output": "You didn't provide any inputs. Please provide the inputs so I can help you.",
+              "start_time": 1717837377.09537,
+              "end_time": 1717837378.880026,
               "error": null,
               "children": [
                 {
@@ -361,7 +231,7 @@
                       },
                       {
                         "role": "user",
-                        "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                        "content": "Input1: \nInput2: \nOutput:"
                       }
                     ],
                     "temperature": 0.1,
@@ -373,14 +243,14 @@
                     "user": ""
                   },
                   "output": {
-                    "id": "chatcmpl-9XtYQAPZE3eU7Hq2Jc80ncVuwHswX",
+                    "id": "chatcmpl-9XtkvoZmtiiAsDUbo8wCNP7VdM1ow",
                     "choices": [
                       {
                         "finish_reason": "stop",
                         "index": 0,
                         "logprobs": null,
                         "message": {
-                          "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match in both sentences.\"\n    },\n  ]\n}",
+                          "content": "You didn't provide any inputs. Please provide the inputs so I can help you.",
                           "role": "assistant",
                           "function_call": null,
                           "tool_calls": null
@@ -405,14 +275,14 @@
                         }
                       }
                     ],
-                    "created": 1717865402,
+                    "created": 1717866177,
                     "model": "gpt-4-32k",
                     "object": "chat.completion",
                     "system_fingerprint": null,
                     "usage": {
-                      "completion_tokens": 118,
-                      "prompt_tokens": 542,
-                      "total_tokens": 660
+                      "completion_tokens": 17,
+                      "prompt_tokens": 468,
+                      "total_tokens": 485
                     },
                     "prompt_filter_results": [
                       {
@@ -438,29 +308,29 @@
                       }
                     ]
                   },
-                  "start_time": 1717836601.398906,
-                  "end_time": 1717836608.50716,
+                  "start_time": 1717837377.098185,
+                  "end_time": 1717837378.879698,
                   "error": null,
                   "children": [],
                   "node_name": null,
-                  "parent_id": "52a30538-e6e1-4b13-b5d4-4f743f8ce74a",
-                  "id": "fc0e3479-8993-42b0-a74c-8db38de92a49",
+                  "parent_id": "dd606068-0f6b-40df-831e-94144f7fa5fd",
+                  "id": "d26c6a54-b710-40de-8674-b30f45b54ce0",
                   "function": "openai.resources.chat.completions.Completions.create",
                   "system_metrics": {
-                    "completion_tokens": 118,
-                    "prompt_tokens": 542,
-                    "total_tokens": 660
+                    "completion_tokens": 17,
+                    "prompt_tokens": 468,
+                    "total_tokens": 485
                   }
                 }
               ],
               "node_name": "personchecking",
               "parent_id": "",
-              "id": "52a30538-e6e1-4b13-b5d4-4f743f8ce74a",
+              "id": "dd606068-0f6b-40df-831e-94144f7fa5fd",
               "function": "AzureOpenAI.chat",
               "system_metrics": {
-                "completion_tokens": 118,
-                "prompt_tokens": 542,
-                "total_tokens": 660
+                "completion_tokens": 17,
+                "prompt_tokens": 468,
+                "total_tokens": 485
               }
             },
             {
@@ -469,17 +339,11 @@
               "inputs": {
                 "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to EVENT DESCRIPTION in the given inputs. Actions do not constitute as event desciptions.\nYou need to evaluate if the description of all events in Input2 is consistent with the descriptions of all events in Input1.\nTaking Input1 as the ground truth, identify the description of all events in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding an event in Input2 and comparing if each of these description exist and correspond to \nwhat is given about the same event in Input1. Consider the context of the event.\nIf an event present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of an event present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of an event in Input2 does not match the description of the same event in Input1, flag the information out as a discrepancy.\nIf the context of an event in Input2 does not match the context of the same event in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n",
                 "deployment_name": "gpt-4-32k-demo",
-                "temperature": 0.1,
-                "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
-                "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
-                "_inputs_to_escape": [
-                  "Input1",
-                  "Input2"
-                ]
+                "temperature": 0.1
               },
-              "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match. In Input1, the visit is scheduled for May 16-17, while in Input2, the visit is scheduled for May 1-2.\"\n    },\n  ]\n}",
-              "start_time": 1717836601.404228,
-              "end_time": 1717836607.410091,
+              "output": "You have not provided any inputs. Please provide the inputs for me to evaluate and identify any discrepancies.",
+              "start_time": 1717837377.104296,
+              "end_time": 1717837379.260278,
               "error": null,
               "children": [
                 {
@@ -494,7 +358,7 @@
                       },
                       {
                         "role": "user",
-                        "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                        "content": "Input1: \nInput2: \nOutput:"
                       }
                     ],
                     "temperature": 0.1,
@@ -506,14 +370,14 @@
                     "user": ""
                   },
                   "output": {
-                    "id": "chatcmpl-9XtYQoCVWwUrl8O8dxoLWNZlU7qs2",
+                    "id": "chatcmpl-9XtkvPQbGtkIAZqzuEqdmk1YkjHbX",
                     "choices": [
                       {
                         "finish_reason": "stop",
                         "index": 0,
                         "logprobs": null,
                         "message": {
-                          "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match. In Input1, the visit is scheduled for May 16-17, while in Input2, the visit is scheduled for May 1-2.\"\n    },\n  ]\n}",
+                          "content": "You have not provided any inputs. Please provide the inputs for me to evaluate and identify any discrepancies.",
                           "role": "assistant",
                           "function_call": null,
                           "tool_calls": null
@@ -538,14 +402,14 @@
                         }
                       }
                     ],
-                    "created": 1717865402,
+                    "created": 1717866177,
                     "model": "gpt-4-32k",
                     "object": "chat.completion",
                     "system_fingerprint": null,
                     "usage": {
-                      "completion_tokens": 146,
-                      "prompt_tokens": 518,
-                      "total_tokens": 664
+                      "completion_tokens": 20,
+                      "prompt_tokens": 444,
+                      "total_tokens": 464
                     },
                     "prompt_filter_results": [
                       {
@@ -571,29 +435,29 @@
                       }
                     ]
                   },
-                  "start_time": 1717836601.407789,
-                  "end_time": 1717836607.409023,
+                  "start_time": 1717837377.133956,
+                  "end_time": 1717837379.259931,
                   "error": null,
                   "children": [],
                   "node_name": null,
-                  "parent_id": "78b05e82-9887-401b-b6b0-b24813bed9c4",
-                  "id": "5702e167-4bd0-47e4-a283-0591b5d7af9a",
+                  "parent_id": "26aceedd-1aba-4ba9-95e2-6e480d3a8327",
+                  "id": "450d6593-a71a-4c8f-98bb-eae36bf9f71a",
                   "function": "openai.resources.chat.completions.Completions.create",
                   "system_metrics": {
-                    "completion_tokens": 146,
-                    "prompt_tokens": 518,
-                    "total_tokens": 664
+                    "completion_tokens": 20,
+                    "prompt_tokens": 444,
+                    "total_tokens": 464
                   }
                 }
               ],
               "node_name": "eventchecking",
               "parent_id": "",
-              "id": "78b05e82-9887-401b-b6b0-b24813bed9c4",
+              "id": "26aceedd-1aba-4ba9-95e2-6e480d3a8327",
               "function": "AzureOpenAI.chat",
               "system_metrics": {
-                "completion_tokens": 146,
-                "prompt_tokens": 518,
-                "total_tokens": 664
+                "completion_tokens": 20,
+                "prompt_tokens": 444,
+                "total_tokens": 464
               }
             },
             {
@@ -602,17 +466,11 @@
               "inputs": {
                 "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to ACTION in the given inputs. \nYou need to evaluate if the actions in Input2 is consistent with the actions in Input1.\nTaking Input1 as the ground truth, identify the actions in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding actions taken in Input2 and comparing if each of these action exist and correspond to \nwhat is given in Input1. Consider the context of the action.\nIf an action present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf an action in Input2 does not match the action given the same context in Input1, flag the information out as a discrepancy.\nIf the context of an action in Input2 does not match the context of the same action in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\n######!!!!!! format the whole thing as a json where each discrepancy is a parameter\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n\n",
                 "deployment_name": "gpt-4-32k-demo",
-                "temperature": 0.1,
-                "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
-                "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
-                "_inputs_to_escape": [
-                  "Input1",
-                  "Input2"
-                ]
+                "temperature": 0.1
               },
-              "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China by Vladimir Putin are different in both sentences.\"\n    }\n  ]\n}",
-              "start_time": 1717836601.412899,
-              "end_time": 1717836608.49655,
+              "output": "As there are no inputs provided, I cannot provide an output. Please provide the necessary inputs.",
+              "start_time": 1717837377.105933,
+              "end_time": 1717837378.71029,
               "error": null,
               "children": [
                 {
@@ -627,7 +485,7 @@
                       },
                       {
                         "role": "user",
-                        "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                        "content": "Input1: \nInput2: \nOutput:"
                       }
                     ],
                     "temperature": 0.1,
@@ -639,14 +497,14 @@
                     "user": ""
                   },
                   "output": {
-                    "id": "chatcmpl-9XtYQuUFvf1JR93ALCexb9wlOhr2L",
+                    "id": "chatcmpl-9XtkvJ3LgcSu03Aa4VLMuq0SIr68Q",
                     "choices": [
                       {
                         "finish_reason": "stop",
                         "index": 0,
                         "logprobs": null,
                         "message": {
-                          "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China by Vladimir Putin are different in both sentences.\"\n    }\n  ]\n}",
+                          "content": "As there are no inputs provided, I cannot provide an output. Please provide the necessary inputs.",
                           "role": "assistant",
                           "function_call": null,
                           "tool_calls": null
@@ -671,14 +529,14 @@
                         }
                       }
                     ],
-                    "created": 1717865402,
+                    "created": 1717866177,
                     "model": "gpt-4-32k",
                     "object": "chat.completion",
                     "system_fingerprint": null,
                     "usage": {
-                      "completion_tokens": 118,
-                      "prompt_tokens": 480,
-                      "total_tokens": 598
+                      "completion_tokens": 19,
+                      "prompt_tokens": 406,
+                      "total_tokens": 425
                     },
                     "prompt_filter_results": [
                       {
@@ -704,29 +562,29 @@
                       }
                     ]
                   },
-                  "start_time": 1717836601.415833,
-                  "end_time": 1717836608.495945,
+                  "start_time": 1717837377.108459,
+                  "end_time": 1717837378.710078,
                   "error": null,
                   "children": [],
                   "node_name": null,
-                  "parent_id": "0ea56983-aa3d-4282-a40e-a561f6bce80d",
-                  "id": "d70d0313-a8c1-40f1-991f-8b4ec74f80b1",
+                  "parent_id": "575d628f-6dd2-4dce-b383-ef6fc0e26cc9",
+                  "id": "41382298-b48c-4704-88fb-137c02076822",
                   "function": "openai.resources.chat.completions.Completions.create",
                   "system_metrics": {
-                    "completion_tokens": 118,
-                    "prompt_tokens": 480,
-                    "total_tokens": 598
+                    "completion_tokens": 19,
+                    "prompt_tokens": 406,
+                    "total_tokens": 425
                   }
                 }
               ],
               "node_name": "actionchecking",
               "parent_id": "",
-              "id": "0ea56983-aa3d-4282-a40e-a561f6bce80d",
+              "id": "575d628f-6dd2-4dce-b383-ef6fc0e26cc9",
               "function": "AzureOpenAI.chat",
               "system_metrics": {
-                "completion_tokens": 118,
-                "prompt_tokens": 480,
-                "total_tokens": 598
+                "completion_tokens": 19,
+                "prompt_tokens": 406,
+                "total_tokens": 425
               }
             },
             {
@@ -763,12 +621,11 @@
                 "_inputs_to_escape": [
                   "Input1",
                   "Input2"
-                ],
-                "stream": false
+                ]
               },
-              "output": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}",
-              "start_time": 1717836601.420617,
-              "end_time": 1717836610.922013,
+              "output": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"}]}",
+              "start_time": 1717837377.118662,
+              "end_time": 1717837388.526008,
               "error": null,
               "children": [
                 {
@@ -795,14 +652,14 @@
                     "user": ""
                   },
                   "output": {
-                    "id": "chatcmpl-9XtYQAsPA4hSDprBMuuTfVz3FVGNd",
+                    "id": "chatcmpl-9Xtkvh9HpjepugC9ncpAMGCtO61Ps",
                     "choices": [
                       {
                         "finish_reason": "stop",
                         "index": 0,
                         "logprobs": null,
                         "message": {
-                          "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}",
+                          "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"}]}",
                           "role": "assistant",
                           "function_call": null,
                           "tool_calls": null
@@ -827,14 +684,14 @@
                         }
                       }
                     ],
-                    "created": 1717865402,
+                    "created": 1717866177,
                     "model": "gpt-4-32k",
                     "object": "chat.completion",
                     "system_fingerprint": null,
                     "usage": {
-                      "completion_tokens": 212,
+                      "completion_tokens": 211,
                       "prompt_tokens": 1706,
-                      "total_tokens": 1918
+                      "total_tokens": 1917
                     },
                     "prompt_filter_results": [
                       {
@@ -860,44 +717,174 @@
                       }
                     ]
                   },
-                  "start_time": 1717836601.425721,
-                  "end_time": 1717836610.921497,
+                  "start_time": 1717837377.149735,
+                  "end_time": 1717837388.525756,
                   "error": null,
                   "children": [],
                   "node_name": null,
-                  "parent_id": "34166b70-fe4b-4e72-9f97-ba18d8a710ea",
-                  "id": "718e1f2f-cd02-4c14-91b5-5f35c1b3f675",
+                  "parent_id": "bc6b24c3-d382-4061-bc56-a89da212169a",
+                  "id": "5dacb9e6-af8f-45d1-bde9-9ed654789417",
                   "function": "openai.resources.chat.completions.Completions.create",
                   "system_metrics": {
-                    "completion_tokens": 212,
+                    "completion_tokens": 211,
                     "prompt_tokens": 1706,
-                    "total_tokens": 1918
+                    "total_tokens": 1917
                   }
                 }
               ],
               "node_name": "datetimechecking",
               "parent_id": "",
-              "id": "34166b70-fe4b-4e72-9f97-ba18d8a710ea",
+              "id": "bc6b24c3-d382-4061-bc56-a89da212169a",
               "function": "AzureOpenAI.chat",
               "system_metrics": {
-                "completion_tokens": 212,
+                "completion_tokens": 211,
                 "prompt_tokens": 1706,
-                "total_tokens": 1918
+                "total_tokens": 1917
+              }
+            },
+            {
+              "name": "AzureOpenAI.chat",
+              "type": "Function",
+              "inputs": {
+                "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to LOCATION in the given inputs. \nYou need to evaluate if the locations in Input2 is consistent with the locations in Input1.\nTaking Input1 as the ground truth, identify the locations in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding locations in Input2 and comparing if each of these locations exist and correspond to \nwhat is given in Input1.\nIf a location present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a location in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput: {{ex.input}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput: {{Input}}\nOutput:\n",
+                "deployment_name": "gpt-4-32k-demo",
+                "temperature": 0.1,
+                "Input": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"}]}",
+                "examples": [],
+                "stream": false
+              },
+              "output": "{\"type of discrepancy\": [\n    {\"sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"\n    }\n  ]\n}",
+              "start_time": 1717837388.529538,
+              "end_time": 1717837396.002717,
+              "error": null,
+              "children": [
+                {
+                  "name": "openai_chat",
+                  "type": "LLM",
+                  "inputs": {
+                    "model": "gpt-4-32k-demo",
+                    "messages": [
+                      {
+                        "role": "system",
+                        "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to LOCATION in the given inputs. \nYou need to evaluate if the locations in Input2 is consistent with the locations in Input1.\nTaking Input1 as the ground truth, identify the locations in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding locations in Input2 and comparing if each of these locations exist and correspond to \nwhat is given in Input1.\nIf a location present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a location in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:"
+                      },
+                      {
+                        "role": "user",
+                        "content": "Input: Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"}]}\nOutput:"
+                      }
+                    ],
+                    "temperature": 0.1,
+                    "top_p": 1.0,
+                    "n": 1,
+                    "stream": false,
+                    "presence_penalty": 0.0,
+                    "frequency_penalty": 0.0,
+                    "user": ""
+                  },
+                  "output": {
+                    "id": "chatcmpl-9Xtl6yJUCPjUY4awJ34oDGQUfuxU6",
+                    "choices": [
+                      {
+                        "finish_reason": "stop",
+                        "index": 0,
+                        "logprobs": null,
+                        "message": {
+                          "content": "{\"type of discrepancy\": [\n    {\"sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"\n    }\n  ]\n}",
+                          "role": "assistant",
+                          "function_call": null,
+                          "tool_calls": null
+                        },
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ],
+                    "created": 1717866188,
+                    "model": "gpt-4-32k",
+                    "object": "chat.completion",
+                    "system_fingerprint": null,
+                    "usage": {
+                      "completion_tokens": 139,
+                      "prompt_tokens": 550,
+                      "total_tokens": 689
+                    },
+                    "prompt_filter_results": [
+                      {
+                        "prompt_index": 0,
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "start_time": 1717837388.533286,
+                  "end_time": 1717837396.002433,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "1278647c-e7b3-48d0-a485-86227625b133",
+                  "id": "37726cef-ecaa-489c-8348-3e71ee50435f",
+                  "function": "openai.resources.chat.completions.Completions.create",
+                  "system_metrics": {
+                    "completion_tokens": 139,
+                    "prompt_tokens": 550,
+                    "total_tokens": 689
+                  }
+                }
+              ],
+              "node_name": "locationchecking",
+              "parent_id": "",
+              "id": "1278647c-e7b3-48d0-a485-86227625b133",
+              "function": "AzureOpenAI.chat",
+              "system_metrics": {
+                "completion_tokens": 139,
+                "prompt_tokens": 550,
+                "total_tokens": 689
               }
             }
           ],
           "system_metrics": {
-            "duration": 9.568655,
-            "prompt_tokens": 4097,
-            "completion_tokens": 840,
-            "total_tokens": 4937
+            "duration": 18.922783,
+            "prompt_tokens": 3932,
+            "completion_tokens": 423,
+            "total_tokens": 4355
           },
           "inputs": {
             "input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
             "input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said."
           },
           "output": {
-            "datetimeoutput": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}"
+            "locationchecking": "{\"type of discrepancy\": [\n    {\"sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"\n    }\n  ]\n}"
           },
           "error": null
         }
@@ -906,24 +893,24 @@
       "description": "",
       "tags": null,
       "system_metrics": {
-        "duration": 9.568655,
-        "prompt_tokens": 4097,
-        "completion_tokens": 840,
-        "total_tokens": 4937
+        "duration": 18.922783,
+        "prompt_tokens": 3932,
+        "completion_tokens": 423,
+        "total_tokens": 4355
       },
       "result": {
-        "datetimeoutput": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}"
+        "locationchecking": "{\"type of discrepancy\": [\n    {\"sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"\n    }\n  ]\n}"
       },
       "upload_metrics": false,
-      "otel_trace_id": "0x0727fc8c814665341890063fd354efdf",
+      "otel_trace_id": "0x1dd02aaee33687e1e8e9d97a143d51ce",
       "message_format": "basic"
     }
   ],
   "node_runs": [
     {
       "node": "datetimeexamples",
-      "flow_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
-      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_datetimeexamples_0",
+      "flow_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47",
+      "run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_datetimeexamples_0",
       "status": "Completed",
       "inputs": {},
       "output": [
@@ -950,13 +937,13 @@
       ],
       "metrics": null,
       "error": null,
-      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
-      "start_time": "2024-06-08T16:50:01.357796Z",
-      "end_time": "2024-06-08T16:50:01.359476Z",
+      "parent_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_0",
+      "start_time": "2024-06-08T17:02:57.084477Z",
+      "end_time": "2024-06-08T17:02:57.086176Z",
       "index": 0,
       "api_calls": [
         {
-          "name": "date_examples",
+          "name": "datetime_examples",
           "type": "Function",
           "inputs": {},
           "output": [
@@ -981,14 +968,14 @@
               "output": "Input1: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.\n\nInput2: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.\n\n{\"DateTime\": [{\"Sentence1\": \"The incident reportedly took place in High Street before 11.30pm on May 4.\", \"Sentence2\": \"The incident reportedly took place in High Street before 12.45pm on June 19.\", \"Reason\": \"The date and time of the incident in Sentence2 (June 19, 12.45pm) does not match with the date and time in Sentence1 (May 4, 11.30pm).\"}]}"
             }
           ],
-          "start_time": 1717836601.357876,
-          "end_time": 1717836601.358993,
+          "start_time": 1717837377.084545,
+          "end_time": 1717837377.085675,
           "error": null,
           "children": [],
           "node_name": "datetimeexamples",
           "parent_id": "",
-          "id": "220e788c-4df0-4629-bfae-7c5b2875591e",
-          "function": "date_examples",
+          "id": "73ed6352-3859-48c4-9c1a-f55b03fd9117",
+          "function": "datetime_examples",
           "system_metrics": {}
         }
       ],
@@ -999,7 +986,7 @@
         "stderr": ""
       },
       "system_metrics": {
-        "duration": 0.00168
+        "duration": 0.001699
       },
       "result": [
         {
@@ -1026,160 +1013,33 @@
       "message_format": "basic"
     },
     {
-      "node": "locationchecking",
-      "flow_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
-      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_locationchecking_0",
+      "node": "locationexamples",
+      "flow_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47",
+      "run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_locationexamples_0",
       "status": "Completed",
-      "inputs": {
-        "deployment_name": "gpt-4-32k-demo",
-        "temperature": 0.1,
-        "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
-        "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
-        "_inputs_to_escape": [
-          "Input1",
-          "Input2"
-        ]
-      },
-      "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Putin's visit to China in Input2 do not match with the dates given in Input1\"\n    },\n  ]\n}",
+      "inputs": {},
+      "output": [],
       "metrics": null,
       "error": null,
-      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
-      "start_time": "2024-06-08T16:50:01.359803Z",
-      "end_time": "2024-06-08T16:50:07.682102Z",
+      "parent_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_0",
+      "start_time": "2024-06-08T17:02:57.086392Z",
+      "end_time": "2024-06-08T17:02:57.086787Z",
       "index": 0,
       "api_calls": [
         {
-          "name": "AzureOpenAI.chat",
+          "name": "location_examples",
           "type": "Function",
-          "inputs": {
-            "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to LOCATION in the given inputs. \nYou need to evaluate if the locations in Input2 is consistent with the locations in Input1.\nTaking Input1 as the ground truth, identify the locations in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding locations in Input2 and comparing if each of these locations exist and correspond to \nwhat is given in Input1.\nIf a location present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a location in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n",
-            "deployment_name": "gpt-4-32k-demo",
-            "temperature": 0.1,
-            "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
-            "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
-            "_inputs_to_escape": [
-              "Input1",
-              "Input2"
-            ]
-          },
-          "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Putin's visit to China in Input2 do not match with the dates given in Input1\"\n    },\n  ]\n}",
-          "start_time": 1717836601.359884,
-          "end_time": 1717836607.676996,
+          "inputs": {},
+          "output": [],
+          "start_time": 1717837377.086427,
+          "end_time": 1717837377.086583,
           "error": null,
-          "children": [
-            {
-              "name": "openai_chat",
-              "type": "LLM",
-              "inputs": {
-                "model": "gpt-4-32k-demo",
-                "messages": [
-                  {
-                    "role": "system",
-                    "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to LOCATION in the given inputs. \nYou need to evaluate if the locations in Input2 is consistent with the locations in Input1.\nTaking Input1 as the ground truth, identify the locations in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding locations in Input2 and comparing if each of these locations exist and correspond to \nwhat is given in Input1.\nIf a location present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a location in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:"
-                  },
-                  {
-                    "role": "user",
-                    "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
-                  }
-                ],
-                "temperature": 0.1,
-                "top_p": 1.0,
-                "n": 1,
-                "stream": false,
-                "presence_penalty": 0.0,
-                "frequency_penalty": 0.0,
-                "user": ""
-              },
-              "output": {
-                "id": "chatcmpl-9XtYQQ5oSypWF9kKiWYqj6nk2MQoV",
-                "choices": [
-                  {
-                    "finish_reason": "stop",
-                    "index": 0,
-                    "logprobs": null,
-                    "message": {
-                      "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Putin's visit to China in Input2 do not match with the dates given in Input1\"\n    },\n  ]\n}",
-                      "role": "assistant",
-                      "function_call": null,
-                      "tool_calls": null
-                    },
-                    "content_filter_results": {
-                      "hate": {
-                        "filtered": false,
-                        "severity": "safe"
-                      },
-                      "self_harm": {
-                        "filtered": false,
-                        "severity": "safe"
-                      },
-                      "sexual": {
-                        "filtered": false,
-                        "severity": "safe"
-                      },
-                      "violence": {
-                        "filtered": false,
-                        "severity": "safe"
-                      }
-                    }
-                  }
-                ],
-                "created": 1717865402,
-                "model": "gpt-4-32k",
-                "object": "chat.completion",
-                "system_fingerprint": null,
-                "usage": {
-                  "completion_tokens": 123,
-                  "prompt_tokens": 419,
-                  "total_tokens": 542
-                },
-                "prompt_filter_results": [
-                  {
-                    "prompt_index": 0,
-                    "content_filter_results": {
-                      "hate": {
-                        "filtered": false,
-                        "severity": "safe"
-                      },
-                      "self_harm": {
-                        "filtered": false,
-                        "severity": "safe"
-                      },
-                      "sexual": {
-                        "filtered": false,
-                        "severity": "safe"
-                      },
-                      "violence": {
-                        "filtered": false,
-                        "severity": "safe"
-                      }
-                    }
-                  }
-                ]
-              },
-              "start_time": 1717836601.363429,
-              "end_time": 1717836607.676358,
-              "error": null,
-              "children": [],
-              "node_name": null,
-              "parent_id": "2f593969-05e5-49e3-b634-961ac582b6aa",
-              "id": "ec030458-1099-4fa7-85dc-a20fc7d358b4",
-              "function": "openai.resources.chat.completions.Completions.create",
-              "system_metrics": {
-                "completion_tokens": 123,
-                "prompt_tokens": 419,
-                "total_tokens": 542
-              }
-            }
-          ],
-          "node_name": "locationchecking",
+          "children": [],
+          "node_name": "locationexamples",
           "parent_id": "",
-          "id": "2f593969-05e5-49e3-b634-961ac582b6aa",
-          "function": "AzureOpenAI.chat",
-          "system_metrics": {
-            "completion_tokens": 123,
-            "prompt_tokens": 419,
-            "total_tokens": 542
-          }
+          "id": "55896dfa-0a99-4594-8634-a293be1a487a",
+          "function": "location_examples",
+          "system_metrics": {}
         }
       ],
       "cached_run_id": null,
@@ -1189,35 +1049,26 @@
         "stderr": ""
       },
       "system_metrics": {
-        "completion_tokens": 123,
-        "prompt_tokens": 419,
-        "total_tokens": 542,
-        "duration": 6.322299
+        "duration": 0.000395
       },
-      "result": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Putin's visit to China in Input2 do not match with the dates given in Input1\"\n    },\n  ]\n}",
+      "result": [],
       "message_format": "basic"
     },
     {
       "node": "objectchecking",
-      "flow_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
-      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_objectchecking_0",
+      "flow_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47",
+      "run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_objectchecking_0",
       "status": "Completed",
       "inputs": {
         "deployment_name": "gpt-4-32k-demo",
-        "temperature": 0.1,
-        "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
-        "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
-        "_inputs_to_escape": [
-          "Input1",
-          "Input2"
-        ]
+        "temperature": 0.1
       },
-      "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China in Input2 do not match with the dates given in Input1.\"\n    },\n  ]\n}",
+      "output": "You didn't provide any inputs. Please provide the inputs so I can help you.",
       "metrics": null,
       "error": null,
-      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
-      "start_time": "2024-06-08T16:50:01.369365Z",
-      "end_time": "2024-06-08T16:50:07.417691Z",
+      "parent_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_0",
+      "start_time": "2024-06-08T17:02:57.087817Z",
+      "end_time": "2024-06-08T17:02:59.065724Z",
       "index": 0,
       "api_calls": [
         {
@@ -1226,17 +1077,11 @@
           "inputs": {
             "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to OBJECTS in the given inputs. People are not objects.\nYou need to evaluate if the objects in Input2 is consistent with the objects in Input1.\nTaking Input1 as the ground truth, identify the objects in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding objects in Input2 and comparing if each of these objects correspond to \nwhat is given in Input1. Consider the context in which these objects are present.\nIf an object present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf an object in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n",
             "deployment_name": "gpt-4-32k-demo",
-            "temperature": 0.1,
-            "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
-            "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
-            "_inputs_to_escape": [
-              "Input1",
-              "Input2"
-            ]
+            "temperature": 0.1
           },
-          "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China in Input2 do not match with the dates given in Input1.\"\n    },\n  ]\n}",
-          "start_time": 1717836601.369468,
-          "end_time": 1717836607.415458,
+          "output": "You didn't provide any inputs. Please provide the inputs so I can help you.",
+          "start_time": 1717837377.087883,
+          "end_time": 1717837379.063562,
           "error": null,
           "children": [
             {
@@ -1251,7 +1096,7 @@
                   },
                   {
                     "role": "user",
-                    "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                    "content": "Input1: \nInput2: \nOutput:"
                   }
                 ],
                 "temperature": 0.1,
@@ -1263,14 +1108,14 @@
                 "user": ""
               },
               "output": {
-                "id": "chatcmpl-9XtYQQhR9beCiDeK3BJPYeWHgPNt7",
+                "id": "chatcmpl-9XtkvKfnmIlnchPAS2WfcC1Jj2RTE",
                 "choices": [
                   {
                     "finish_reason": "stop",
                     "index": 0,
                     "logprobs": null,
                     "message": {
-                      "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China in Input2 do not match with the dates given in Input1.\"\n    },\n  ]\n}",
+                      "content": "You didn't provide any inputs. Please provide the inputs so I can help you.",
                       "role": "assistant",
                       "function_call": null,
                       "tool_calls": null
@@ -1295,14 +1140,14 @@
                     }
                   }
                 ],
-                "created": 1717865402,
+                "created": 1717866177,
                 "model": "gpt-4-32k",
                 "object": "chat.completion",
                 "system_fingerprint": null,
                 "usage": {
-                  "completion_tokens": 123,
-                  "prompt_tokens": 432,
-                  "total_tokens": 555
+                  "completion_tokens": 17,
+                  "prompt_tokens": 358,
+                  "total_tokens": 375
                 },
                 "prompt_filter_results": [
                   {
@@ -1328,29 +1173,29 @@
                   }
                 ]
               },
-              "start_time": 1717836601.380505,
-              "end_time": 1717836607.415253,
+              "start_time": 1717837377.091723,
+              "end_time": 1717837379.0633,
               "error": null,
               "children": [],
               "node_name": null,
-              "parent_id": "60450d23-89b1-424c-8eec-46558b1d3588",
-              "id": "2b56ccbb-05c2-4caf-b595-61935ae411cc",
+              "parent_id": "b44c304b-322d-4418-a601-5656d8ccb0c1",
+              "id": "d6ae5d43-86d7-4bf0-87f1-be50715dc76e",
               "function": "openai.resources.chat.completions.Completions.create",
               "system_metrics": {
-                "completion_tokens": 123,
-                "prompt_tokens": 432,
-                "total_tokens": 555
+                "completion_tokens": 17,
+                "prompt_tokens": 358,
+                "total_tokens": 375
               }
             }
           ],
           "node_name": "objectchecking",
           "parent_id": "",
-          "id": "60450d23-89b1-424c-8eec-46558b1d3588",
+          "id": "b44c304b-322d-4418-a601-5656d8ccb0c1",
           "function": "AzureOpenAI.chat",
           "system_metrics": {
-            "completion_tokens": 123,
-            "prompt_tokens": 432,
-            "total_tokens": 555
+            "completion_tokens": 17,
+            "prompt_tokens": 358,
+            "total_tokens": 375
           }
         }
       ],
@@ -1361,35 +1206,29 @@
         "stderr": ""
       },
       "system_metrics": {
-        "completion_tokens": 123,
-        "prompt_tokens": 432,
-        "total_tokens": 555,
-        "duration": 6.048326
+        "completion_tokens": 17,
+        "prompt_tokens": 358,
+        "total_tokens": 375,
+        "duration": 1.977907
       },
-      "result": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China in Input2 do not match with the dates given in Input1.\"\n    },\n  ]\n}",
+      "result": "You didn't provide any inputs. Please provide the inputs so I can help you.",
       "message_format": "basic"
     },
     {
       "node": "personchecking",
-      "flow_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
-      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_personchecking_0",
+      "flow_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47",
+      "run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_personchecking_0",
       "status": "Completed",
       "inputs": {
         "deployment_name": "gpt-4-32k-demo",
-        "temperature": 0.1,
-        "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
-        "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
-        "_inputs_to_escape": [
-          "Input1",
-          "Input2"
-        ]
+        "temperature": 0.1
       },
-      "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match in both sentences.\"\n    },\n  ]\n}",
+      "output": "You didn't provide any inputs. Please provide the inputs so I can help you.",
       "metrics": null,
       "error": null,
-      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
-      "start_time": "2024-06-08T16:50:01.392999Z",
-      "end_time": "2024-06-08T16:50:08.510820Z",
+      "parent_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_0",
+      "start_time": "2024-06-08T17:02:57.095268Z",
+      "end_time": "2024-06-08T17:02:58.882742Z",
       "index": 0,
       "api_calls": [
         {
@@ -1398,17 +1237,11 @@
           "inputs": {
             "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to PERSON in the given inputs. \nYou need to evaluate if the description about all persons in Input2 is consistent with the descriptions about all persons in Input1.\nTaking Input1 as the ground truth, identify the description about all persons in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding a person in Input2 and comparing if each of these description exist and correspond to \nwhat is given about the same person in Input1.\nConsider these attributes of a person: Name, Date of Birth, Nationality, Physical Features (eg. height, weight, hair colour), Indentifying Marks (eg. tattoos, scars), Clothing and Accessories.\nIf a person present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of a person present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of a person in Input2 does not match the description of the same person in Input1, flag the information out as a discrepancy.\nIf the description of a person in Input2 matches the description of a different person in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n\n",
             "deployment_name": "gpt-4-32k-demo",
-            "temperature": 0.1,
-            "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
-            "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
-            "_inputs_to_escape": [
-              "Input1",
-              "Input2"
-            ]
+            "temperature": 0.1
           },
-          "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match in both sentences.\"\n    },\n  ]\n}",
-          "start_time": 1717836601.394166,
-          "end_time": 1717836608.507478,
+          "output": "You didn't provide any inputs. Please provide the inputs so I can help you.",
+          "start_time": 1717837377.09537,
+          "end_time": 1717837378.880026,
           "error": null,
           "children": [
             {
@@ -1423,7 +1256,7 @@
                   },
                   {
                     "role": "user",
-                    "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                    "content": "Input1: \nInput2: \nOutput:"
                   }
                 ],
                 "temperature": 0.1,
@@ -1435,14 +1268,14 @@
                 "user": ""
               },
               "output": {
-                "id": "chatcmpl-9XtYQAPZE3eU7Hq2Jc80ncVuwHswX",
+                "id": "chatcmpl-9XtkvoZmtiiAsDUbo8wCNP7VdM1ow",
                 "choices": [
                   {
                     "finish_reason": "stop",
                     "index": 0,
                     "logprobs": null,
                     "message": {
-                      "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match in both sentences.\"\n    },\n  ]\n}",
+                      "content": "You didn't provide any inputs. Please provide the inputs so I can help you.",
                       "role": "assistant",
                       "function_call": null,
                       "tool_calls": null
@@ -1467,14 +1300,14 @@
                     }
                   }
                 ],
-                "created": 1717865402,
+                "created": 1717866177,
                 "model": "gpt-4-32k",
                 "object": "chat.completion",
                 "system_fingerprint": null,
                 "usage": {
-                  "completion_tokens": 118,
-                  "prompt_tokens": 542,
-                  "total_tokens": 660
+                  "completion_tokens": 17,
+                  "prompt_tokens": 468,
+                  "total_tokens": 485
                 },
                 "prompt_filter_results": [
                   {
@@ -1500,29 +1333,29 @@
                   }
                 ]
               },
-              "start_time": 1717836601.398906,
-              "end_time": 1717836608.50716,
+              "start_time": 1717837377.098185,
+              "end_time": 1717837378.879698,
               "error": null,
               "children": [],
               "node_name": null,
-              "parent_id": "52a30538-e6e1-4b13-b5d4-4f743f8ce74a",
-              "id": "fc0e3479-8993-42b0-a74c-8db38de92a49",
+              "parent_id": "dd606068-0f6b-40df-831e-94144f7fa5fd",
+              "id": "d26c6a54-b710-40de-8674-b30f45b54ce0",
               "function": "openai.resources.chat.completions.Completions.create",
               "system_metrics": {
-                "completion_tokens": 118,
-                "prompt_tokens": 542,
-                "total_tokens": 660
+                "completion_tokens": 17,
+                "prompt_tokens": 468,
+                "total_tokens": 485
               }
             }
           ],
           "node_name": "personchecking",
           "parent_id": "",
-          "id": "52a30538-e6e1-4b13-b5d4-4f743f8ce74a",
+          "id": "dd606068-0f6b-40df-831e-94144f7fa5fd",
           "function": "AzureOpenAI.chat",
           "system_metrics": {
-            "completion_tokens": 118,
-            "prompt_tokens": 542,
-            "total_tokens": 660
+            "completion_tokens": 17,
+            "prompt_tokens": 468,
+            "total_tokens": 485
           }
         }
       ],
@@ -1533,35 +1366,29 @@
         "stderr": ""
       },
       "system_metrics": {
-        "completion_tokens": 118,
-        "prompt_tokens": 542,
-        "total_tokens": 660,
-        "duration": 7.117821
+        "completion_tokens": 17,
+        "prompt_tokens": 468,
+        "total_tokens": 485,
+        "duration": 1.787474
       },
-      "result": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match in both sentences.\"\n    },\n  ]\n}",
+      "result": "You didn't provide any inputs. Please provide the inputs so I can help you.",
       "message_format": "basic"
     },
     {
       "node": "eventchecking",
-      "flow_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
-      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_eventchecking_0",
+      "flow_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47",
+      "run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_eventchecking_0",
       "status": "Completed",
       "inputs": {
         "deployment_name": "gpt-4-32k-demo",
-        "temperature": 0.1,
-        "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
-        "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
-        "_inputs_to_escape": [
-          "Input1",
-          "Input2"
-        ]
+        "temperature": 0.1
       },
-      "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match. In Input1, the visit is scheduled for May 16-17, while in Input2, the visit is scheduled for May 1-2.\"\n    },\n  ]\n}",
+      "output": "You have not provided any inputs. Please provide the inputs for me to evaluate and identify any discrepancies.",
       "metrics": null,
       "error": null,
-      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
-      "start_time": "2024-06-08T16:50:01.404064Z",
-      "end_time": "2024-06-08T16:50:07.412630Z",
+      "parent_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_0",
+      "start_time": "2024-06-08T17:02:57.104188Z",
+      "end_time": "2024-06-08T17:02:59.263771Z",
       "index": 0,
       "api_calls": [
         {
@@ -1570,17 +1397,11 @@
           "inputs": {
             "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to EVENT DESCRIPTION in the given inputs. Actions do not constitute as event desciptions.\nYou need to evaluate if the description of all events in Input2 is consistent with the descriptions of all events in Input1.\nTaking Input1 as the ground truth, identify the description of all events in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding an event in Input2 and comparing if each of these description exist and correspond to \nwhat is given about the same event in Input1. Consider the context of the event.\nIf an event present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of an event present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of an event in Input2 does not match the description of the same event in Input1, flag the information out as a discrepancy.\nIf the context of an event in Input2 does not match the context of the same event in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n",
             "deployment_name": "gpt-4-32k-demo",
-            "temperature": 0.1,
-            "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
-            "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
-            "_inputs_to_escape": [
-              "Input1",
-              "Input2"
-            ]
+            "temperature": 0.1
           },
-          "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match. In Input1, the visit is scheduled for May 16-17, while in Input2, the visit is scheduled for May 1-2.\"\n    },\n  ]\n}",
-          "start_time": 1717836601.404228,
-          "end_time": 1717836607.410091,
+          "output": "You have not provided any inputs. Please provide the inputs for me to evaluate and identify any discrepancies.",
+          "start_time": 1717837377.104296,
+          "end_time": 1717837379.260278,
           "error": null,
           "children": [
             {
@@ -1595,7 +1416,7 @@
                   },
                   {
                     "role": "user",
-                    "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                    "content": "Input1: \nInput2: \nOutput:"
                   }
                 ],
                 "temperature": 0.1,
@@ -1607,14 +1428,14 @@
                 "user": ""
               },
               "output": {
-                "id": "chatcmpl-9XtYQoCVWwUrl8O8dxoLWNZlU7qs2",
+                "id": "chatcmpl-9XtkvPQbGtkIAZqzuEqdmk1YkjHbX",
                 "choices": [
                   {
                     "finish_reason": "stop",
                     "index": 0,
                     "logprobs": null,
                     "message": {
-                      "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match. In Input1, the visit is scheduled for May 16-17, while in Input2, the visit is scheduled for May 1-2.\"\n    },\n  ]\n}",
+                      "content": "You have not provided any inputs. Please provide the inputs for me to evaluate and identify any discrepancies.",
                       "role": "assistant",
                       "function_call": null,
                       "tool_calls": null
@@ -1639,14 +1460,14 @@
                     }
                   }
                 ],
-                "created": 1717865402,
+                "created": 1717866177,
                 "model": "gpt-4-32k",
                 "object": "chat.completion",
                 "system_fingerprint": null,
                 "usage": {
-                  "completion_tokens": 146,
-                  "prompt_tokens": 518,
-                  "total_tokens": 664
+                  "completion_tokens": 20,
+                  "prompt_tokens": 444,
+                  "total_tokens": 464
                 },
                 "prompt_filter_results": [
                   {
@@ -1672,29 +1493,29 @@
                   }
                 ]
               },
-              "start_time": 1717836601.407789,
-              "end_time": 1717836607.409023,
+              "start_time": 1717837377.133956,
+              "end_time": 1717837379.259931,
               "error": null,
               "children": [],
               "node_name": null,
-              "parent_id": "78b05e82-9887-401b-b6b0-b24813bed9c4",
-              "id": "5702e167-4bd0-47e4-a283-0591b5d7af9a",
+              "parent_id": "26aceedd-1aba-4ba9-95e2-6e480d3a8327",
+              "id": "450d6593-a71a-4c8f-98bb-eae36bf9f71a",
               "function": "openai.resources.chat.completions.Completions.create",
               "system_metrics": {
-                "completion_tokens": 146,
-                "prompt_tokens": 518,
-                "total_tokens": 664
+                "completion_tokens": 20,
+                "prompt_tokens": 444,
+                "total_tokens": 464
               }
             }
           ],
           "node_name": "eventchecking",
           "parent_id": "",
-          "id": "78b05e82-9887-401b-b6b0-b24813bed9c4",
+          "id": "26aceedd-1aba-4ba9-95e2-6e480d3a8327",
           "function": "AzureOpenAI.chat",
           "system_metrics": {
-            "completion_tokens": 146,
-            "prompt_tokens": 518,
-            "total_tokens": 664
+            "completion_tokens": 20,
+            "prompt_tokens": 444,
+            "total_tokens": 464
           }
         }
       ],
@@ -1705,35 +1526,29 @@
         "stderr": ""
       },
       "system_metrics": {
-        "completion_tokens": 146,
-        "prompt_tokens": 518,
-        "total_tokens": 664,
-        "duration": 6.008566
+        "completion_tokens": 20,
+        "prompt_tokens": 444,
+        "total_tokens": 464,
+        "duration": 2.159583
       },
-      "result": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match. In Input1, the visit is scheduled for May 16-17, while in Input2, the visit is scheduled for May 1-2.\"\n    },\n  ]\n}",
+      "result": "You have not provided any inputs. Please provide the inputs for me to evaluate and identify any discrepancies.",
       "message_format": "basic"
     },
     {
       "node": "actionchecking",
-      "flow_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
-      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_actionchecking_0",
+      "flow_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47",
+      "run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_actionchecking_0",
       "status": "Completed",
       "inputs": {
         "deployment_name": "gpt-4-32k-demo",
-        "temperature": 0.1,
-        "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
-        "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
-        "_inputs_to_escape": [
-          "Input1",
-          "Input2"
-        ]
+        "temperature": 0.1
       },
-      "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China by Vladimir Putin are different in both sentences.\"\n    }\n  ]\n}",
+      "output": "As there are no inputs provided, I cannot provide an output. Please provide the necessary inputs.",
       "metrics": null,
       "error": null,
-      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
-      "start_time": "2024-06-08T16:50:01.412785Z",
-      "end_time": "2024-06-08T16:50:08.501830Z",
+      "parent_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_0",
+      "start_time": "2024-06-08T17:02:57.105847Z",
+      "end_time": "2024-06-08T17:02:58.712277Z",
       "index": 0,
       "api_calls": [
         {
@@ -1742,17 +1557,11 @@
           "inputs": {
             "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to ACTION in the given inputs. \nYou need to evaluate if the actions in Input2 is consistent with the actions in Input1.\nTaking Input1 as the ground truth, identify the actions in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding actions taken in Input2 and comparing if each of these action exist and correspond to \nwhat is given in Input1. Consider the context of the action.\nIf an action present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf an action in Input2 does not match the action given the same context in Input1, flag the information out as a discrepancy.\nIf the context of an action in Input2 does not match the context of the same action in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\n######!!!!!! format the whole thing as a json where each discrepancy is a parameter\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n\n",
             "deployment_name": "gpt-4-32k-demo",
-            "temperature": 0.1,
-            "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
-            "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
-            "_inputs_to_escape": [
-              "Input1",
-              "Input2"
-            ]
+            "temperature": 0.1
           },
-          "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China by Vladimir Putin are different in both sentences.\"\n    }\n  ]\n}",
-          "start_time": 1717836601.412899,
-          "end_time": 1717836608.49655,
+          "output": "As there are no inputs provided, I cannot provide an output. Please provide the necessary inputs.",
+          "start_time": 1717837377.105933,
+          "end_time": 1717837378.71029,
           "error": null,
           "children": [
             {
@@ -1767,7 +1576,7 @@
                   },
                   {
                     "role": "user",
-                    "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                    "content": "Input1: \nInput2: \nOutput:"
                   }
                 ],
                 "temperature": 0.1,
@@ -1779,14 +1588,14 @@
                 "user": ""
               },
               "output": {
-                "id": "chatcmpl-9XtYQuUFvf1JR93ALCexb9wlOhr2L",
+                "id": "chatcmpl-9XtkvJ3LgcSu03Aa4VLMuq0SIr68Q",
                 "choices": [
                   {
                     "finish_reason": "stop",
                     "index": 0,
                     "logprobs": null,
                     "message": {
-                      "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China by Vladimir Putin are different in both sentences.\"\n    }\n  ]\n}",
+                      "content": "As there are no inputs provided, I cannot provide an output. Please provide the necessary inputs.",
                       "role": "assistant",
                       "function_call": null,
                       "tool_calls": null
@@ -1811,14 +1620,14 @@
                     }
                   }
                 ],
-                "created": 1717865402,
+                "created": 1717866177,
                 "model": "gpt-4-32k",
                 "object": "chat.completion",
                 "system_fingerprint": null,
                 "usage": {
-                  "completion_tokens": 118,
-                  "prompt_tokens": 480,
-                  "total_tokens": 598
+                  "completion_tokens": 19,
+                  "prompt_tokens": 406,
+                  "total_tokens": 425
                 },
                 "prompt_filter_results": [
                   {
@@ -1844,29 +1653,29 @@
                   }
                 ]
               },
-              "start_time": 1717836601.415833,
-              "end_time": 1717836608.495945,
+              "start_time": 1717837377.108459,
+              "end_time": 1717837378.710078,
               "error": null,
               "children": [],
               "node_name": null,
-              "parent_id": "0ea56983-aa3d-4282-a40e-a561f6bce80d",
-              "id": "d70d0313-a8c1-40f1-991f-8b4ec74f80b1",
+              "parent_id": "575d628f-6dd2-4dce-b383-ef6fc0e26cc9",
+              "id": "41382298-b48c-4704-88fb-137c02076822",
               "function": "openai.resources.chat.completions.Completions.create",
               "system_metrics": {
-                "completion_tokens": 118,
-                "prompt_tokens": 480,
-                "total_tokens": 598
+                "completion_tokens": 19,
+                "prompt_tokens": 406,
+                "total_tokens": 425
               }
             }
           ],
           "node_name": "actionchecking",
           "parent_id": "",
-          "id": "0ea56983-aa3d-4282-a40e-a561f6bce80d",
+          "id": "575d628f-6dd2-4dce-b383-ef6fc0e26cc9",
           "function": "AzureOpenAI.chat",
           "system_metrics": {
-            "completion_tokens": 118,
-            "prompt_tokens": 480,
-            "total_tokens": 598
+            "completion_tokens": 19,
+            "prompt_tokens": 406,
+            "total_tokens": 425
           }
         }
       ],
@@ -1877,18 +1686,18 @@
         "stderr": ""
       },
       "system_metrics": {
-        "completion_tokens": 118,
-        "prompt_tokens": 480,
-        "total_tokens": 598,
-        "duration": 7.089045
+        "completion_tokens": 19,
+        "prompt_tokens": 406,
+        "total_tokens": 425,
+        "duration": 1.60643
       },
-      "result": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China by Vladimir Putin are different in both sentences.\"\n    }\n  ]\n}",
+      "result": "As there are no inputs provided, I cannot provide an output. Please provide the necessary inputs.",
       "message_format": "basic"
     },
     {
       "node": "datetimechecking",
-      "flow_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
-      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_datetimechecking_0",
+      "flow_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47",
+      "run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_datetimechecking_0",
       "status": "Completed",
       "inputs": {
         "deployment_name": "gpt-4-32k-demo",
@@ -1922,12 +1731,12 @@
           "Input2"
         ]
       },
-      "output": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}",
+      "output": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"}]}",
       "metrics": null,
       "error": null,
-      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
-      "start_time": "2024-06-08T16:50:01.420493Z",
-      "end_time": "2024-06-08T16:50:10.924174Z",
+      "parent_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_0",
+      "start_time": "2024-06-08T17:02:57.117258Z",
+      "end_time": "2024-06-08T17:03:08.528311Z",
       "index": 0,
       "api_calls": [
         {
@@ -1964,12 +1773,11 @@
             "_inputs_to_escape": [
               "Input1",
               "Input2"
-            ],
-            "stream": false
+            ]
           },
-          "output": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}",
-          "start_time": 1717836601.420617,
-          "end_time": 1717836610.922013,
+          "output": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"}]}",
+          "start_time": 1717837377.118662,
+          "end_time": 1717837388.526008,
           "error": null,
           "children": [
             {
@@ -1996,14 +1804,14 @@
                 "user": ""
               },
               "output": {
-                "id": "chatcmpl-9XtYQAsPA4hSDprBMuuTfVz3FVGNd",
+                "id": "chatcmpl-9Xtkvh9HpjepugC9ncpAMGCtO61Ps",
                 "choices": [
                   {
                     "finish_reason": "stop",
                     "index": 0,
                     "logprobs": null,
                     "message": {
-                      "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}",
+                      "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"}]}",
                       "role": "assistant",
                       "function_call": null,
                       "tool_calls": null
@@ -2028,14 +1836,14 @@
                     }
                   }
                 ],
-                "created": 1717865402,
+                "created": 1717866177,
                 "model": "gpt-4-32k",
                 "object": "chat.completion",
                 "system_fingerprint": null,
                 "usage": {
-                  "completion_tokens": 212,
+                  "completion_tokens": 211,
                   "prompt_tokens": 1706,
-                  "total_tokens": 1918
+                  "total_tokens": 1917
                 },
                 "prompt_filter_results": [
                   {
@@ -2061,29 +1869,29 @@
                   }
                 ]
               },
-              "start_time": 1717836601.425721,
-              "end_time": 1717836610.921497,
+              "start_time": 1717837377.149735,
+              "end_time": 1717837388.525756,
               "error": null,
               "children": [],
               "node_name": null,
-              "parent_id": "34166b70-fe4b-4e72-9f97-ba18d8a710ea",
-              "id": "718e1f2f-cd02-4c14-91b5-5f35c1b3f675",
+              "parent_id": "bc6b24c3-d382-4061-bc56-a89da212169a",
+              "id": "5dacb9e6-af8f-45d1-bde9-9ed654789417",
               "function": "openai.resources.chat.completions.Completions.create",
               "system_metrics": {
-                "completion_tokens": 212,
+                "completion_tokens": 211,
                 "prompt_tokens": 1706,
-                "total_tokens": 1918
+                "total_tokens": 1917
               }
             }
           ],
           "node_name": "datetimechecking",
           "parent_id": "",
-          "id": "34166b70-fe4b-4e72-9f97-ba18d8a710ea",
+          "id": "bc6b24c3-d382-4061-bc56-a89da212169a",
           "function": "AzureOpenAI.chat",
           "system_metrics": {
-            "completion_tokens": 212,
+            "completion_tokens": 211,
             "prompt_tokens": 1706,
-            "total_tokens": 1918
+            "total_tokens": 1917
           }
         }
       ],
@@ -2094,12 +1902,177 @@
         "stderr": ""
       },
       "system_metrics": {
-        "completion_tokens": 212,
+        "completion_tokens": 211,
         "prompt_tokens": 1706,
-        "total_tokens": 1918,
-        "duration": 9.503681
+        "total_tokens": 1917,
+        "duration": 11.411053
       },
-      "result": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}",
+      "result": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"}]}",
+      "message_format": "basic"
+    },
+    {
+      "node": "locationchecking",
+      "flow_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47",
+      "run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_locationchecking_0",
+      "status": "Completed",
+      "inputs": {
+        "deployment_name": "gpt-4-32k-demo",
+        "temperature": 0.1,
+        "Input": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"}]}",
+        "examples": []
+      },
+      "output": "{\"type of discrepancy\": [\n    {\"sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"\n    }\n  ]\n}",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "59a6409c-64af-4c11-b735-df91d9eb3e47_0",
+      "start_time": "2024-06-08T17:03:08.529378Z",
+      "end_time": "2024-06-08T17:03:16.004950Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.chat",
+          "type": "Function",
+          "inputs": {
+            "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to LOCATION in the given inputs. \nYou need to evaluate if the locations in Input2 is consistent with the locations in Input1.\nTaking Input1 as the ground truth, identify the locations in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding locations in Input2 and comparing if each of these locations exist and correspond to \nwhat is given in Input1.\nIf a location present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a location in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput: {{ex.input}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput: {{Input}}\nOutput:\n",
+            "deployment_name": "gpt-4-32k-demo",
+            "temperature": 0.1,
+            "Input": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"}]}",
+            "examples": [],
+            "stream": false
+          },
+          "output": "{\"type of discrepancy\": [\n    {\"sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"\n    }\n  ]\n}",
+          "start_time": 1717837388.529538,
+          "end_time": 1717837396.002717,
+          "error": null,
+          "children": [
+            {
+              "name": "openai_chat",
+              "type": "LLM",
+              "inputs": {
+                "model": "gpt-4-32k-demo",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to LOCATION in the given inputs. \nYou need to evaluate if the locations in Input2 is consistent with the locations in Input1.\nTaking Input1 as the ground truth, identify the locations in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding locations in Input2 and comparing if each of these locations exist and correspond to \nwhat is given in Input1.\nIf a location present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a location in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:"
+                  },
+                  {
+                    "role": "user",
+                    "content": "Input: Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"}]}\nOutput:"
+                  }
+                ],
+                "temperature": 0.1,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "user": ""
+              },
+              "output": {
+                "id": "chatcmpl-9Xtl6yJUCPjUY4awJ34oDGQUfuxU6",
+                "choices": [
+                  {
+                    "finish_reason": "stop",
+                    "index": 0,
+                    "logprobs": null,
+                    "message": {
+                      "content": "{\"type of discrepancy\": [\n    {\"sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"\n    }\n  ]\n}",
+                      "role": "assistant",
+                      "function_call": null,
+                      "tool_calls": null
+                    },
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "created": 1717866188,
+                "model": "gpt-4-32k",
+                "object": "chat.completion",
+                "system_fingerprint": null,
+                "usage": {
+                  "completion_tokens": 139,
+                  "prompt_tokens": 550,
+                  "total_tokens": 689
+                },
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ]
+              },
+              "start_time": 1717837388.533286,
+              "end_time": 1717837396.002433,
+              "error": null,
+              "children": [],
+              "node_name": null,
+              "parent_id": "1278647c-e7b3-48d0-a485-86227625b133",
+              "id": "37726cef-ecaa-489c-8348-3e71ee50435f",
+              "function": "openai.resources.chat.completions.Completions.create",
+              "system_metrics": {
+                "completion_tokens": 139,
+                "prompt_tokens": 550,
+                "total_tokens": 689
+              }
+            }
+          ],
+          "node_name": "locationchecking",
+          "parent_id": "",
+          "id": "1278647c-e7b3-48d0-a485-86227625b133",
+          "function": "AzureOpenAI.chat",
+          "system_metrics": {
+            "completion_tokens": 139,
+            "prompt_tokens": 550,
+            "total_tokens": 689
+          }
+        }
+      ],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "completion_tokens": 139,
+        "prompt_tokens": 550,
+        "total_tokens": 689,
+        "duration": 7.475572
+      },
+      "result": "{\"type of discrepancy\": [\n    {\"sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The date of Putin's state visit to China in Sentence2 (May 1-2) does not match the date in Sentence1 (May 16-17).\"\n    }\n  ]\n}",
       "message_format": "basic"
     }
   ]

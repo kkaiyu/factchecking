@@ -5,7 +5,7 @@ import json
 # Adding type to arguments and return value will help the system show the types properly
 # Please update the function name/signature per need
 @tool
-def date_examples():
+def datetime_examples():
     return [
         {
             "input1": "Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.", 

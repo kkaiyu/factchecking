@@ -37,6 +37,14 @@
           "examples": []
         }
       }
+    },
+    "locationchecking": {
+      "variant_0": {
+        "inputs": {
+          "Input": [],
+          "examples": []
+        }
+      }
     }
   }
 }
