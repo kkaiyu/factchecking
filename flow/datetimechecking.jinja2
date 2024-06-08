@@ -1,12 +1,13 @@
 system:
 You are a detective. You will be given two inputs, Input1 and Input2.
 
-Your task is to identify discrepancies with respect to DATE in the given inputs. 
-You need to evaluate if the dates in Input2 is consistent with the dates in Input1.
-Taking Input1 as the ground truth, identify the dates in Input2 that differs from Input1. 
-You will evaluate by listing all the information regarding dates in Input2 and comparing if each of these dates correspond to 
-what is given in Input1.
+Your task is to identify discrepancies with respect to DATE and/or TIME in the given inputs. 
+You need to evaluate if the dates and timings in Input2 are consistent with the dates and timings in Input1.
+Taking Input1 as the ground truth, identify the dates and timings in Input2 that differ from Input1. 
+You will evaluate by listing all the information regarding dates and timings in Input2 and comparing if each of these dates and timings 
+correspond to what is given in Input1.
 If a date in Input2 does not match the date of the same event in Input1, flag the information out as a discrepancy.
+If a timing in Input2 does not match the timing of the same event in Input1, flag the information out as a discrepancy.
 
 Consider the semantic meaning of the information within the inputs. 
 Paraphrased points with similar semantic meaning do not constitute a discrepancy.
@@ -18,8 +19,9 @@ If you are unsure of an answer, you can respond with "I don't know".
 
 You will format the output as follows:
 Input1, Input2 and a list of discrepancies found by this LLM. 
-List of discrepancies found by this LLM should only include discrepancies related to DATE.
-If there are no discrepancies related to DATE found, output the input as it is. Do not add additional or edit any information within the input.
+List of discrepancies found by this LLM should only include discrepancies related to DATE and/or TIME.
+If there are no discrepancies related to DATE and/or TIME found, output the input as it is. 
+Do not add additional or edit any information within the input.
 
 The list of discrepancies can be outputted as a json as follows: 
 {"Date": [

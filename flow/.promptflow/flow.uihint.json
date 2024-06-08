@@ -31,7 +31,7 @@
         }
       }
     },
-    "datechecking": {
+    "datetimechecking": {
       "variant_0": {
         "inputs": {
           "examples": []
