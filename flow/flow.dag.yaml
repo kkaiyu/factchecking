@@ -1,10 +1,14 @@
 inputs:
   input1:
     type: string
-    default: ""
+    default: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will
+      pay a state visit to China on May 16-17 as his first foreign trip after
+      taking office,” the Kremlin said.
   input2:
     type: string
-    default: ""
+    default: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will
+      pay a state visit to China on May 1-2 as his first foreign trip after
+      taking office,” the Kremlin said.
 outputs:
   datetimeoutput:
     type: string
@@ -29,18 +33,6 @@ nodes:
     type: code
     path: datetimeexamples.py
   inputs: {}
-- name: timechecking
-  type: llm
-  source:
-    type: code
-    path: timechecking.jinja2
-  inputs:
-    deployment_name: gpt-4-32k-demo
-    temperature: 0.1
-    Input1: ${inputs.input1}
-    Input2: ${inputs.input2}
-  connection: kkaiyu
-  api: chat
 - name: locationchecking
   type: llm
   source:

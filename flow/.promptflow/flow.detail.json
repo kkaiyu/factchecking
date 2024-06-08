@@ -1,0 +1,2106 @@
+{
+  "flow_runs": [
+    {
+      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
+      "status": "Completed",
+      "error": null,
+      "inputs": {
+        "input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+        "input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said."
+      },
+      "output": {
+        "datetimeoutput": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}"
+      },
+      "metrics": null,
+      "request": null,
+      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
+      "root_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
+      "source_run_id": null,
+      "flow_id": "default_flow_id",
+      "start_time": "2024-06-08T16:50:01.356542Z",
+      "end_time": "2024-06-08T16:50:10.925197Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "flow",
+          "node_name": "flow",
+          "type": "Flow",
+          "start_time": 1717836601.356542,
+          "end_time": 1717836610.925197,
+          "children": [
+            {
+              "name": "date_examples",
+              "type": "Function",
+              "inputs": {},
+              "output": [
+                {
+                  "input1": "Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.",
+                  "input2": "Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.",
+                  "output": "Input1: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.\n\nInput2: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership."
+                },
+                {
+                  "input1": "Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.",
+                  "input2": "Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.",
+                  "output": "Input1: Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\n\nInput2: Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\n\n{\"DateTime\": [{\"Sentence1\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Sentence2\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Reason\": \"The date of the attack in Sentence2 (April 7) does not match the date in Sentence1 (May 17).\"}]}"
+                },
+                {
+                  "input1": "More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.",
+                  "input2": "More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.",
+                  "output": "Input1: More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.\n\nInput2: More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.\n\n{\"DateTime\": [{\"Sentence1\": \"More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024.\", \"Sentence2\": \"More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018.\", \"Reason\": \"Sentence2 states the automated lanes were installed in 2015 and more to be set up in 2018, whereas Sentence1 states 2023 and 2024 respectively.\"}, {\"Sentence1\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2026.\", \"Sentence2\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2020.\", \"Reason\": \"Sentence2 states the installation will be completed by 2026, whereas Sentence2 states it will be completed by 2020.\"}]}"
+                },
+                {
+                  "input1": "The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.",
+                  "input2": "The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.",
+                  "output": "Input1: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.\n\nInput2: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.\n\n{\"DateTime\": [{\"Sentence1\": \"The incident reportedly took place in High Street before 11.30pm on May 4.\", \"Sentence2\": \"The incident reportedly took place in High Street before 12.45pm on June 19.\", \"Reason\": \"The date and time of the incident in Sentence2 (June 19, 12.45pm) does not match with the date and time in Sentence1 (May 4, 11.30pm).\"}]}"
+                }
+              ],
+              "start_time": 1717836601.357876,
+              "end_time": 1717836601.358993,
+              "error": null,
+              "children": [],
+              "node_name": "datetimeexamples",
+              "parent_id": "",
+              "id": "220e788c-4df0-4629-bfae-7c5b2875591e",
+              "function": "date_examples",
+              "system_metrics": {}
+            },
+            {
+              "name": "AzureOpenAI.chat",
+              "type": "Function",
+              "inputs": {
+                "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to LOCATION in the given inputs. \nYou need to evaluate if the locations in Input2 is consistent with the locations in Input1.\nTaking Input1 as the ground truth, identify the locations in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding locations in Input2 and comparing if each of these locations exist and correspond to \nwhat is given in Input1.\nIf a location present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a location in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n",
+                "deployment_name": "gpt-4-32k-demo",
+                "temperature": 0.1,
+                "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+                "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+                "_inputs_to_escape": [
+                  "Input1",
+                  "Input2"
+                ]
+              },
+              "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Putin's visit to China in Input2 do not match with the dates given in Input1\"\n    },\n  ]\n}",
+              "start_time": 1717836601.359884,
+              "end_time": 1717836607.676996,
+              "error": null,
+              "children": [
+                {
+                  "name": "openai_chat",
+                  "type": "LLM",
+                  "inputs": {
+                    "model": "gpt-4-32k-demo",
+                    "messages": [
+                      {
+                        "role": "system",
+                        "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to LOCATION in the given inputs. \nYou need to evaluate if the locations in Input2 is consistent with the locations in Input1.\nTaking Input1 as the ground truth, identify the locations in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding locations in Input2 and comparing if each of these locations exist and correspond to \nwhat is given in Input1.\nIf a location present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a location in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:"
+                      },
+                      {
+                        "role": "user",
+                        "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                      }
+                    ],
+                    "temperature": 0.1,
+                    "top_p": 1.0,
+                    "n": 1,
+                    "stream": false,
+                    "presence_penalty": 0.0,
+                    "frequency_penalty": 0.0,
+                    "user": ""
+                  },
+                  "output": {
+                    "id": "chatcmpl-9XtYQQ5oSypWF9kKiWYqj6nk2MQoV",
+                    "choices": [
+                      {
+                        "finish_reason": "stop",
+                        "index": 0,
+                        "logprobs": null,
+                        "message": {
+                          "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Putin's visit to China in Input2 do not match with the dates given in Input1\"\n    },\n  ]\n}",
+                          "role": "assistant",
+                          "function_call": null,
+                          "tool_calls": null
+                        },
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ],
+                    "created": 1717865402,
+                    "model": "gpt-4-32k",
+                    "object": "chat.completion",
+                    "system_fingerprint": null,
+                    "usage": {
+                      "completion_tokens": 123,
+                      "prompt_tokens": 419,
+                      "total_tokens": 542
+                    },
+                    "prompt_filter_results": [
+                      {
+                        "prompt_index": 0,
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "start_time": 1717836601.363429,
+                  "end_time": 1717836607.676358,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "2f593969-05e5-49e3-b634-961ac582b6aa",
+                  "id": "ec030458-1099-4fa7-85dc-a20fc7d358b4",
+                  "function": "openai.resources.chat.completions.Completions.create",
+                  "system_metrics": {
+                    "completion_tokens": 123,
+                    "prompt_tokens": 419,
+                    "total_tokens": 542
+                  }
+                }
+              ],
+              "node_name": "locationchecking",
+              "parent_id": "",
+              "id": "2f593969-05e5-49e3-b634-961ac582b6aa",
+              "function": "AzureOpenAI.chat",
+              "system_metrics": {
+                "completion_tokens": 123,
+                "prompt_tokens": 419,
+                "total_tokens": 542
+              }
+            },
+            {
+              "name": "AzureOpenAI.chat",
+              "type": "Function",
+              "inputs": {
+                "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to OBJECTS in the given inputs. People are not objects.\nYou need to evaluate if the objects in Input2 is consistent with the objects in Input1.\nTaking Input1 as the ground truth, identify the objects in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding objects in Input2 and comparing if each of these objects correspond to \nwhat is given in Input1. Consider the context in which these objects are present.\nIf an object present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf an object in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n",
+                "deployment_name": "gpt-4-32k-demo",
+                "temperature": 0.1,
+                "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+                "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+                "_inputs_to_escape": [
+                  "Input1",
+                  "Input2"
+                ]
+              },
+              "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China in Input2 do not match with the dates given in Input1.\"\n    },\n  ]\n}",
+              "start_time": 1717836601.369468,
+              "end_time": 1717836607.415458,
+              "error": null,
+              "children": [
+                {
+                  "name": "openai_chat",
+                  "type": "LLM",
+                  "inputs": {
+                    "model": "gpt-4-32k-demo",
+                    "messages": [
+                      {
+                        "role": "system",
+                        "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to OBJECTS in the given inputs. People are not objects.\nYou need to evaluate if the objects in Input2 is consistent with the objects in Input1.\nTaking Input1 as the ground truth, identify the objects in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding objects in Input2 and comparing if each of these objects correspond to \nwhat is given in Input1. Consider the context in which these objects are present.\nIf an object present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf an object in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:"
+                      },
+                      {
+                        "role": "user",
+                        "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                      }
+                    ],
+                    "temperature": 0.1,
+                    "top_p": 1.0,
+                    "n": 1,
+                    "stream": false,
+                    "presence_penalty": 0.0,
+                    "frequency_penalty": 0.0,
+                    "user": ""
+                  },
+                  "output": {
+                    "id": "chatcmpl-9XtYQQhR9beCiDeK3BJPYeWHgPNt7",
+                    "choices": [
+                      {
+                        "finish_reason": "stop",
+                        "index": 0,
+                        "logprobs": null,
+                        "message": {
+                          "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China in Input2 do not match with the dates given in Input1.\"\n    },\n  ]\n}",
+                          "role": "assistant",
+                          "function_call": null,
+                          "tool_calls": null
+                        },
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ],
+                    "created": 1717865402,
+                    "model": "gpt-4-32k",
+                    "object": "chat.completion",
+                    "system_fingerprint": null,
+                    "usage": {
+                      "completion_tokens": 123,
+                      "prompt_tokens": 432,
+                      "total_tokens": 555
+                    },
+                    "prompt_filter_results": [
+                      {
+                        "prompt_index": 0,
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "start_time": 1717836601.380505,
+                  "end_time": 1717836607.415253,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "60450d23-89b1-424c-8eec-46558b1d3588",
+                  "id": "2b56ccbb-05c2-4caf-b595-61935ae411cc",
+                  "function": "openai.resources.chat.completions.Completions.create",
+                  "system_metrics": {
+                    "completion_tokens": 123,
+                    "prompt_tokens": 432,
+                    "total_tokens": 555
+                  }
+                }
+              ],
+              "node_name": "objectchecking",
+              "parent_id": "",
+              "id": "60450d23-89b1-424c-8eec-46558b1d3588",
+              "function": "AzureOpenAI.chat",
+              "system_metrics": {
+                "completion_tokens": 123,
+                "prompt_tokens": 432,
+                "total_tokens": 555
+              }
+            },
+            {
+              "name": "AzureOpenAI.chat",
+              "type": "Function",
+              "inputs": {
+                "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to PERSON in the given inputs. \nYou need to evaluate if the description about all persons in Input2 is consistent with the descriptions about all persons in Input1.\nTaking Input1 as the ground truth, identify the description about all persons in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding a person in Input2 and comparing if each of these description exist and correspond to \nwhat is given about the same person in Input1.\nConsider these attributes of a person: Name, Date of Birth, Nationality, Physical Features (eg. height, weight, hair colour), Indentifying Marks (eg. tattoos, scars), Clothing and Accessories.\nIf a person present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of a person present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of a person in Input2 does not match the description of the same person in Input1, flag the information out as a discrepancy.\nIf the description of a person in Input2 matches the description of a different person in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n\n",
+                "deployment_name": "gpt-4-32k-demo",
+                "temperature": 0.1,
+                "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+                "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+                "_inputs_to_escape": [
+                  "Input1",
+                  "Input2"
+                ]
+              },
+              "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match in both sentences.\"\n    },\n  ]\n}",
+              "start_time": 1717836601.394166,
+              "end_time": 1717836608.507478,
+              "error": null,
+              "children": [
+                {
+                  "name": "openai_chat",
+                  "type": "LLM",
+                  "inputs": {
+                    "model": "gpt-4-32k-demo",
+                    "messages": [
+                      {
+                        "role": "system",
+                        "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to PERSON in the given inputs. \nYou need to evaluate if the description about all persons in Input2 is consistent with the descriptions about all persons in Input1.\nTaking Input1 as the ground truth, identify the description about all persons in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding a person in Input2 and comparing if each of these description exist and correspond to \nwhat is given about the same person in Input1.\nConsider these attributes of a person: Name, Date of Birth, Nationality, Physical Features (eg. height, weight, hair colour), Indentifying Marks (eg. tattoos, scars), Clothing and Accessories.\nIf a person present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of a person present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of a person in Input2 does not match the description of the same person in Input1, flag the information out as a discrepancy.\nIf the description of a person in Input2 matches the description of a different person in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:"
+                      },
+                      {
+                        "role": "user",
+                        "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                      }
+                    ],
+                    "temperature": 0.1,
+                    "top_p": 1.0,
+                    "n": 1,
+                    "stream": false,
+                    "presence_penalty": 0.0,
+                    "frequency_penalty": 0.0,
+                    "user": ""
+                  },
+                  "output": {
+                    "id": "chatcmpl-9XtYQAPZE3eU7Hq2Jc80ncVuwHswX",
+                    "choices": [
+                      {
+                        "finish_reason": "stop",
+                        "index": 0,
+                        "logprobs": null,
+                        "message": {
+                          "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match in both sentences.\"\n    },\n  ]\n}",
+                          "role": "assistant",
+                          "function_call": null,
+                          "tool_calls": null
+                        },
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ],
+                    "created": 1717865402,
+                    "model": "gpt-4-32k",
+                    "object": "chat.completion",
+                    "system_fingerprint": null,
+                    "usage": {
+                      "completion_tokens": 118,
+                      "prompt_tokens": 542,
+                      "total_tokens": 660
+                    },
+                    "prompt_filter_results": [
+                      {
+                        "prompt_index": 0,
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "start_time": 1717836601.398906,
+                  "end_time": 1717836608.50716,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "52a30538-e6e1-4b13-b5d4-4f743f8ce74a",
+                  "id": "fc0e3479-8993-42b0-a74c-8db38de92a49",
+                  "function": "openai.resources.chat.completions.Completions.create",
+                  "system_metrics": {
+                    "completion_tokens": 118,
+                    "prompt_tokens": 542,
+                    "total_tokens": 660
+                  }
+                }
+              ],
+              "node_name": "personchecking",
+              "parent_id": "",
+              "id": "52a30538-e6e1-4b13-b5d4-4f743f8ce74a",
+              "function": "AzureOpenAI.chat",
+              "system_metrics": {
+                "completion_tokens": 118,
+                "prompt_tokens": 542,
+                "total_tokens": 660
+              }
+            },
+            {
+              "name": "AzureOpenAI.chat",
+              "type": "Function",
+              "inputs": {
+                "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to EVENT DESCRIPTION in the given inputs. Actions do not constitute as event desciptions.\nYou need to evaluate if the description of all events in Input2 is consistent with the descriptions of all events in Input1.\nTaking Input1 as the ground truth, identify the description of all events in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding an event in Input2 and comparing if each of these description exist and correspond to \nwhat is given about the same event in Input1. Consider the context of the event.\nIf an event present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of an event present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of an event in Input2 does not match the description of the same event in Input1, flag the information out as a discrepancy.\nIf the context of an event in Input2 does not match the context of the same event in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n",
+                "deployment_name": "gpt-4-32k-demo",
+                "temperature": 0.1,
+                "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+                "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+                "_inputs_to_escape": [
+                  "Input1",
+                  "Input2"
+                ]
+              },
+              "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match. In Input1, the visit is scheduled for May 16-17, while in Input2, the visit is scheduled for May 1-2.\"\n    },\n  ]\n}",
+              "start_time": 1717836601.404228,
+              "end_time": 1717836607.410091,
+              "error": null,
+              "children": [
+                {
+                  "name": "openai_chat",
+                  "type": "LLM",
+                  "inputs": {
+                    "model": "gpt-4-32k-demo",
+                    "messages": [
+                      {
+                        "role": "system",
+                        "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to EVENT DESCRIPTION in the given inputs. Actions do not constitute as event desciptions.\nYou need to evaluate if the description of all events in Input2 is consistent with the descriptions of all events in Input1.\nTaking Input1 as the ground truth, identify the description of all events in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding an event in Input2 and comparing if each of these description exist and correspond to \nwhat is given about the same event in Input1. Consider the context of the event.\nIf an event present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of an event present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of an event in Input2 does not match the description of the same event in Input1, flag the information out as a discrepancy.\nIf the context of an event in Input2 does not match the context of the same event in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:"
+                      },
+                      {
+                        "role": "user",
+                        "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                      }
+                    ],
+                    "temperature": 0.1,
+                    "top_p": 1.0,
+                    "n": 1,
+                    "stream": false,
+                    "presence_penalty": 0.0,
+                    "frequency_penalty": 0.0,
+                    "user": ""
+                  },
+                  "output": {
+                    "id": "chatcmpl-9XtYQoCVWwUrl8O8dxoLWNZlU7qs2",
+                    "choices": [
+                      {
+                        "finish_reason": "stop",
+                        "index": 0,
+                        "logprobs": null,
+                        "message": {
+                          "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match. In Input1, the visit is scheduled for May 16-17, while in Input2, the visit is scheduled for May 1-2.\"\n    },\n  ]\n}",
+                          "role": "assistant",
+                          "function_call": null,
+                          "tool_calls": null
+                        },
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ],
+                    "created": 1717865402,
+                    "model": "gpt-4-32k",
+                    "object": "chat.completion",
+                    "system_fingerprint": null,
+                    "usage": {
+                      "completion_tokens": 146,
+                      "prompt_tokens": 518,
+                      "total_tokens": 664
+                    },
+                    "prompt_filter_results": [
+                      {
+                        "prompt_index": 0,
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "start_time": 1717836601.407789,
+                  "end_time": 1717836607.409023,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "78b05e82-9887-401b-b6b0-b24813bed9c4",
+                  "id": "5702e167-4bd0-47e4-a283-0591b5d7af9a",
+                  "function": "openai.resources.chat.completions.Completions.create",
+                  "system_metrics": {
+                    "completion_tokens": 146,
+                    "prompt_tokens": 518,
+                    "total_tokens": 664
+                  }
+                }
+              ],
+              "node_name": "eventchecking",
+              "parent_id": "",
+              "id": "78b05e82-9887-401b-b6b0-b24813bed9c4",
+              "function": "AzureOpenAI.chat",
+              "system_metrics": {
+                "completion_tokens": 146,
+                "prompt_tokens": 518,
+                "total_tokens": 664
+              }
+            },
+            {
+              "name": "AzureOpenAI.chat",
+              "type": "Function",
+              "inputs": {
+                "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to ACTION in the given inputs. \nYou need to evaluate if the actions in Input2 is consistent with the actions in Input1.\nTaking Input1 as the ground truth, identify the actions in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding actions taken in Input2 and comparing if each of these action exist and correspond to \nwhat is given in Input1. Consider the context of the action.\nIf an action present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf an action in Input2 does not match the action given the same context in Input1, flag the information out as a discrepancy.\nIf the context of an action in Input2 does not match the context of the same action in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\n######!!!!!! format the whole thing as a json where each discrepancy is a parameter\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n\n",
+                "deployment_name": "gpt-4-32k-demo",
+                "temperature": 0.1,
+                "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+                "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+                "_inputs_to_escape": [
+                  "Input1",
+                  "Input2"
+                ]
+              },
+              "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China by Vladimir Putin are different in both sentences.\"\n    }\n  ]\n}",
+              "start_time": 1717836601.412899,
+              "end_time": 1717836608.49655,
+              "error": null,
+              "children": [
+                {
+                  "name": "openai_chat",
+                  "type": "LLM",
+                  "inputs": {
+                    "model": "gpt-4-32k-demo",
+                    "messages": [
+                      {
+                        "role": "system",
+                        "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to ACTION in the given inputs. \nYou need to evaluate if the actions in Input2 is consistent with the actions in Input1.\nTaking Input1 as the ground truth, identify the actions in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding actions taken in Input2 and comparing if each of these action exist and correspond to \nwhat is given in Input1. Consider the context of the action.\nIf an action present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf an action in Input2 does not match the action given the same context in Input1, flag the information out as a discrepancy.\nIf the context of an action in Input2 does not match the context of the same action in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\n######!!!!!! format the whole thing as a json where each discrepancy is a parameter\n\nHere are a few examples:"
+                      },
+                      {
+                        "role": "user",
+                        "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                      }
+                    ],
+                    "temperature": 0.1,
+                    "top_p": 1.0,
+                    "n": 1,
+                    "stream": false,
+                    "presence_penalty": 0.0,
+                    "frequency_penalty": 0.0,
+                    "user": ""
+                  },
+                  "output": {
+                    "id": "chatcmpl-9XtYQuUFvf1JR93ALCexb9wlOhr2L",
+                    "choices": [
+                      {
+                        "finish_reason": "stop",
+                        "index": 0,
+                        "logprobs": null,
+                        "message": {
+                          "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China by Vladimir Putin are different in both sentences.\"\n    }\n  ]\n}",
+                          "role": "assistant",
+                          "function_call": null,
+                          "tool_calls": null
+                        },
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ],
+                    "created": 1717865402,
+                    "model": "gpt-4-32k",
+                    "object": "chat.completion",
+                    "system_fingerprint": null,
+                    "usage": {
+                      "completion_tokens": 118,
+                      "prompt_tokens": 480,
+                      "total_tokens": 598
+                    },
+                    "prompt_filter_results": [
+                      {
+                        "prompt_index": 0,
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "start_time": 1717836601.415833,
+                  "end_time": 1717836608.495945,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "0ea56983-aa3d-4282-a40e-a561f6bce80d",
+                  "id": "d70d0313-a8c1-40f1-991f-8b4ec74f80b1",
+                  "function": "openai.resources.chat.completions.Completions.create",
+                  "system_metrics": {
+                    "completion_tokens": 118,
+                    "prompt_tokens": 480,
+                    "total_tokens": 598
+                  }
+                }
+              ],
+              "node_name": "actionchecking",
+              "parent_id": "",
+              "id": "0ea56983-aa3d-4282-a40e-a561f6bce80d",
+              "function": "AzureOpenAI.chat",
+              "system_metrics": {
+                "completion_tokens": 118,
+                "prompt_tokens": 480,
+                "total_tokens": 598
+              }
+            },
+            {
+              "name": "AzureOpenAI.chat",
+              "type": "Function",
+              "inputs": {
+                "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to DATE and/or TIME in the given inputs. \nYou need to evaluate if the dates and timings in Input2 are consistent with the dates and timings in Input1.\nTaking Input1 as the ground truth, identify the dates and timings in Input2 that differ from Input1. \nYou will evaluate by listing all the information regarding dates and timings in Input2 and comparing if each of these dates and timings \ncorrespond to what is given in Input1.\nIf a date in Input2 does not match the date of the same event in Input1, flag the information out as a discrepancy.\nIf a timing in Input2 does not match the timing of the same event in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output as follows:\nInput1, Input2 and a list of discrepancies found by this LLM. \nList of discrepancies found by this LLM should only include discrepancies related to DATE and/or TIME.\nIf there are no discrepancies related to DATE and/or TIME found, output the input as it is. \nDo not add additional or edit any information within the input.\n\nThe list of discrepancies can be outputted as a json as follows: \n{\"DateTime\": [\n    {\"Sentence1\": \"inconsistent sentence from Input1\",\n     \"Sentence2\": \"inconsistent sentence from Input2\",\n     \"Reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nThe reason given should be concise.\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n",
+                "deployment_name": "gpt-4-32k-demo",
+                "temperature": 0.1,
+                "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+                "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+                "examples": [
+                  {
+                    "input1": "Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.",
+                    "input2": "Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.",
+                    "output": "Input1: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.\n\nInput2: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership."
+                  },
+                  {
+                    "input1": "Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.",
+                    "input2": "Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.",
+                    "output": "Input1: Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\n\nInput2: Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\n\n{\"DateTime\": [{\"Sentence1\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Sentence2\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Reason\": \"The date of the attack in Sentence2 (April 7) does not match the date in Sentence1 (May 17).\"}]}"
+                  },
+                  {
+                    "input1": "More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.",
+                    "input2": "More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.",
+                    "output": "Input1: More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.\n\nInput2: More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.\n\n{\"DateTime\": [{\"Sentence1\": \"More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024.\", \"Sentence2\": \"More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018.\", \"Reason\": \"Sentence2 states the automated lanes were installed in 2015 and more to be set up in 2018, whereas Sentence1 states 2023 and 2024 respectively.\"}, {\"Sentence1\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2026.\", \"Sentence2\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2020.\", \"Reason\": \"Sentence2 states the installation will be completed by 2026, whereas Sentence2 states it will be completed by 2020.\"}]}"
+                  },
+                  {
+                    "input1": "The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.",
+                    "input2": "The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.",
+                    "output": "Input1: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.\n\nInput2: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.\n\n{\"DateTime\": [{\"Sentence1\": \"The incident reportedly took place in High Street before 11.30pm on May 4.\", \"Sentence2\": \"The incident reportedly took place in High Street before 12.45pm on June 19.\", \"Reason\": \"The date and time of the incident in Sentence2 (June 19, 12.45pm) does not match with the date and time in Sentence1 (May 4, 11.30pm).\"}]}"
+                  }
+                ],
+                "_inputs_to_escape": [
+                  "Input1",
+                  "Input2"
+                ],
+                "stream": false
+              },
+              "output": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}",
+              "start_time": 1717836601.420617,
+              "end_time": 1717836610.922013,
+              "error": null,
+              "children": [
+                {
+                  "name": "openai_chat",
+                  "type": "LLM",
+                  "inputs": {
+                    "model": "gpt-4-32k-demo",
+                    "messages": [
+                      {
+                        "role": "system",
+                        "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to DATE and/or TIME in the given inputs. \nYou need to evaluate if the dates and timings in Input2 are consistent with the dates and timings in Input1.\nTaking Input1 as the ground truth, identify the dates and timings in Input2 that differ from Input1. \nYou will evaluate by listing all the information regarding dates and timings in Input2 and comparing if each of these dates and timings \ncorrespond to what is given in Input1.\nIf a date in Input2 does not match the date of the same event in Input1, flag the information out as a discrepancy.\nIf a timing in Input2 does not match the timing of the same event in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output as follows:\nInput1, Input2 and a list of discrepancies found by this LLM. \nList of discrepancies found by this LLM should only include discrepancies related to DATE and/or TIME.\nIf there are no discrepancies related to DATE and/or TIME found, output the input as it is. \nDo not add additional or edit any information within the input.\n\nThe list of discrepancies can be outputted as a json as follows: \n{\"DateTime\": [\n    {\"Sentence1\": \"inconsistent sentence from Input1\",\n     \"Sentence2\": \"inconsistent sentence from Input2\",\n     \"Reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nThe reason given should be concise.\n\nHere are a few examples:\nInput1: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.\nInput2: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.\nOutput: Input1: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.\n\nInput2: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.\nInput1: Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\nInput2: Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\nOutput: Input1: Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\n\nInput2: Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\n\n{\"DateTime\": [{\"Sentence1\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Sentence2\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Reason\": \"The date of the attack in Sentence2 (April 7) does not match the date in Sentence1 (May 17).\"}]}\nInput1: More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.\nInput2: More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.\nOutput: Input1: More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.\n\nInput2: More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.\n\n{\"DateTime\": [{\"Sentence1\": \"More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024.\", \"Sentence2\": \"More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018.\", \"Reason\": \"Sentence2 states the automated lanes were installed in 2015 and more to be set up in 2018, whereas Sentence1 states 2023 and 2024 respectively.\"}, {\"Sentence1\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2026.\", \"Sentence2\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2020.\", \"Reason\": \"Sentence2 states the installation will be completed by 2026, whereas Sentence2 states it will be completed by 2020.\"}]}\nInput1: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.\nInput2: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.\nOutput: Input1: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.\n\nInput2: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.\n\n{\"DateTime\": [{\"Sentence1\": \"The incident reportedly took place in High Street before 11.30pm on May 4.\", \"Sentence2\": \"The incident reportedly took place in High Street before 12.45pm on June 19.\", \"Reason\": \"The date and time of the incident in Sentence2 (June 19, 12.45pm) does not match with the date and time in Sentence1 (May 4, 11.30pm).\"}]}"
+                      },
+                      {
+                        "role": "user",
+                        "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                      }
+                    ],
+                    "temperature": 0.1,
+                    "top_p": 1.0,
+                    "n": 1,
+                    "stream": false,
+                    "presence_penalty": 0.0,
+                    "frequency_penalty": 0.0,
+                    "user": ""
+                  },
+                  "output": {
+                    "id": "chatcmpl-9XtYQAsPA4hSDprBMuuTfVz3FVGNd",
+                    "choices": [
+                      {
+                        "finish_reason": "stop",
+                        "index": 0,
+                        "logprobs": null,
+                        "message": {
+                          "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}",
+                          "role": "assistant",
+                          "function_call": null,
+                          "tool_calls": null
+                        },
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ],
+                    "created": 1717865402,
+                    "model": "gpt-4-32k",
+                    "object": "chat.completion",
+                    "system_fingerprint": null,
+                    "usage": {
+                      "completion_tokens": 212,
+                      "prompt_tokens": 1706,
+                      "total_tokens": 1918
+                    },
+                    "prompt_filter_results": [
+                      {
+                        "prompt_index": 0,
+                        "content_filter_results": {
+                          "hate": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "self_harm": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "sexual": {
+                            "filtered": false,
+                            "severity": "safe"
+                          },
+                          "violence": {
+                            "filtered": false,
+                            "severity": "safe"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  "start_time": 1717836601.425721,
+                  "end_time": 1717836610.921497,
+                  "error": null,
+                  "children": [],
+                  "node_name": null,
+                  "parent_id": "34166b70-fe4b-4e72-9f97-ba18d8a710ea",
+                  "id": "718e1f2f-cd02-4c14-91b5-5f35c1b3f675",
+                  "function": "openai.resources.chat.completions.Completions.create",
+                  "system_metrics": {
+                    "completion_tokens": 212,
+                    "prompt_tokens": 1706,
+                    "total_tokens": 1918
+                  }
+                }
+              ],
+              "node_name": "datetimechecking",
+              "parent_id": "",
+              "id": "34166b70-fe4b-4e72-9f97-ba18d8a710ea",
+              "function": "AzureOpenAI.chat",
+              "system_metrics": {
+                "completion_tokens": 212,
+                "prompt_tokens": 1706,
+                "total_tokens": 1918
+              }
+            }
+          ],
+          "system_metrics": {
+            "duration": 9.568655,
+            "prompt_tokens": 4097,
+            "completion_tokens": 840,
+            "total_tokens": 4937
+          },
+          "inputs": {
+            "input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+            "input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said."
+          },
+          "output": {
+            "datetimeoutput": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}"
+          },
+          "error": null
+        }
+      ],
+      "name": "",
+      "description": "",
+      "tags": null,
+      "system_metrics": {
+        "duration": 9.568655,
+        "prompt_tokens": 4097,
+        "completion_tokens": 840,
+        "total_tokens": 4937
+      },
+      "result": {
+        "datetimeoutput": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}"
+      },
+      "upload_metrics": false,
+      "otel_trace_id": "0x0727fc8c814665341890063fd354efdf",
+      "message_format": "basic"
+    }
+  ],
+  "node_runs": [
+    {
+      "node": "datetimeexamples",
+      "flow_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
+      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_datetimeexamples_0",
+      "status": "Completed",
+      "inputs": {},
+      "output": [
+        {
+          "input1": "Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.",
+          "input2": "Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.",
+          "output": "Input1: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.\n\nInput2: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership."
+        },
+        {
+          "input1": "Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.",
+          "input2": "Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.",
+          "output": "Input1: Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\n\nInput2: Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\n\n{\"DateTime\": [{\"Sentence1\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Sentence2\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Reason\": \"The date of the attack in Sentence2 (April 7) does not match the date in Sentence1 (May 17).\"}]}"
+        },
+        {
+          "input1": "More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.",
+          "input2": "More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.",
+          "output": "Input1: More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.\n\nInput2: More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.\n\n{\"DateTime\": [{\"Sentence1\": \"More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024.\", \"Sentence2\": \"More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018.\", \"Reason\": \"Sentence2 states the automated lanes were installed in 2015 and more to be set up in 2018, whereas Sentence1 states 2023 and 2024 respectively.\"}, {\"Sentence1\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2026.\", \"Sentence2\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2020.\", \"Reason\": \"Sentence2 states the installation will be completed by 2026, whereas Sentence2 states it will be completed by 2020.\"}]}"
+        },
+        {
+          "input1": "The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.",
+          "input2": "The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.",
+          "output": "Input1: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.\n\nInput2: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.\n\n{\"DateTime\": [{\"Sentence1\": \"The incident reportedly took place in High Street before 11.30pm on May 4.\", \"Sentence2\": \"The incident reportedly took place in High Street before 12.45pm on June 19.\", \"Reason\": \"The date and time of the incident in Sentence2 (June 19, 12.45pm) does not match with the date and time in Sentence1 (May 4, 11.30pm).\"}]}"
+        }
+      ],
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
+      "start_time": "2024-06-08T16:50:01.357796Z",
+      "end_time": "2024-06-08T16:50:01.359476Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "date_examples",
+          "type": "Function",
+          "inputs": {},
+          "output": [
+            {
+              "input1": "Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.",
+              "input2": "Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.",
+              "output": "Input1: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.\n\nInput2: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership."
+            },
+            {
+              "input1": "Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.",
+              "input2": "Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.",
+              "output": "Input1: Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\n\nInput2: Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\n\n{\"DateTime\": [{\"Sentence1\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Sentence2\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Reason\": \"The date of the attack in Sentence2 (April 7) does not match the date in Sentence1 (May 17).\"}]}"
+            },
+            {
+              "input1": "More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.",
+              "input2": "More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.",
+              "output": "Input1: More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.\n\nInput2: More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.\n\n{\"DateTime\": [{\"Sentence1\": \"More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024.\", \"Sentence2\": \"More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018.\", \"Reason\": \"Sentence2 states the automated lanes were installed in 2015 and more to be set up in 2018, whereas Sentence1 states 2023 and 2024 respectively.\"}, {\"Sentence1\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2026.\", \"Sentence2\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2020.\", \"Reason\": \"Sentence2 states the installation will be completed by 2026, whereas Sentence2 states it will be completed by 2020.\"}]}"
+            },
+            {
+              "input1": "The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.",
+              "input2": "The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.",
+              "output": "Input1: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.\n\nInput2: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.\n\n{\"DateTime\": [{\"Sentence1\": \"The incident reportedly took place in High Street before 11.30pm on May 4.\", \"Sentence2\": \"The incident reportedly took place in High Street before 12.45pm on June 19.\", \"Reason\": \"The date and time of the incident in Sentence2 (June 19, 12.45pm) does not match with the date and time in Sentence1 (May 4, 11.30pm).\"}]}"
+            }
+          ],
+          "start_time": 1717836601.357876,
+          "end_time": 1717836601.358993,
+          "error": null,
+          "children": [],
+          "node_name": "datetimeexamples",
+          "parent_id": "",
+          "id": "220e788c-4df0-4629-bfae-7c5b2875591e",
+          "function": "date_examples",
+          "system_metrics": {}
+        }
+      ],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "duration": 0.00168
+      },
+      "result": [
+        {
+          "input1": "Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.",
+          "input2": "Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.",
+          "output": "Input1: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.\n\nInput2: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership."
+        },
+        {
+          "input1": "Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.",
+          "input2": "Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.",
+          "output": "Input1: Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\n\nInput2: Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\n\n{\"DateTime\": [{\"Sentence1\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Sentence2\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Reason\": \"The date of the attack in Sentence2 (April 7) does not match the date in Sentence1 (May 17).\"}]}"
+        },
+        {
+          "input1": "More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.",
+          "input2": "More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.",
+          "output": "Input1: More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.\n\nInput2: More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.\n\n{\"DateTime\": [{\"Sentence1\": \"More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024.\", \"Sentence2\": \"More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018.\", \"Reason\": \"Sentence2 states the automated lanes were installed in 2015 and more to be set up in 2018, whereas Sentence1 states 2023 and 2024 respectively.\"}, {\"Sentence1\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2026.\", \"Sentence2\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2020.\", \"Reason\": \"Sentence2 states the installation will be completed by 2026, whereas Sentence2 states it will be completed by 2020.\"}]}"
+        },
+        {
+          "input1": "The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.",
+          "input2": "The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.",
+          "output": "Input1: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.\n\nInput2: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.\n\n{\"DateTime\": [{\"Sentence1\": \"The incident reportedly took place in High Street before 11.30pm on May 4.\", \"Sentence2\": \"The incident reportedly took place in High Street before 12.45pm on June 19.\", \"Reason\": \"The date and time of the incident in Sentence2 (June 19, 12.45pm) does not match with the date and time in Sentence1 (May 4, 11.30pm).\"}]}"
+        }
+      ],
+      "message_format": "basic"
+    },
+    {
+      "node": "locationchecking",
+      "flow_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
+      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_locationchecking_0",
+      "status": "Completed",
+      "inputs": {
+        "deployment_name": "gpt-4-32k-demo",
+        "temperature": 0.1,
+        "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+        "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+        "_inputs_to_escape": [
+          "Input1",
+          "Input2"
+        ]
+      },
+      "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Putin's visit to China in Input2 do not match with the dates given in Input1\"\n    },\n  ]\n}",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
+      "start_time": "2024-06-08T16:50:01.359803Z",
+      "end_time": "2024-06-08T16:50:07.682102Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.chat",
+          "type": "Function",
+          "inputs": {
+            "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to LOCATION in the given inputs. \nYou need to evaluate if the locations in Input2 is consistent with the locations in Input1.\nTaking Input1 as the ground truth, identify the locations in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding locations in Input2 and comparing if each of these locations exist and correspond to \nwhat is given in Input1.\nIf a location present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a location in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n",
+            "deployment_name": "gpt-4-32k-demo",
+            "temperature": 0.1,
+            "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+            "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+            "_inputs_to_escape": [
+              "Input1",
+              "Input2"
+            ]
+          },
+          "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Putin's visit to China in Input2 do not match with the dates given in Input1\"\n    },\n  ]\n}",
+          "start_time": 1717836601.359884,
+          "end_time": 1717836607.676996,
+          "error": null,
+          "children": [
+            {
+              "name": "openai_chat",
+              "type": "LLM",
+              "inputs": {
+                "model": "gpt-4-32k-demo",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to LOCATION in the given inputs. \nYou need to evaluate if the locations in Input2 is consistent with the locations in Input1.\nTaking Input1 as the ground truth, identify the locations in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding locations in Input2 and comparing if each of these locations exist and correspond to \nwhat is given in Input1.\nIf a location present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a location in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:"
+                  },
+                  {
+                    "role": "user",
+                    "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                  }
+                ],
+                "temperature": 0.1,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "user": ""
+              },
+              "output": {
+                "id": "chatcmpl-9XtYQQ5oSypWF9kKiWYqj6nk2MQoV",
+                "choices": [
+                  {
+                    "finish_reason": "stop",
+                    "index": 0,
+                    "logprobs": null,
+                    "message": {
+                      "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Putin's visit to China in Input2 do not match with the dates given in Input1\"\n    },\n  ]\n}",
+                      "role": "assistant",
+                      "function_call": null,
+                      "tool_calls": null
+                    },
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "created": 1717865402,
+                "model": "gpt-4-32k",
+                "object": "chat.completion",
+                "system_fingerprint": null,
+                "usage": {
+                  "completion_tokens": 123,
+                  "prompt_tokens": 419,
+                  "total_tokens": 542
+                },
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ]
+              },
+              "start_time": 1717836601.363429,
+              "end_time": 1717836607.676358,
+              "error": null,
+              "children": [],
+              "node_name": null,
+              "parent_id": "2f593969-05e5-49e3-b634-961ac582b6aa",
+              "id": "ec030458-1099-4fa7-85dc-a20fc7d358b4",
+              "function": "openai.resources.chat.completions.Completions.create",
+              "system_metrics": {
+                "completion_tokens": 123,
+                "prompt_tokens": 419,
+                "total_tokens": 542
+              }
+            }
+          ],
+          "node_name": "locationchecking",
+          "parent_id": "",
+          "id": "2f593969-05e5-49e3-b634-961ac582b6aa",
+          "function": "AzureOpenAI.chat",
+          "system_metrics": {
+            "completion_tokens": 123,
+            "prompt_tokens": 419,
+            "total_tokens": 542
+          }
+        }
+      ],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "completion_tokens": 123,
+        "prompt_tokens": 419,
+        "total_tokens": 542,
+        "duration": 6.322299
+      },
+      "result": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Putin's visit to China in Input2 do not match with the dates given in Input1\"\n    },\n  ]\n}",
+      "message_format": "basic"
+    },
+    {
+      "node": "objectchecking",
+      "flow_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
+      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_objectchecking_0",
+      "status": "Completed",
+      "inputs": {
+        "deployment_name": "gpt-4-32k-demo",
+        "temperature": 0.1,
+        "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+        "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+        "_inputs_to_escape": [
+          "Input1",
+          "Input2"
+        ]
+      },
+      "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China in Input2 do not match with the dates given in Input1.\"\n    },\n  ]\n}",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
+      "start_time": "2024-06-08T16:50:01.369365Z",
+      "end_time": "2024-06-08T16:50:07.417691Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.chat",
+          "type": "Function",
+          "inputs": {
+            "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to OBJECTS in the given inputs. People are not objects.\nYou need to evaluate if the objects in Input2 is consistent with the objects in Input1.\nTaking Input1 as the ground truth, identify the objects in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding objects in Input2 and comparing if each of these objects correspond to \nwhat is given in Input1. Consider the context in which these objects are present.\nIf an object present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf an object in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n",
+            "deployment_name": "gpt-4-32k-demo",
+            "temperature": 0.1,
+            "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+            "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+            "_inputs_to_escape": [
+              "Input1",
+              "Input2"
+            ]
+          },
+          "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China in Input2 do not match with the dates given in Input1.\"\n    },\n  ]\n}",
+          "start_time": 1717836601.369468,
+          "end_time": 1717836607.415458,
+          "error": null,
+          "children": [
+            {
+              "name": "openai_chat",
+              "type": "LLM",
+              "inputs": {
+                "model": "gpt-4-32k-demo",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to OBJECTS in the given inputs. People are not objects.\nYou need to evaluate if the objects in Input2 is consistent with the objects in Input1.\nTaking Input1 as the ground truth, identify the objects in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding objects in Input2 and comparing if each of these objects correspond to \nwhat is given in Input1. Consider the context in which these objects are present.\nIf an object present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf an object in Input2 does not match that of Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs.\nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:"
+                  },
+                  {
+                    "role": "user",
+                    "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                  }
+                ],
+                "temperature": 0.1,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "user": ""
+              },
+              "output": {
+                "id": "chatcmpl-9XtYQQhR9beCiDeK3BJPYeWHgPNt7",
+                "choices": [
+                  {
+                    "finish_reason": "stop",
+                    "index": 0,
+                    "logprobs": null,
+                    "message": {
+                      "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China in Input2 do not match with the dates given in Input1.\"\n    },\n  ]\n}",
+                      "role": "assistant",
+                      "function_call": null,
+                      "tool_calls": null
+                    },
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "created": 1717865402,
+                "model": "gpt-4-32k",
+                "object": "chat.completion",
+                "system_fingerprint": null,
+                "usage": {
+                  "completion_tokens": 123,
+                  "prompt_tokens": 432,
+                  "total_tokens": 555
+                },
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ]
+              },
+              "start_time": 1717836601.380505,
+              "end_time": 1717836607.415253,
+              "error": null,
+              "children": [],
+              "node_name": null,
+              "parent_id": "60450d23-89b1-424c-8eec-46558b1d3588",
+              "id": "2b56ccbb-05c2-4caf-b595-61935ae411cc",
+              "function": "openai.resources.chat.completions.Completions.create",
+              "system_metrics": {
+                "completion_tokens": 123,
+                "prompt_tokens": 432,
+                "total_tokens": 555
+              }
+            }
+          ],
+          "node_name": "objectchecking",
+          "parent_id": "",
+          "id": "60450d23-89b1-424c-8eec-46558b1d3588",
+          "function": "AzureOpenAI.chat",
+          "system_metrics": {
+            "completion_tokens": 123,
+            "prompt_tokens": 432,
+            "total_tokens": 555
+          }
+        }
+      ],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "completion_tokens": 123,
+        "prompt_tokens": 432,
+        "total_tokens": 555,
+        "duration": 6.048326
+      },
+      "result": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China in Input2 do not match with the dates given in Input1.\"\n    },\n  ]\n}",
+      "message_format": "basic"
+    },
+    {
+      "node": "personchecking",
+      "flow_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
+      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_personchecking_0",
+      "status": "Completed",
+      "inputs": {
+        "deployment_name": "gpt-4-32k-demo",
+        "temperature": 0.1,
+        "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+        "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+        "_inputs_to_escape": [
+          "Input1",
+          "Input2"
+        ]
+      },
+      "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match in both sentences.\"\n    },\n  ]\n}",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
+      "start_time": "2024-06-08T16:50:01.392999Z",
+      "end_time": "2024-06-08T16:50:08.510820Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.chat",
+          "type": "Function",
+          "inputs": {
+            "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to PERSON in the given inputs. \nYou need to evaluate if the description about all persons in Input2 is consistent with the descriptions about all persons in Input1.\nTaking Input1 as the ground truth, identify the description about all persons in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding a person in Input2 and comparing if each of these description exist and correspond to \nwhat is given about the same person in Input1.\nConsider these attributes of a person: Name, Date of Birth, Nationality, Physical Features (eg. height, weight, hair colour), Indentifying Marks (eg. tattoos, scars), Clothing and Accessories.\nIf a person present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of a person present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of a person in Input2 does not match the description of the same person in Input1, flag the information out as a discrepancy.\nIf the description of a person in Input2 matches the description of a different person in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n\n",
+            "deployment_name": "gpt-4-32k-demo",
+            "temperature": 0.1,
+            "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+            "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+            "_inputs_to_escape": [
+              "Input1",
+              "Input2"
+            ]
+          },
+          "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match in both sentences.\"\n    },\n  ]\n}",
+          "start_time": 1717836601.394166,
+          "end_time": 1717836608.507478,
+          "error": null,
+          "children": [
+            {
+              "name": "openai_chat",
+              "type": "LLM",
+              "inputs": {
+                "model": "gpt-4-32k-demo",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to PERSON in the given inputs. \nYou need to evaluate if the description about all persons in Input2 is consistent with the descriptions about all persons in Input1.\nTaking Input1 as the ground truth, identify the description about all persons in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding a person in Input2 and comparing if each of these description exist and correspond to \nwhat is given about the same person in Input1.\nConsider these attributes of a person: Name, Date of Birth, Nationality, Physical Features (eg. height, weight, hair colour), Indentifying Marks (eg. tattoos, scars), Clothing and Accessories.\nIf a person present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of a person present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of a person in Input2 does not match the description of the same person in Input1, flag the information out as a discrepancy.\nIf the description of a person in Input2 matches the description of a different person in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:"
+                  },
+                  {
+                    "role": "user",
+                    "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                  }
+                ],
+                "temperature": 0.1,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "user": ""
+              },
+              "output": {
+                "id": "chatcmpl-9XtYQAPZE3eU7Hq2Jc80ncVuwHswX",
+                "choices": [
+                  {
+                    "finish_reason": "stop",
+                    "index": 0,
+                    "logprobs": null,
+                    "message": {
+                      "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match in both sentences.\"\n    },\n  ]\n}",
+                      "role": "assistant",
+                      "function_call": null,
+                      "tool_calls": null
+                    },
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "created": 1717865402,
+                "model": "gpt-4-32k",
+                "object": "chat.completion",
+                "system_fingerprint": null,
+                "usage": {
+                  "completion_tokens": 118,
+                  "prompt_tokens": 542,
+                  "total_tokens": 660
+                },
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ]
+              },
+              "start_time": 1717836601.398906,
+              "end_time": 1717836608.50716,
+              "error": null,
+              "children": [],
+              "node_name": null,
+              "parent_id": "52a30538-e6e1-4b13-b5d4-4f743f8ce74a",
+              "id": "fc0e3479-8993-42b0-a74c-8db38de92a49",
+              "function": "openai.resources.chat.completions.Completions.create",
+              "system_metrics": {
+                "completion_tokens": 118,
+                "prompt_tokens": 542,
+                "total_tokens": 660
+              }
+            }
+          ],
+          "node_name": "personchecking",
+          "parent_id": "",
+          "id": "52a30538-e6e1-4b13-b5d4-4f743f8ce74a",
+          "function": "AzureOpenAI.chat",
+          "system_metrics": {
+            "completion_tokens": 118,
+            "prompt_tokens": 542,
+            "total_tokens": 660
+          }
+        }
+      ],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "completion_tokens": 118,
+        "prompt_tokens": 542,
+        "total_tokens": 660,
+        "duration": 7.117821
+      },
+      "result": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match in both sentences.\"\n    },\n  ]\n}",
+      "message_format": "basic"
+    },
+    {
+      "node": "eventchecking",
+      "flow_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
+      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_eventchecking_0",
+      "status": "Completed",
+      "inputs": {
+        "deployment_name": "gpt-4-32k-demo",
+        "temperature": 0.1,
+        "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+        "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+        "_inputs_to_escape": [
+          "Input1",
+          "Input2"
+        ]
+      },
+      "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match. In Input1, the visit is scheduled for May 16-17, while in Input2, the visit is scheduled for May 1-2.\"\n    },\n  ]\n}",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
+      "start_time": "2024-06-08T16:50:01.404064Z",
+      "end_time": "2024-06-08T16:50:07.412630Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.chat",
+          "type": "Function",
+          "inputs": {
+            "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to EVENT DESCRIPTION in the given inputs. Actions do not constitute as event desciptions.\nYou need to evaluate if the description of all events in Input2 is consistent with the descriptions of all events in Input1.\nTaking Input1 as the ground truth, identify the description of all events in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding an event in Input2 and comparing if each of these description exist and correspond to \nwhat is given about the same event in Input1. Consider the context of the event.\nIf an event present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of an event present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of an event in Input2 does not match the description of the same event in Input1, flag the information out as a discrepancy.\nIf the context of an event in Input2 does not match the context of the same event in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n",
+            "deployment_name": "gpt-4-32k-demo",
+            "temperature": 0.1,
+            "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+            "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+            "_inputs_to_escape": [
+              "Input1",
+              "Input2"
+            ]
+          },
+          "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match. In Input1, the visit is scheduled for May 16-17, while in Input2, the visit is scheduled for May 1-2.\"\n    },\n  ]\n}",
+          "start_time": 1717836601.404228,
+          "end_time": 1717836607.410091,
+          "error": null,
+          "children": [
+            {
+              "name": "openai_chat",
+              "type": "LLM",
+              "inputs": {
+                "model": "gpt-4-32k-demo",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to EVENT DESCRIPTION in the given inputs. Actions do not constitute as event desciptions.\nYou need to evaluate if the description of all events in Input2 is consistent with the descriptions of all events in Input1.\nTaking Input1 as the ground truth, identify the description of all events in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding an event in Input2 and comparing if each of these description exist and correspond to \nwhat is given about the same event in Input1. Consider the context of the event.\nIf an event present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of an event present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf a description of an event in Input2 does not match the description of the same event in Input1, flag the information out as a discrepancy.\nIf the context of an event in Input2 does not match the context of the same event in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nHere are a few examples:"
+                  },
+                  {
+                    "role": "user",
+                    "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                  }
+                ],
+                "temperature": 0.1,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "user": ""
+              },
+              "output": {
+                "id": "chatcmpl-9XtYQoCVWwUrl8O8dxoLWNZlU7qs2",
+                "choices": [
+                  {
+                    "finish_reason": "stop",
+                    "index": 0,
+                    "logprobs": null,
+                    "message": {
+                      "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match. In Input1, the visit is scheduled for May 16-17, while in Input2, the visit is scheduled for May 1-2.\"\n    },\n  ]\n}",
+                      "role": "assistant",
+                      "function_call": null,
+                      "tool_calls": null
+                    },
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "created": 1717865402,
+                "model": "gpt-4-32k",
+                "object": "chat.completion",
+                "system_fingerprint": null,
+                "usage": {
+                  "completion_tokens": 146,
+                  "prompt_tokens": 518,
+                  "total_tokens": 664
+                },
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ]
+              },
+              "start_time": 1717836601.407789,
+              "end_time": 1717836607.409023,
+              "error": null,
+              "children": [],
+              "node_name": null,
+              "parent_id": "78b05e82-9887-401b-b6b0-b24813bed9c4",
+              "id": "5702e167-4bd0-47e4-a283-0591b5d7af9a",
+              "function": "openai.resources.chat.completions.Completions.create",
+              "system_metrics": {
+                "completion_tokens": 146,
+                "prompt_tokens": 518,
+                "total_tokens": 664
+              }
+            }
+          ],
+          "node_name": "eventchecking",
+          "parent_id": "",
+          "id": "78b05e82-9887-401b-b6b0-b24813bed9c4",
+          "function": "AzureOpenAI.chat",
+          "system_metrics": {
+            "completion_tokens": 146,
+            "prompt_tokens": 518,
+            "total_tokens": 664
+          }
+        }
+      ],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "completion_tokens": 146,
+        "prompt_tokens": 518,
+        "total_tokens": 664,
+        "duration": 6.008566
+      },
+      "result": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of Vladimir Putin's state visit to China do not match. In Input1, the visit is scheduled for May 16-17, while in Input2, the visit is scheduled for May 1-2.\"\n    },\n  ]\n}",
+      "message_format": "basic"
+    },
+    {
+      "node": "actionchecking",
+      "flow_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
+      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_actionchecking_0",
+      "status": "Completed",
+      "inputs": {
+        "deployment_name": "gpt-4-32k-demo",
+        "temperature": 0.1,
+        "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+        "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+        "_inputs_to_escape": [
+          "Input1",
+          "Input2"
+        ]
+      },
+      "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China by Vladimir Putin are different in both sentences.\"\n    }\n  ]\n}",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
+      "start_time": "2024-06-08T16:50:01.412785Z",
+      "end_time": "2024-06-08T16:50:08.501830Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.chat",
+          "type": "Function",
+          "inputs": {
+            "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to ACTION in the given inputs. \nYou need to evaluate if the actions in Input2 is consistent with the actions in Input1.\nTaking Input1 as the ground truth, identify the actions in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding actions taken in Input2 and comparing if each of these action exist and correspond to \nwhat is given in Input1. Consider the context of the action.\nIf an action present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf an action in Input2 does not match the action given the same context in Input1, flag the information out as a discrepancy.\nIf the context of an action in Input2 does not match the context of the same action in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\n######!!!!!! format the whole thing as a json where each discrepancy is a parameter\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n\n\n",
+            "deployment_name": "gpt-4-32k-demo",
+            "temperature": 0.1,
+            "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+            "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+            "_inputs_to_escape": [
+              "Input1",
+              "Input2"
+            ]
+          },
+          "output": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China by Vladimir Putin are different in both sentences.\"\n    }\n  ]\n}",
+          "start_time": 1717836601.412899,
+          "end_time": 1717836608.49655,
+          "error": null,
+          "children": [
+            {
+              "name": "openai_chat",
+              "type": "LLM",
+              "inputs": {
+                "model": "gpt-4-32k-demo",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to ACTION in the given inputs. \nYou need to evaluate if the actions in Input2 is consistent with the actions in Input1.\nTaking Input1 as the ground truth, identify the actions in Input2 that differs from Input1. \nYou will evaluate by listing all the information regarding actions taken in Input2 and comparing if each of these action exist and correspond to \nwhat is given in Input1. Consider the context of the action.\nIf an action present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.\nIf an action in Input2 does not match the action given the same context in Input1, flag the information out as a discrepancy.\nIf the context of an action in Input2 does not match the context of the same action in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output in json as follows:\n{\"type of discrepancy\": [\n    {\"sentence1\": \"inconsistent sentence from Input1\",\n     \"sentence2\": \"inconsistent sentence from Input2\",\n     \"reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\n######!!!!!! format the whole thing as a json where each discrepancy is a parameter\n\nHere are a few examples:"
+                  },
+                  {
+                    "role": "user",
+                    "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                  }
+                ],
+                "temperature": 0.1,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "user": ""
+              },
+              "output": {
+                "id": "chatcmpl-9XtYQuUFvf1JR93ALCexb9wlOhr2L",
+                "choices": [
+                  {
+                    "finish_reason": "stop",
+                    "index": 0,
+                    "logprobs": null,
+                    "message": {
+                      "content": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China by Vladimir Putin are different in both sentences.\"\n    }\n  ]\n}",
+                      "role": "assistant",
+                      "function_call": null,
+                      "tool_calls": null
+                    },
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "created": 1717865402,
+                "model": "gpt-4-32k",
+                "object": "chat.completion",
+                "system_fingerprint": null,
+                "usage": {
+                  "completion_tokens": 118,
+                  "prompt_tokens": 480,
+                  "total_tokens": 598
+                },
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ]
+              },
+              "start_time": 1717836601.415833,
+              "end_time": 1717836608.495945,
+              "error": null,
+              "children": [],
+              "node_name": null,
+              "parent_id": "0ea56983-aa3d-4282-a40e-a561f6bce80d",
+              "id": "d70d0313-a8c1-40f1-991f-8b4ec74f80b1",
+              "function": "openai.resources.chat.completions.Completions.create",
+              "system_metrics": {
+                "completion_tokens": 118,
+                "prompt_tokens": 480,
+                "total_tokens": 598
+              }
+            }
+          ],
+          "node_name": "actionchecking",
+          "parent_id": "",
+          "id": "0ea56983-aa3d-4282-a40e-a561f6bce80d",
+          "function": "AzureOpenAI.chat",
+          "system_metrics": {
+            "completion_tokens": 118,
+            "prompt_tokens": 480,
+            "total_tokens": 598
+          }
+        }
+      ],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "completion_tokens": 118,
+        "prompt_tokens": 480,
+        "total_tokens": 598,
+        "duration": 7.089045
+      },
+      "result": "{\"date discrepancy\": [\n    {\"sentence1\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"sentence2\": \"At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\",\n     \"reason\": \"The dates of the state visit to China by Vladimir Putin are different in both sentences.\"\n    }\n  ]\n}",
+      "message_format": "basic"
+    },
+    {
+      "node": "datetimechecking",
+      "flow_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6",
+      "run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_datetimechecking_0",
+      "status": "Completed",
+      "inputs": {
+        "deployment_name": "gpt-4-32k-demo",
+        "temperature": 0.1,
+        "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+        "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+        "examples": [
+          {
+            "input1": "Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.",
+            "input2": "Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.",
+            "output": "Input1: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.\n\nInput2: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership."
+          },
+          {
+            "input1": "Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.",
+            "input2": "Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.",
+            "output": "Input1: Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\n\nInput2: Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\n\n{\"DateTime\": [{\"Sentence1\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Sentence2\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Reason\": \"The date of the attack in Sentence2 (April 7) does not match the date in Sentence1 (May 17).\"}]}"
+          },
+          {
+            "input1": "More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.",
+            "input2": "More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.",
+            "output": "Input1: More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.\n\nInput2: More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.\n\n{\"DateTime\": [{\"Sentence1\": \"More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024.\", \"Sentence2\": \"More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018.\", \"Reason\": \"Sentence2 states the automated lanes were installed in 2015 and more to be set up in 2018, whereas Sentence1 states 2023 and 2024 respectively.\"}, {\"Sentence1\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2026.\", \"Sentence2\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2020.\", \"Reason\": \"Sentence2 states the installation will be completed by 2026, whereas Sentence2 states it will be completed by 2020.\"}]}"
+          },
+          {
+            "input1": "The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.",
+            "input2": "The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.",
+            "output": "Input1: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.\n\nInput2: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.\n\n{\"DateTime\": [{\"Sentence1\": \"The incident reportedly took place in High Street before 11.30pm on May 4.\", \"Sentence2\": \"The incident reportedly took place in High Street before 12.45pm on June 19.\", \"Reason\": \"The date and time of the incident in Sentence2 (June 19, 12.45pm) does not match with the date and time in Sentence1 (May 4, 11.30pm).\"}]}"
+          }
+        ],
+        "_inputs_to_escape": [
+          "Input1",
+          "Input2"
+        ]
+      },
+      "output": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}",
+      "metrics": null,
+      "error": null,
+      "parent_run_id": "5f980e1d-a325-4bfe-bccf-e767438fbdb6_0",
+      "start_time": "2024-06-08T16:50:01.420493Z",
+      "end_time": "2024-06-08T16:50:10.924174Z",
+      "index": 0,
+      "api_calls": [
+        {
+          "name": "AzureOpenAI.chat",
+          "type": "Function",
+          "inputs": {
+            "prompt": "system:\nYou are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to DATE and/or TIME in the given inputs. \nYou need to evaluate if the dates and timings in Input2 are consistent with the dates and timings in Input1.\nTaking Input1 as the ground truth, identify the dates and timings in Input2 that differ from Input1. \nYou will evaluate by listing all the information regarding dates and timings in Input2 and comparing if each of these dates and timings \ncorrespond to what is given in Input1.\nIf a date in Input2 does not match the date of the same event in Input1, flag the information out as a discrepancy.\nIf a timing in Input2 does not match the timing of the same event in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output as follows:\nInput1, Input2 and a list of discrepancies found by this LLM. \nList of discrepancies found by this LLM should only include discrepancies related to DATE and/or TIME.\nIf there are no discrepancies related to DATE and/or TIME found, output the input as it is. \nDo not add additional or edit any information within the input.\n\nThe list of discrepancies can be outputted as a json as follows: \n{\"DateTime\": [\n    {\"Sentence1\": \"inconsistent sentence from Input1\",\n     \"Sentence2\": \"inconsistent sentence from Input2\",\n     \"Reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nThe reason given should be concise.\n\nHere are a few examples:\n{% for ex in examples %}\nInput1: {{ex.input1}}\nInput2: {{ex.input2}}\nOutput: {{ex.output}}\n{% endfor %}\n\nuser:\nInput1: {{Input1}}\nInput2: {{Input2}}\nOutput:\n",
+            "deployment_name": "gpt-4-32k-demo",
+            "temperature": 0.1,
+            "Input1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.",
+            "Input2": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.",
+            "examples": [
+              {
+                "input1": "Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.",
+                "input2": "Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.",
+                "output": "Input1: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.\n\nInput2: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership."
+              },
+              {
+                "input1": "Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.",
+                "input2": "Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.",
+                "output": "Input1: Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\n\nInput2: Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\n\n{\"DateTime\": [{\"Sentence1\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Sentence2\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Reason\": \"The date of the attack in Sentence2 (April 7) does not match the date in Sentence1 (May 17).\"}]}"
+              },
+              {
+                "input1": "More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.",
+                "input2": "More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.",
+                "output": "Input1: More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.\n\nInput2: More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.\n\n{\"DateTime\": [{\"Sentence1\": \"More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024.\", \"Sentence2\": \"More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018.\", \"Reason\": \"Sentence2 states the automated lanes were installed in 2015 and more to be set up in 2018, whereas Sentence1 states 2023 and 2024 respectively.\"}, {\"Sentence1\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2026.\", \"Sentence2\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2020.\", \"Reason\": \"Sentence2 states the installation will be completed by 2026, whereas Sentence2 states it will be completed by 2020.\"}]}"
+              },
+              {
+                "input1": "The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.",
+                "input2": "The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.",
+                "output": "Input1: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.\n\nInput2: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.\n\n{\"DateTime\": [{\"Sentence1\": \"The incident reportedly took place in High Street before 11.30pm on May 4.\", \"Sentence2\": \"The incident reportedly took place in High Street before 12.45pm on June 19.\", \"Reason\": \"The date and time of the incident in Sentence2 (June 19, 12.45pm) does not match with the date and time in Sentence1 (May 4, 11.30pm).\"}]}"
+              }
+            ],
+            "_inputs_to_escape": [
+              "Input1",
+              "Input2"
+            ],
+            "stream": false
+          },
+          "output": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}",
+          "start_time": 1717836601.420617,
+          "end_time": 1717836610.922013,
+          "error": null,
+          "children": [
+            {
+              "name": "openai_chat",
+              "type": "LLM",
+              "inputs": {
+                "model": "gpt-4-32k-demo",
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You are a detective. You will be given two inputs, Input1 and Input2.\n\nYour task is to identify discrepancies with respect to DATE and/or TIME in the given inputs. \nYou need to evaluate if the dates and timings in Input2 are consistent with the dates and timings in Input1.\nTaking Input1 as the ground truth, identify the dates and timings in Input2 that differ from Input1. \nYou will evaluate by listing all the information regarding dates and timings in Input2 and comparing if each of these dates and timings \ncorrespond to what is given in Input1.\nIf a date in Input2 does not match the date of the same event in Input1, flag the information out as a discrepancy.\nIf a timing in Input2 does not match the timing of the same event in Input1, flag the information out as a discrepancy.\n\nConsider the semantic meaning of the information within the inputs. \nParaphrased points with similar semantic meaning do not constitute a discrepancy.\n\nWork in a step by step way to ensure that your response is correct. \nAlways ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.\nDo not return information not in the inputs. Do not return information that you do not know. \nIf you are unsure of an answer, you can respond with \"I don't know\".\n\nYou will format the output as follows:\nInput1, Input2 and a list of discrepancies found by this LLM. \nList of discrepancies found by this LLM should only include discrepancies related to DATE and/or TIME.\nIf there are no discrepancies related to DATE and/or TIME found, output the input as it is. \nDo not add additional or edit any information within the input.\n\nThe list of discrepancies can be outputted as a json as follows: \n{\"DateTime\": [\n    {\"Sentence1\": \"inconsistent sentence from Input1\",\n     \"Sentence2\": \"inconsistent sentence from Input2\",\n     \"Reason\": \"how does sentence2 differ from sentence1\"\n    },\n  ]\n}\n\nThe reason given should be concise.\n\nHere are a few examples:\nInput1: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.\nInput2: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.\nOutput: Input1: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.\n\nInput2: Some opposition parties congratulated Mr Lawrence Wong ahead of his swearing-in as prime minister at the Istana on May 15, while thanking outgoing prime minister Lee Hsien Loong for his decades of public service and leadership.\nInput1: Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\nInput2: Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\nOutput: Input1: Singapore “strongly condemns” the attack that took place at a police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\n\nInput2: Singapore “strongly condemns” the attack that took place at a police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\n\n{\"DateTime\": [{\"Sentence1\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Sentence2\": \"Singapore \\u201cstrongly condemns\\u201d the attack that took place at a\\u00a0police station in Johor on April 7, said the Ministry of Foreign Affairs (MFA) in a statement.\", \"Reason\": \"The date of the attack in Sentence2 (April 7) does not match the date in Sentence1 (May 17).\"}]}\nInput1: More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.\nInput2: More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.\nOutput: Input1: More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.\n\nInput2: More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2020.\n\n{\"DateTime\": [{\"Sentence1\": \"More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024.\", \"Sentence2\": \"More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018.\", \"Reason\": \"Sentence2 states the automated lanes were installed in 2015 and more to be set up in 2018, whereas Sentence1 states 2023 and 2024 respectively.\"}, {\"Sentence1\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2026.\", \"Sentence2\": \"ICA intends to install about 800 such lanes across all of Singapore\\u2019s checkpoints by 2020.\", \"Reason\": \"Sentence2 states the installation will be completed by 2026, whereas Sentence2 states it will be completed by 2020.\"}]}\nInput1: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.\nInput2: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.\nOutput: Input1: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.\n\nInput2: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 12.45pm on June 19.\n\n{\"DateTime\": [{\"Sentence1\": \"The incident reportedly took place in High Street before 11.30pm on May 4.\", \"Sentence2\": \"The incident reportedly took place in High Street before 12.45pm on June 19.\", \"Reason\": \"The date and time of the incident in Sentence2 (June 19, 12.45pm) does not match with the date and time in Sentence1 (May 4, 11.30pm).\"}]}"
+                  },
+                  {
+                    "role": "user",
+                    "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\nOutput:"
+                  }
+                ],
+                "temperature": 0.1,
+                "top_p": 1.0,
+                "n": 1,
+                "stream": false,
+                "presence_penalty": 0.0,
+                "frequency_penalty": 0.0,
+                "user": ""
+              },
+              "output": {
+                "id": "chatcmpl-9XtYQAsPA4hSDprBMuuTfVz3FVGNd",
+                "choices": [
+                  {
+                    "finish_reason": "stop",
+                    "index": 0,
+                    "logprobs": null,
+                    "message": {
+                      "content": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}",
+                      "role": "assistant",
+                      "function_call": null,
+                      "tool_calls": null
+                    },
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ],
+                "created": 1717865402,
+                "model": "gpt-4-32k",
+                "object": "chat.completion",
+                "system_fingerprint": null,
+                "usage": {
+                  "completion_tokens": 212,
+                  "prompt_tokens": 1706,
+                  "total_tokens": 1918
+                },
+                "prompt_filter_results": [
+                  {
+                    "prompt_index": 0,
+                    "content_filter_results": {
+                      "hate": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "self_harm": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "sexual": {
+                        "filtered": false,
+                        "severity": "safe"
+                      },
+                      "violence": {
+                        "filtered": false,
+                        "severity": "safe"
+                      }
+                    }
+                  }
+                ]
+              },
+              "start_time": 1717836601.425721,
+              "end_time": 1717836610.921497,
+              "error": null,
+              "children": [],
+              "node_name": null,
+              "parent_id": "34166b70-fe4b-4e72-9f97-ba18d8a710ea",
+              "id": "718e1f2f-cd02-4c14-91b5-5f35c1b3f675",
+              "function": "openai.resources.chat.completions.Completions.create",
+              "system_metrics": {
+                "completion_tokens": 212,
+                "prompt_tokens": 1706,
+                "total_tokens": 1918
+              }
+            }
+          ],
+          "node_name": "datetimechecking",
+          "parent_id": "",
+          "id": "34166b70-fe4b-4e72-9f97-ba18d8a710ea",
+          "function": "AzureOpenAI.chat",
+          "system_metrics": {
+            "completion_tokens": 212,
+            "prompt_tokens": 1706,
+            "total_tokens": 1918
+          }
+        }
+      ],
+      "cached_run_id": null,
+      "cached_flow_run_id": null,
+      "logs": {
+        "stdout": "",
+        "stderr": ""
+      },
+      "system_metrics": {
+        "completion_tokens": 212,
+        "prompt_tokens": 1706,
+        "total_tokens": 1918,
+        "duration": 9.503681
+      },
+      "result": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\n\nInput2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\n\n{\"DateTime\": [{\"Sentence1\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16-17 as his first foreign trip after taking office,” the Kremlin said.\", \"Sentence2\": \"“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 1-2 as his first foreign trip after taking office,” the Kremlin said.\", \"Reason\": \"The dates of Putin's state visit to China in Sentence2 (May 1-2) do not match with the dates in Sentence1 (May 16-17).\"}]}",
+      "message_format": "basic"
+    }
+  ]
+}
