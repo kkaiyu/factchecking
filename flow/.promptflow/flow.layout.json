@@ -6,8 +6,8 @@
       "index": -1
     },
     "outputs": {
-      "x": 550,
-      "y": 444,
+      "x": 715,
+      "y": 578,
       "index": -1
     },
     "datetimechecking": {
@@ -21,24 +21,24 @@
       "index": 2
     },
     "objectchecking": {
-      "x": 800,
-      "y": 42,
+      "x": 635,
+      "y": 444,
       "index": 4
     },
     "personchecking": {
-      "x": 1130,
-      "y": 42,
-      "index": 5
-    },
-    "eventchecking": {
-      "x": 1790,
-      "y": 42,
-      "index": 7
-    },
-    "actionchecking": {
-      "x": 1460,
+      "x": 800,
       "y": 42,
       "index": 6
+    },
+    "eventchecking": {
+      "x": 1460,
+      "y": 42,
+      "index": 8
+    },
+    "actionchecking": {
+      "x": 1130,
+      "y": 42,
+      "index": 7
     },
     "datetimeexamples": {
       "x": 470,
@@ -49,6 +49,11 @@
       "x": 635,
       "y": 176,
       "index": 3
+    },
+    "objectexamples": {
+      "x": 800,
+      "y": 310,
+      "index": 5
     }
   },
   "orientation": "Vertical"

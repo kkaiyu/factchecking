@@ -10,9 +10,9 @@ inputs:
       station in Kuala Lumpur on December 11, said the Ministry of Foreign
       Affairs (MFA) in a statement.
 outputs:
-  locationchecking:
+  final:
     type: string
-    reference: ${locationchecking.output}
+    reference: ${objectchecking.output}
 nodes:
 - name: datetimechecking
   type: llm
@@ -59,10 +59,16 @@ nodes:
   inputs:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1
-    Input1: ""
-    Input2: ""
+    Input: ${locationchecking.output}
+    examples: ${objectexamples.output}
   connection: kkaiyu
   api: chat
+- name: objectexamples
+  type: python
+  source:
+    type: code
+    path: objectexamples.py
+  inputs: {}
 - name: personchecking
   type: llm
   source:
