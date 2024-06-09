@@ -1,14 +1,14 @@
 inputs:
   input1:
     type: string
-    default: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will
-      pay a state visit to China on May 16-17 as his first foreign trip after
-      taking office,” the Kremlin said.
+    default: “Singapore “strongly condemns” the attack that took place at a police
+      station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in
+      a statement.
   input2:
     type: string
-    default: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will
-      pay a state visit to China on May 1-2 as his first foreign trip after
-      taking office,” the Kremlin said.
+    default: Singapore “strongly condemns” the attack that took place at a police
+      station in Kuala Lumpur on December 11, said the Ministry of Foreign
+      Affairs (MFA) in a statement.
 outputs:
   locationchecking:
     type: string
@@ -75,11 +75,11 @@ nodes:
     Input2: ""
   connection: kkaiyu
   api: chat
-- name: eventchecking
+- name: actionchecking
   type: llm
   source:
     type: code
-    path: eventchecking.jinja2
+    path: actionchecking.jinja2
   inputs:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1
@@ -87,11 +87,11 @@ nodes:
     Input2: ""
   connection: kkaiyu
   api: chat
-- name: actionchecking
+- name: eventchecking
   type: llm
   source:
     type: code
-    path: actionchecking.jinja2
+    path: eventchecking.jinja2
   inputs:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1

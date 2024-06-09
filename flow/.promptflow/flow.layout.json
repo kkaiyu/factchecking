@@ -31,14 +31,14 @@
       "index": 5
     },
     "eventchecking": {
-      "x": 1460,
-      "y": 42,
-      "index": 6
-    },
-    "actionchecking": {
       "x": 1790,
       "y": 42,
       "index": 7
+    },
+    "actionchecking": {
+      "x": 1460,
+      "y": 42,
+      "index": 6
     },
     "datetimeexamples": {
       "x": 470,
