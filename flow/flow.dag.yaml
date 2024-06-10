@@ -1,14 +1,18 @@
 inputs:
   input1:
     type: string
-    default: “Singapore “strongly condemns” the attack that took place at a police
-      station in Johor on May 17, said the Ministry of Foreign Affairs (MFA) in
-      a statement.
+    default: A woman was charged on Thursday (May 9) with the murder of a
+      56-year-old man at a condominium along Beach Road. Li Ye, a 37-year-old
+      Chinese national, is accused of causing the death of Lim Lai Guan in a
+      unit at City Gate Residences at about 1.40am on May 8. Li was arrested at
+      the scene and a knife was seized. 
   input2:
     type: string
-    default: Singapore “strongly condemns” the attack that took place at a police
-      station in Kuala Lumpur on December 11, said the Ministry of Foreign
-      Affairs (MFA) in a statement.
+    default: A woman was charged on Monday (May 16) with the murder of a 56-year-old
+      man at a terrace along Sand Street. Li Ye, a 37-year-old Chinese national,
+      is accused of causing the death of Lim Lai Guan in a unit at Merlion House
+      at about 9.20pm on April 30. Li was arrested at the scene and a gun was
+      seized. 
 outputs:
   final:
     type: string

@@ -1,4 +1,4 @@
-from promptflow import tool
+from promptflow.core import tool
 import json
 
 
@@ -17,7 +17,7 @@ def location_examples():
                 {"Location": [
                     {"Sentence1": "The incident took place on May 7 just three hours after Eva Air’s BR08 flight left Taipei for San Francisco, according to TVBS News.",
                     "Sentence2": "The incident took place on May 7 just three hours after Eva Air’s BR08 flight left Singapore for New York, according to TVBS News.",
-                    "Reason": "BR08 flight left from Taipei for San Francisco in Sentence1, but is stated to have left from Singapore for New York in Sentence2"
+                    "Reason": "BR08 flight left from Taipei for San Francisco in Sentence1, but is stated to have left from Singapore for New York in Sentence2."
                     }]
                 }
             )

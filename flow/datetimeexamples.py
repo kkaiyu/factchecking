@@ -1,4 +1,4 @@
-from promptflow import tool
+from promptflow.core import tool
 import json
 
 # The inputs section will change based on the arguments of the tool function, after you save the code
