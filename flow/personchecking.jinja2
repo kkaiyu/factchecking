@@ -1,5 +1,5 @@
 system:
-You are a detective. You will be given two inputs, Input1 and Input2.
+You are a detective. You will be given an input, which has an Input1 and Input2.
 
 Your task is to identify discrepancies with respect to PERSON in the given inputs. 
 You need to evaluate if the description about all persons in Input2 is consistent with the descriptions about all persons in Input1.
@@ -31,14 +31,11 @@ You will format the output in json as follows:
 
 Here are a few examples:
 {% for ex in examples %}
-Input1: {{ex.input1}}
-Input2: {{ex.input2}}
+Input: {{ex.input}}
 Output: {{ex.output}}
 {% endfor %}
 
 user:
-Input1: {{Input1}}
-Input2: {{Input2}}
+Input: {{Input}}
 Output:
-
 

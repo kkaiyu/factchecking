@@ -11,7 +11,9 @@
       "variant_0": {
         "inputs": {
           "Input1": [],
-          "Input2": []
+          "Input2": [],
+          "Input": [],
+          "examples": []
         }
       }
     },
