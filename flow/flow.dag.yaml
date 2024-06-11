@@ -8,11 +8,11 @@ inputs:
       the scene and a knife was seized. 
   input2:
     type: string
-    default: A woman was charged on Monday (May 16) with the murder of a 56-year-old
-      man at a terrace along Sand Street. Li Ye, a 37-year-old Chinese national,
-      is accused of causing the death of Lim Lai Guan in a unit at Merlion House
-      at about 9.20pm on April 30. Li was arrested at the scene and a gun was
-      seized. 
+    default: A man was charged on Monday (May 16) with the murder of a 56-year-old
+      man at a terrace along Sand Street. Xiao Li, a 40-year-old Burmese
+      national, is accused of causing the death of Lim Lai Guan in a unit at
+      Merlion House at about 9.20pm on April 30. Li was arrested at the scene
+      and a gun was seized. 
 outputs:
   final:
     type: string

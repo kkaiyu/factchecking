@@ -14,10 +14,10 @@ def object_examples():
             "output": "Input1: Li was arrested at the scene and a knife was seized.\n\n" +
             "Input2: Li was arrested at the scene and a gun was seized.\n\n" +
             json.dumps(
-                {"Object": [
+                {"Object": [          
                     {"Sentence1": "Li was arrested at the scene and a knife was seized.",
                     "Sentence2": "Li was arrested at the scene and a gun was seized.",
-                    "Reason": "The object seized at the scene is a knife in Sentence1, but in Sentence 2, it is a gun."
+                    "Reason": "The object seized at the scene is a knife in Sentence1, but in Sentence2, it is a gun."
                     }]
                 }
             )
