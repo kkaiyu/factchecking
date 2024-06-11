@@ -22,27 +22,6 @@
       },
       "source": "datechecking.jinja2"
     },
-    "timechecking.jinja2": {
-      "type": "llm",
-      "inputs": {
-        "Input1": {
-          "type": [
-            "string"
-          ]
-        },
-        "Input2": {
-          "type": [
-            "string"
-          ]
-        },
-        "examples": {
-          "type": [
-            "string"
-          ]
-        }
-      },
-      "source": "timechecking.jinja2"
-    },
     "locationchecking.jinja2": {
       "type": "llm",
       "inputs": {
