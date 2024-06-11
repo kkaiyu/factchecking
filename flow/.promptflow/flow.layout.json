@@ -1,57 +1,57 @@
 {
   "nodeLayouts": {
     "inputs": {
-      "x": 290,
-      "y": 42,
+      "x": 640.6584693650846,
+      "y": 25.28472837263482,
       "index": -1
     },
     "outputs": {
-      "x": 880,
+      "x": 715,
       "y": 712,
       "index": -1
     },
     "datetimechecking": {
-      "x": 305,
+      "x": 140,
       "y": 176,
       "index": 0
     },
     "locationchecking": {
-      "x": 470,
+      "x": 305,
       "y": 310,
       "index": 2
     },
     "objectchecking": {
-      "x": 635,
+      "x": 470,
       "y": 444,
       "index": 4
     },
     "personchecking": {
-      "x": 800,
+      "x": 635,
       "y": 578,
       "index": 6
     },
     "eventchecking": {
-      "x": 800,
-      "y": 42,
+      "x": 965,
+      "y": 176,
       "index": 8
     },
     "datetimeexamples": {
-      "x": 470,
-      "y": 42,
+      "x": -72.30543834271111,
+      "y": 59.42459127206887,
       "index": 1
     },
     "locationexamples": {
-      "x": 635,
+      "x": 470,
       "y": 176,
       "index": 3
     },
     "objectexamples": {
-      "x": 800,
+      "x": 635,
       "y": 310,
       "index": 5
     },
     "personexamples": {
-      "x": 965,
+      "x": 800,
       "y": 444,
       "index": 7
     },
@@ -64,6 +64,16 @@
       "x": 470,
       "y": 176,
       "index": -1
+    },
+    "eventexamples": {
+      "x": 975,
+      "y": 42,
+      "index": 9
+    },
+    "textualentailment": {
+      "x": 965,
+      "y": 310,
+      "index": 10
     }
   },
   "orientation": "Vertical"

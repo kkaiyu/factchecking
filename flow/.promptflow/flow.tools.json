@@ -157,6 +157,23 @@
       "type": "python",
       "source": "personexamples.py",
       "function": "person_examples"
+    },
+    "eventexamples.py": {
+      "type": "python",
+      "source": "eventexamples.py",
+      "function": "event_examples"
+    },
+    "textualentailment.py": {
+      "type": "python",
+      "inputs": {
+        "input1": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "textualentailment.py",
+      "function": "my_python_tool"
     }
   }
 }
