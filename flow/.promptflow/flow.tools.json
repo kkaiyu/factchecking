@@ -46,12 +46,7 @@
     "locationchecking.jinja2": {
       "type": "llm",
       "inputs": {
-        "Input1": {
-          "type": [
-            "string"
-          ]
-        },
-        "Input2": {
+        "Input": {
           "type": [
             "string"
           ]
@@ -67,12 +62,7 @@
     "objectchecking.jinja2": {
       "type": "llm",
       "inputs": {
-        "Input1": {
-          "type": [
-            "string"
-          ]
-        },
-        "Input2": {
+        "Input": {
           "type": [
             "string"
           ]
@@ -86,6 +76,22 @@
       "source": "objectchecking.jinja2"
     },
     "personchecking.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "Input": {
+          "type": [
+            "string"
+          ]
+        },
+        "examples": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "personchecking.jinja2"
+    },
+    "eventchecking.jinja2": {
       "type": "llm",
       "inputs": {
         "Input1": {
@@ -104,7 +110,74 @@
           ]
         }
       },
-      "source": "personchecking.jinja2"
+      "source": "eventchecking.jinja2"
+    },
+    "actionchecking.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "Input1": {
+          "type": [
+            "string"
+          ]
+        },
+        "Input2": {
+          "type": [
+            "string"
+          ]
+        },
+        "examples": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "actionchecking.jinja2"
+    },
+    "dateexamples.py": {
+      "type": "python",
+      "source": "dateexamples.py",
+      "function": "date_examples"
+    },
+    "datetimechecking.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "Input1": {
+          "type": [
+            "string"
+          ]
+        },
+        "Input2": {
+          "type": [
+            "string"
+          ]
+        },
+        "examples": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "datetimechecking.jinja2"
+    },
+    "datetimeexamples.py": {
+      "type": "python",
+      "source": "datetimeexamples.py",
+      "function": "datetime_examples"
+    },
+    "locationexamples.py": {
+      "type": "python",
+      "source": "locationexamples.py",
+      "function": "location_examples"
+    },
+    "objectexamples.py": {
+      "type": "python",
+      "source": "objectexamples.py",
+      "function": "object_examples"
+    },
+    "personexamples.py": {
+      "type": "python",
+      "source": "personexamples.py",
+      "function": "person_examples"
     }
   }
 }

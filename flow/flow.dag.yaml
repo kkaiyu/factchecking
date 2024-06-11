@@ -1,37 +1,42 @@
 inputs:
   input1:
     type: string
-    default: ""
+    default: A woman was charged on Thursday (May 9) with the murder of a
+      56-year-old man at a condominium along Beach Road. Li Ye, a 37-year-old
+      Chinese national, is accused of causing the death of Lim Lai Guan in a
+      unit at City Gate Residences at about 1.40am on May 8. Li was arrested at
+      the scene and a knife was seized. 
   input2:
     type: string
-    default: ""
-outputs: {}
+    default: A man was charged on Monday (May 16) with the murder of a 56-year-old
+      man at a terrace along Sand Street. Xiao Li, a 40-year-old Burmese
+      national, is accused of causing the death of Lim Lai Guan in a unit at
+      Merlion House at about 9.20pm on April 30. Li was arrested at the scene
+      and a gun was seized. 
+outputs:
+  final:
+    type: string
+    reference: ${personchecking.output}
 nodes:
-- name: datechecking
+- name: datetimechecking
   type: llm
   source:
     type: code
-    path: datechecking.jinja2
+    path: datetimechecking.jinja2
   inputs:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1
     Input1: ${inputs.input1}
     Input2: ${inputs.input2}
-    examples: ""
+    examples: ${datetimeexamples.output}
   connection: kkaiyu
   api: chat
-- name: timechecking
-  type: llm
+- name: datetimeexamples
+  type: python
   source:
     type: code
-    path: timechecking.jinja2
-  inputs:
-    deployment_name: gpt-4-32k-demo
-    temperature: 0.1
-    Input1: ${inputs.input1}
-    Input2: ${inputs.input2}
-  connection: kkaiyu
-  api: chat
+    path: datetimeexamples.py
+  inputs: {}
 - name: locationchecking
   type: llm
   source:
@@ -40,10 +45,16 @@ nodes:
   inputs:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1
-    Input1: ${inputs.input1}
-    Input2: ${inputs.input2}
+    Input: ${datetimechecking.output}
+    examples: ${locationexamples.output}
   connection: kkaiyu
   api: chat
+- name: locationexamples
+  type: python
+  source:
+    type: code
+    path: locationexamples.py
+  inputs: {}
 - name: objectchecking
   type: llm
   source:
@@ -52,10 +63,16 @@ nodes:
   inputs:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1
-    Input1: ${inputs.input1}
-    Input2: ${inputs.input2}
+    Input: ${locationchecking.output}
+    examples: ${objectexamples.output}
   connection: kkaiyu
   api: chat
+- name: objectexamples
+  type: python
+  source:
+    type: code
+    path: objectexamples.py
+  inputs: {}
 - name: personchecking
   type: llm
   source:
@@ -64,5 +81,37 @@ nodes:
   inputs:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1
+    Input: ${objectchecking.output}
+    examples: ${personexamples.output}
+  connection: kkaiyu
+  api: chat
+- name: personexamples
+  type: python
+  source:
+    type: code
+    path: personexamples.py
+  inputs: {}
+- name: actionchecking
+  type: llm
+  source:
+    type: code
+    path: actionchecking.jinja2
+  inputs:
+    deployment_name: gpt-4-32k-demo
+    temperature: 0.1
+    Input1: ""
+    Input2: ""
+  connection: kkaiyu
+  api: chat
+- name: eventchecking
+  type: llm
+  source:
+    type: code
+    path: eventchecking.jinja2
+  inputs:
+    deployment_name: gpt-4-32k-demo
+    temperature: 0.1
+    Input1: ""
+    Input2: ""
   connection: kkaiyu
   api: chat

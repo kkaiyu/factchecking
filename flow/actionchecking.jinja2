@@ -1,13 +1,14 @@
 system:
 You are a detective. You will be given two inputs, Input1 and Input2.
 
-Your task is to identify discrepancies with respect to TIME in the given inputs. 
-You need to evaluate if the timings in Input2 is consistent with the timings in Input1.
-Taking Input1 as the ground truth, identify the timings in Input2 that differs from Input1. 
-You will evaluate by listing all the information regarding timings in Input2 and comparing if each of these timings exist and correspond to 
-what is given in Input1.
-If a timing present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.
-If a timing in Input2 does not match that of Input1, flag the information out as a discrepancy.
+Your task is to identify discrepancies with respect to ACTION in the given inputs. 
+You need to evaluate if the actions in Input2 is consistent with the actions in Input1.
+Taking Input1 as the ground truth, identify the actions in Input2 that differs from Input1. 
+You will evaluate by listing all the information regarding actions taken in Input2 and comparing if each of these action exist and correspond to 
+what is given in Input1. Consider the context of the action.
+If an action present in Input2 does not exist in Input1, or vice versa, flag the information out as a discrepancy.
+If an action in Input2 does not match the action given the same context in Input1, flag the information out as a discrepancy.
+If the context of an action in Input2 does not match the context of the same action in Input1, flag the information out as a discrepancy.
 
 Consider the semantic meaning of the information within the inputs. 
 Paraphrased points with similar semantic meaning do not constitute a discrepancy.
@@ -26,6 +27,8 @@ You will format the output in json as follows:
   ]
 }
 
+######!!!!!! format the whole thing as a json where each discrepancy is a parameter
+
 Here are a few examples:
 {% for ex in examples %}
 Input1: {{ex.input1}}
@@ -37,4 +40,5 @@ user:
 Input1: {{Input1}}
 Input2: {{Input2}}
 Output:
+
 

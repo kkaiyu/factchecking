@@ -6,6 +6,55 @@
           "Input2": []
         }
       }
+    },
+    "personchecking": {
+      "variant_0": {
+        "inputs": {
+          "Input1": [],
+          "Input2": [],
+          "Input": [],
+          "examples": []
+        }
+      }
+    },
+    "eventchecking": {
+      "variant_0": {
+        "inputs": {
+          "Input1": [],
+          "Input2": []
+        }
+      }
+    },
+    "actionchecking": {
+      "variant_0": {
+        "inputs": {
+          "Input1": [],
+          "Input2": []
+        }
+      }
+    },
+    "datetimechecking": {
+      "variant_0": {
+        "inputs": {
+          "examples": []
+        }
+      }
+    },
+    "locationchecking": {
+      "variant_0": {
+        "inputs": {
+          "Input": [],
+          "examples": []
+        }
+      }
+    },
+    "objectchecking": {
+      "variant_0": {
+        "inputs": {
+          "Input": [],
+          "examples": []
+        }
+      }
     }
   }
 }
