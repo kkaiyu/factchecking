@@ -73,12 +73,7 @@
     "eventchecking.jinja2": {
       "type": "llm",
       "inputs": {
-        "Input1": {
-          "type": [
-            "string"
-          ]
-        },
-        "Input2": {
+        "Input": {
           "type": [
             "string"
           ]
@@ -165,15 +160,8 @@
     },
     "textualentailment.py": {
       "type": "python",
-      "inputs": {
-        "input1": {
-          "type": [
-            "string"
-          ]
-        }
-      },
       "source": "textualentailment.py",
-      "function": "my_python_tool"
+      "function": "textualentailment"
     }
   }
 }

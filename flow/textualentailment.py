@@ -6,5 +6,5 @@ from promptflow import tool
 # Adding type to arguments and return value will help the system show the types properly
 # Please update the function name/signature per need
 @tool
-def my_python_tool(input1: str) -> str:
-    return 'hello ' + input1
+def textualentailment():
+    []

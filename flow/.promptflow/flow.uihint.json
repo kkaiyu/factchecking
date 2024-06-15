@@ -22,7 +22,8 @@
         "inputs": {
           "Input1": [],
           "Input2": [],
-          "examples": []
+          "examples": [],
+          "Input": []
         }
       }
     },
