@@ -61,4 +61,18 @@ def datetime_examples():
                 }
             )
         },
+        {
+            "input1": "City now have the chance of winning the double when they face Manchester United in the FA Cup final on May 25.",
+            "input2": "On 20 May they will aim to become the first side to complete the domestic Treble in successive seasons when they face Liverpool in the FA Cup final at Wembley.",
+            "output": "Input1: City now have the chance of winning the double when they face Manchester United in the FA Cup final on May 25." +
+            "Input2: On 20 May they will aim to become the first side to complete the domestic Treble in successive seasons when they face Liverpool in the FA Cup final at Wembley." +
+            json.dumps(
+                {"DateTime": [
+                    {"Sentence1": "City now have the chance of winning the double when they face Manchester United in the FA Cup final on May 25.",
+                    "Sentence2": "On 20 May they will aim to become the first side to complete the domestic Treble in successive seasons when they face Liverpool  in the FA Cup final at Wembley.",
+                    "Reason": "The date of the FA Cup final in Sentence2 (May 20) does not match with the date in Sentence1 (May 25)."
+                    }]
+                }
+            )
+        }
     ]

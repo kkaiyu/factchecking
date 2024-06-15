@@ -7,14 +7,14 @@ Taking Input1 as the ground truth, identify dates and timings in Input2 that dif
 If a date or timing in Input2 does not match the date or timing of the same event in Input1, flag the information as a discrepancy
 related to DATE and/or TIME.
 
-The output should only list discrepancies that are directly related to differences in DATE and/or TIME.
-Even if a sentence contains discrepancies of other types, list of discrepancies found by this LLM should only include discrepancies 
-related to DATE and/or TIME.
-Ensure that the reason given does not comprise reasons other than difference in DATE and/or TIME, else remove from list of discrepancies.
-
 Paraphrased points with similar semantic meaning should not be flagged unless they involve temporal information.
 Always ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.
 Do not return information not in the inputs. Do not return information that you do not know. 
+
+The output should only list discrepancies that are directly related to differences in DATE and/or TIME.
+Even if a sentence contains discrepancies of other types, list of discrepancies found by this LLM should only include discrepancies 
+related to DATE and/or TIME.
+Ensure that the reason given does not comprise reasons other than DATE and/or TIME.
 
 Output:
 Input1, Input2 and a list of discrepancies found by this LLM.

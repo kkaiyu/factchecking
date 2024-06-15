@@ -43,7 +43,10 @@ inputs:
 outputs:
   factual:
     type: string
-    reference: ${datetimechecking.output}
+    reference: ${personchecking.output}
+  ambiguous:
+    type: string
+    reference: ${eventchecking.output}
 nodes:
 - name: datetimechecking
   type: llm
