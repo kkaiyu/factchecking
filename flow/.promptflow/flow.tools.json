@@ -73,7 +73,12 @@
     "eventchecking.jinja2": {
       "type": "llm",
       "inputs": {
-        "Input": {
+        "Input1": {
+          "type": [
+            "string"
+          ]
+        },
+        "Input2": {
           "type": [
             "string"
           ]

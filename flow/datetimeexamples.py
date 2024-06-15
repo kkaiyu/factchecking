@@ -60,5 +60,5 @@ def datetime_examples():
                     }]
                 }
             )
-        }
+        },
     ]

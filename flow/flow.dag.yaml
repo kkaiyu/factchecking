@@ -43,10 +43,7 @@ inputs:
 outputs:
   factual:
     type: string
-    reference: ${personchecking.output}
-  ambigious:
-    type: string
-    reference: ${eventchecking.output}
+    reference: ${datetimechecking.output}
 nodes:
 - name: datetimechecking
   type: llm
@@ -129,8 +126,9 @@ nodes:
   inputs:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1
+    Input1: ${inputs.input1}
+    Input2: ${inputs.input2}
     examples: ${eventexamples.output}
-    Input: ${personchecking.output}
   connection: kkaiyu
   api: chat
 - name: eventexamples
