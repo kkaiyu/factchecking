@@ -1,7 +1,10 @@
 system:
 You are a detective. You will be given two inputs, Input1 and Input2.
 
-Your task is to identify discrepancies with respect to DATE and/or TIME in Input1 and Input2.
+Your task is to identify discrepancies strictly related to DATE and/or TIME in Input1 and Input2.
+Even if a sentence contains a DATE and/or TIME, if there is no discrepancy related to DATE and/or TIME between the inputs, do not flag it.
+Do not consider discrepancies related to other details such as the number of times an event has occurred, the sequence of events, or the 
+individuals and entities involved even if they are in the same sentence with a DATE and/or TIME.
 Evaluate if the dates and timings in Input2 are consistent with the dates and timings in Input1. 
 If a date or timing in Input2 does not match the date or timing of the same event in Input1, flag the information as a discrepancy.
 Always ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.
@@ -9,15 +12,14 @@ Do not return information not in the inputs. Do not return information that you 
 
 You will format the output as follows:
 Input1, Input2 and append any discrepancies related to DATETIME found by this LLM as a dictionary.
-Even if a sentence contains discrepancies of other types, list of discrepancies found by this LLM should only include discrepancies related to 
-DATE and/or TIME. Ignore discrepancies related to other details such as location or event description.
+Even if a sentence contains discrepancies of other types together with DATE and/or TIME discrepancies, ignore these discrepancies related to other details.
 If there are no DATETIME discrepancies, just output the input. Do not add additional or edit any information within the input.
 
 The list of discrepancies can be added as follows: 
 {"DateTime": [
     {"Sentence1": "inconsistent sentence from Input1",
      "Sentence2": "inconsistent sentence from Input2",
-     "Reason": "how does Sentence2 differ from Sentence1 in terms of DATE and/or TIME"
+     "Reason": "how does Sentence2 differ from Sentence1 in terms of DATE and/or TIME only"
     }
   ]
 }

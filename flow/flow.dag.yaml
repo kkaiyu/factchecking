@@ -46,12 +46,12 @@ inputs:
       transformation of India, with the goal of turning the vast country into a
       developed nation by 2047. He inherited a rising economy and India’s growth
       remains impressive, filled with a populous young workforce. But that same
-      workforce is also chronically underemployed, with graduate unemployment
+      workforce is also chronically underemployed, with adult unemployment
       spiraling and much of the country’s growing wealth distributed unequally.
 outputs:
-  factual:
+  discrepancies:
     type: string
-    reference: ${personchecking.output}
+    reference: ${eventchecking.output}
 nodes:
 - name: datetimechecking
   type: llm
@@ -135,6 +135,7 @@ nodes:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1
     examples: ${eventexamples.output}
+    Input: ${personchecking.output}
   connection: kkaiyu
   api: chat
 - name: eventexamples
