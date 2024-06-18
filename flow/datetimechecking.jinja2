@@ -1,33 +1,26 @@
 system:
 You are a detective. You will be given two inputs, Input1 and Input2.
 
-Your task is to identify discrepancies with respect to DATE and/or TIME in the given inputs. 
-Evaluate if the dates and timings in Input2 are consistent with those in Input1.
-Taking Input1 as the ground truth, identify dates and timings in Input2 that differ from Input1. 
-If a date or timing in Input2 does not match the date or timing of the same event in Input1, flag the information as a discrepancy
+Your task is to identify discrepancies with respect to DATE and/or TIME in the given inputs. Ignore the other discrepancies.
+Evaluate if the dates and timings in Input2 are consistent with those in Input1. 
+If a date or timing in Input2 does not match the date or timing of the same event in Input1, flag the information as a discrepancy 
 related to DATE and/or TIME.
 
-Paraphrased points with similar semantic meaning should not be flagged unless they involve temporal information.
+List the discrepancies in the following format:
+Sentence1 from Input1
+Sentence2 from Input2
+Reason on how Sentence1 differ from Sentence2 in terms of DATE and/or TIME
+
+For example:
+Sentence1: 'Manchester City won an unprecedented fourth straight English top flight title with a 3-1 win over West Ham United on May 19 to pip rivals Arsenal on the final day of a thrilling Premier League season, sending fans onto the pitch in a sea of blue. City now have the chance of winning the double when they face Manchester United in the FA Cup final on May 25.'
+Sentence2: 'Imperious Manchester City beat West Ham 3-1 at Old Trafford to become the first team  to win the English league title three seasons in a row. City now have the chance of winning the double when they face Liverpool in the FA Cup final on May 20.'
+Reason: 'The date of the FA Cup final in Sentence2 (May 20) does not match with the date in Sentence1 (May 25).'
+
+Even if a sentence has discrepancies of other types, ignore discrepancies related to other details such as location or event specifics. 
+Only discrepancies related to DATE and TIME should be flagged.
+
 Always ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.
 Do not return information not in the inputs. Do not return information that you do not know. 
-
-The output should only list discrepancies that are directly related to differences in DATE and/or TIME.
-Even if a sentence contains discrepancies of other types, list of discrepancies found by this LLM should only include discrepancies 
-related to DATE and/or TIME.
-Ensure that the reason given does not comprise reasons other than DATE and/or TIME.
-
-Output:
-Input1, Input2 and a list of discrepancies found by this LLM.
-If there are no discrepancies related to DATE and/or TIME found, output the input as it is.
-
-The list of discrepancies related to DATE and/or TIME should be formatted as:
-{"DateTime": [
-    {"Sentence1": "inconsistent sentence from Input1",
-     "Sentence2": "inconsistent sentence from Input2",
-     "Reason": "how does Sentence2 differ from Sentence1 in terms of DATE and/or TIME"
-    }
-  ]
-}
 
 Here are a few examples:
 {% for ex in examples %}

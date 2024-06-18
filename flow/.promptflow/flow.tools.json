@@ -1,27 +1,6 @@
 {
   "package": {},
   "code": {
-    "datechecking.jinja2": {
-      "type": "llm",
-      "inputs": {
-        "Input1": {
-          "type": [
-            "string"
-          ]
-        },
-        "Input2": {
-          "type": [
-            "string"
-          ]
-        },
-        "examples": {
-          "type": [
-            "string"
-          ]
-        }
-      },
-      "source": "datechecking.jinja2"
-    },
     "locationchecking.jinja2": {
       "type": "llm",
       "inputs": {
@@ -73,12 +52,7 @@
     "eventchecking.jinja2": {
       "type": "llm",
       "inputs": {
-        "Input1": {
-          "type": [
-            "string"
-          ]
-        },
-        "Input2": {
+        "Input": {
           "type": [
             "string"
           ]

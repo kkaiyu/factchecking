@@ -38,7 +38,9 @@
     "datetimechecking": {
       "variant_0": {
         "inputs": {
-          "examples": []
+          "examples": [],
+          "Input1": [],
+          "Input2": []
         }
       }
     },
