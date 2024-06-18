@@ -51,7 +51,7 @@ inputs:
 outputs:
   factual:
     type: string
-    reference: ${objectchecking.output}
+    reference: ${personchecking.output}
 nodes:
 - name: datetimechecking
   type: llm
@@ -116,7 +116,7 @@ nodes:
   inputs:
     deployment_name: gpt-4-32k-demo
     temperature: 0.1
-    Input: ""
+    Input: ${objectchecking.output}
     examples: ${personexamples.output}
   connection: kkaiyu
   api: chat

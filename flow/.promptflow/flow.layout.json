@@ -6,8 +6,8 @@
       "index": -1
     },
     "outputs": {
-      "x": 715,
-      "y": 578,
+      "x": 880,
+      "y": 712,
       "index": -1
     },
     "datetimechecking": {
@@ -26,12 +26,12 @@
       "index": 4
     },
     "personchecking": {
-      "x": 965,
-      "y": 176,
+      "x": 800,
+      "y": 578,
       "index": 6
     },
     "eventchecking": {
-      "x": 1295,
+      "x": 965,
       "y": 176,
       "index": 8
     },
@@ -52,7 +52,7 @@
     },
     "personexamples": {
       "x": 965,
-      "y": 42,
+      "y": 444,
       "index": 7
     },
     "timechecking": {
@@ -61,12 +61,12 @@
       "index": -1
     },
     "eventexamples": {
-      "x": 1295,
+      "x": 965,
       "y": 42,
       "index": 9
     },
     "textualentailment": {
-      "x": 1625,
+      "x": 1295,
       "y": 42,
       "index": 10
     }
