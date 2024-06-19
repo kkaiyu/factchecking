@@ -1,24 +1,25 @@
-2024-06-18 15:36:09 +0800    5115 execution.flow     INFO     Start executing nodes in thread pool mode.
-2024-06-18 15:36:09 +0800    5115 execution.flow     INFO     Start to run 11 nodes with concurrency level 16.
-2024-06-18 15:36:09 +0800    5115 execution.flow     INFO     Executing node datetimeexamples. node run id: b4f0aa72-5cc5-4078-91c0-c8dc9b5fbefb_datetimeexamples_0
-2024-06-18 15:36:09 +0800    5115 execution.flow     INFO     Node datetimeexamples completes.
-2024-06-18 15:36:09 +0800    5115 execution.flow     INFO     Executing node locationexamples. node run id: b4f0aa72-5cc5-4078-91c0-c8dc9b5fbefb_locationexamples_0
-2024-06-18 15:36:09 +0800    5115 execution.flow     INFO     Node locationexamples completes.
-2024-06-18 15:36:09 +0800    5115 execution.flow     INFO     Executing node objectexamples. node run id: b4f0aa72-5cc5-4078-91c0-c8dc9b5fbefb_objectexamples_0
-2024-06-18 15:36:09 +0800    5115 execution.flow     INFO     Node objectexamples completes.
-2024-06-18 15:36:09 +0800    5115 execution.flow     INFO     Executing node personexamples. node run id: b4f0aa72-5cc5-4078-91c0-c8dc9b5fbefb_personexamples_0
-2024-06-18 15:36:09 +0800    5115 execution.flow     INFO     Node personexamples completes.
-2024-06-18 15:36:09 +0800    5115 execution.flow     INFO     Executing node eventexamples. node run id: b4f0aa72-5cc5-4078-91c0-c8dc9b5fbefb_eventexamples_0
-2024-06-18 15:36:09 +0800    5115 execution.flow     INFO     Node eventexamples completes.
-2024-06-18 15:36:09 +0800    5115 execution.flow     INFO     Executing node textualentailment. node run id: b4f0aa72-5cc5-4078-91c0-c8dc9b5fbefb_textualentailment_0
-2024-06-18 15:36:09 +0800    5115 execution.flow     INFO     Node textualentailment completes.
-2024-06-18 15:36:09 +0800    5115 execution.flow     INFO     Executing node datetimechecking. node run id: b4f0aa72-5cc5-4078-91c0-c8dc9b5fbefb_datetimechecking_0
-2024-06-18 15:36:57 +0800    5115 execution.flow     INFO     Node datetimechecking completes.
-2024-06-18 15:36:57 +0800    5115 execution.flow     INFO     Executing node locationchecking. node run id: b4f0aa72-5cc5-4078-91c0-c8dc9b5fbefb_locationchecking_0
-2024-06-18 15:37:36 +0800    5115 execution.flow     INFO     Node locationchecking completes.
-2024-06-18 15:37:36 +0800    5115 execution.flow     INFO     Executing node objectchecking. node run id: b4f0aa72-5cc5-4078-91c0-c8dc9b5fbefb_objectchecking_0
-2024-06-18 15:38:18 +0800    5115 execution.flow     INFO     Node objectchecking completes.
-2024-06-18 15:38:18 +0800    5115 execution.flow     INFO     Executing node personchecking. node run id: b4f0aa72-5cc5-4078-91c0-c8dc9b5fbefb_personchecking_0
-2024-06-18 15:39:23 +0800    5115 execution.flow     INFO     Node personchecking completes.
-2024-06-18 15:39:23 +0800    5115 execution.flow     INFO     Executing node eventchecking. node run id: b4f0aa72-5cc5-4078-91c0-c8dc9b5fbefb_eventchecking_0
-2024-06-18 15:39:48 +0800    5115 execution.flow     INFO     Node eventchecking completes.
+2024-06-19 16:49:49 +0800   10009 execution.flow     INFO     Start executing nodes in thread pool mode.
+2024-06-19 16:49:49 +0800   10009 execution.flow     INFO     Start to run 11 nodes with concurrency level 16.
+2024-06-19 16:49:49 +0800   10009 execution.flow     INFO     Executing node datetimeexamples. node run id: 58ca5b0f-98d7-4e92-8ef5-2e0bc625693d_datetimeexamples_0
+2024-06-19 16:49:49 +0800   10009 execution.flow     INFO     Executing node locationexamples. node run id: 58ca5b0f-98d7-4e92-8ef5-2e0bc625693d_locationexamples_0
+2024-06-19 16:49:49 +0800   10009 execution.flow     INFO     Node datetimeexamples completes.
+2024-06-19 16:49:49 +0800   10009 execution.flow     INFO     Node locationexamples completes.
+2024-06-19 16:49:49 +0800   10009 execution.flow     INFO     Executing node objectexamples. node run id: 58ca5b0f-98d7-4e92-8ef5-2e0bc625693d_objectexamples_0
+2024-06-19 16:49:49 +0800   10009 execution.flow     INFO     Node objectexamples completes.
+2024-06-19 16:49:49 +0800   10009 execution.flow     INFO     Executing node personexamples. node run id: 58ca5b0f-98d7-4e92-8ef5-2e0bc625693d_personexamples_0
+2024-06-19 16:49:49 +0800   10009 execution.flow     INFO     Executing node eventexamples. node run id: 58ca5b0f-98d7-4e92-8ef5-2e0bc625693d_eventexamples_0
+2024-06-19 16:49:49 +0800   10009 execution.flow     INFO     Executing node textualentailment. node run id: 58ca5b0f-98d7-4e92-8ef5-2e0bc625693d_textualentailment_0
+2024-06-19 16:49:49 +0800   10009 execution.flow     INFO     Executing node datetimechecking. node run id: 58ca5b0f-98d7-4e92-8ef5-2e0bc625693d_datetimechecking_0
+2024-06-19 16:49:49 +0800   10009 execution.flow     INFO     Node personexamples completes.
+2024-06-19 16:49:49 +0800   10009 execution.flow     INFO     Node eventexamples completes.
+2024-06-19 16:49:49 +0800   10009 execution.flow     INFO     Node textualentailment completes.
+2024-06-19 16:50:13 +0800    9647 execution.flow     INFO     Node eventchecking completes.
+2024-06-19 16:50:23 +0800   10009 execution.flow     INFO     Node datetimechecking completes.
+2024-06-19 16:50:23 +0800   10009 execution.flow     INFO     Executing node locationchecking. node run id: 58ca5b0f-98d7-4e92-8ef5-2e0bc625693d_locationchecking_0
+2024-06-19 16:51:05 +0800   10009 execution.flow     INFO     Node locationchecking completes.
+2024-06-19 16:51:05 +0800   10009 execution.flow     INFO     Executing node objectchecking. node run id: 58ca5b0f-98d7-4e92-8ef5-2e0bc625693d_objectchecking_0
+2024-06-19 16:51:52 +0800   10009 execution.flow     INFO     Node objectchecking completes.
+2024-06-19 16:51:52 +0800   10009 execution.flow     INFO     Executing node personchecking. node run id: 58ca5b0f-98d7-4e92-8ef5-2e0bc625693d_personchecking_0
+2024-06-19 16:52:29 +0800   10009 execution.flow     INFO     Node personchecking completes.
+2024-06-19 16:52:29 +0800   10009 execution.flow     INFO     Executing node eventchecking. node run id: 58ca5b0f-98d7-4e92-8ef5-2e0bc625693d_eventchecking_0
+2024-06-19 16:53:24 +0800   10009 execution.flow     INFO     Node eventchecking completes.

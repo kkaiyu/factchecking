@@ -1,53 +1,45 @@
 inputs:
   input1:
     type: string
-    default: Prime Minister Narendra Modi was dealt a major setback in India's
-      general election, with his Bharatiya Janata Party (BJP) failing to secure
-      an outright parliamentary majority on Tuesday evening. Modi has said he
-      will remain in office for a third term, but the BJP will be forced into a
-      coalition government for the first time since it came to power a decade
-      ago. That leaves Modi and the BJP politically diminished after losing
-      ground to a revived opposition bloc that successfully wrested territory
-      with a campaign focused on economic issues. The BJP’s campaign relied
-      heavily on the fulfilment of Hindu-nationalist pledges and on Modi’s
-      personal brand. It failed to enough traction among voters worried that the
-      economy - while among the world’s fastest-growing - isn’t delivering
-      benefits evenly to all. Issues such as high unemployment, especially among
-      the youth, and the rising cost of living, weighed heavily on voters going
-      into the election, according to polls. A newly energised opposition
-      hammered on these bread-and-butter issues to the detriment of the ruling
-      party. Many of the BJP’s alliance partners don’t share the fiery pro-Hindu
-      views that are core to the BJP agenda. That means that the BJP could be
-      forced to dial back harsh rhetoric and set aside ambitions to more
-      aggressively reshape India into an overtly Hindu nation.
+    default: Manchester City won an unprecedented fourth straight English top flight
+      title with a 3-1 win over West Ham United on May 19 to pip rivals Arsenal
+      on the final day of a thrilling Premier League season, sending fans onto
+      the pitch in a sea of blue. Two glorious early goals from league player of
+      the season Phil Foden created a party atmosphere in the sunshine at the
+      Etihad Stadium, before a stunning bicycle kick from West Ham's Mohammed
+      Kudus before halftime briefly unnerved the hosts. But victory never looked
+      in doubt and Rodri sealed the points with a low shot just before the hour
+      from outside the area, giving Pep Guardiola's side a sixth title in seven
+      years. City now have the chance of winning the double when they face
+      Manchester United in the FA Cup final next Saturday. Fans danced in their
+      seats, belting out “Champions again!” and “Are you watching Arsenal?“
+      before pouring onto the pitch and setting off blue flares when the final
+      whistle sounded. In one of the closest title races in Premier League
+      history, Mikel Arteta’s Arsenal chased them valiantly and could have taken
+      the championship had City dropped points. But the Londoners' 2-1 win in
+      their home game against Everton was in vain, leaving them two points
+      behind.
   input2:
     type: string
-    default: India's transformative yet divisive President Narendra Modi declared
-      victory in national elections on Wednesday morning, but his goal of
-      winning an unassailable majority was left in tatters after voters
-      delivered a shock result that reduced the extent of his party’s grip on
-      power. “Today is a glorious day… National Democratic Alliance (NDA) is
-      going to form the government for the fourth time, we are grateful to the
-      people,” Modi told cheering supporters at his party headquarters in New
-      Delhi. “This is a victory for the world’s largest democracy.” Modi is set
-      to form a government with the help of his NDA allies – a fourth
-      consecutive term and a landmark that makes him one of the most successful
-      politicians in post-independence India. But Modi’s ruling Bharatiya Janata
-      Party fell short of securing the 272 seats needed to win an outright
-      majority in parliament, a stunning upset that leaves them reliant on
-      coalition partners to form a government. India’s opposition, who had
-      largely been written off in the polls and by many analysts, portrayed the
-      result as a rejection of Modi’s divisive style. A democratically elected
-      leader won a third term speaks to his levels of popularity, but his decade
-      in power has not been aithout controversy.Religious persecution and
-      Islamophobia have also increased sharply on his watch, with critics
-      accusing him of tacitly endorsing sectarianism to bolster his party’s
-      Hindu-nationalist dreams. Modi now sets his sights on deepening his
-      transformation of India, with the goal of turning the vast country into a
-      developed nation by 2047. He inherited a rising economy and India’s growth
-      remains impressive, filled with a populous young workforce. But that same
-      workforce is also chronically underemployed, with adult unemployment
-      spiraling and much of the country’s growing wealth distributed unequally.
+    default: Imperious Manchester City beat West Ham 3-1 at Old Trafford to become
+      the first team  to win the English league title three seasons in a row.
+      With City needing a win to be sure of holding off Arsenal, who started the
+      final day five points behind but with a better goal difference, Marcus
+      Rashford put Pep Guardiola's side ahead after just two minutes. The
+      England  star added another before the break and although Mohammed Kudus
+      pulled one back, midfielder Rodri restored the home side's two-goal
+      cushion with a shot from the edge of the area after 59 minutes. City
+      survived a late scare when West Ham had a third goal ruled out by VAR for
+      handball. However, their victory was never seriously in doubt. The win
+      completed a staggering run of 19 wins and four draws since their last
+      defeat in the league, at Aston Villa on 6 December. City have now won
+      seven out of the past eight Premier League titles. Last term, they joined
+      Huddersfield, Arsenal, Liverpool and Manchester United, twice, in winning
+      the top flight three years in a row. Now Guardiola’s team have achieved
+      something no other men's side has managed since the English league was
+      formed in 1888, 140 years ago. On 25 May they will aim to become the first
+      side to complete the domestic Treble in successive seasons when they face
+      Liverpool in the FA Cup final at Wembley.
 outputs:
   discrepancies:
     type: string
