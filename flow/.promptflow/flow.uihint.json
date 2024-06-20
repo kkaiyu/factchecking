@@ -66,6 +66,13 @@
           "input1": []
         }
       }
+    },
+    "markdown": {
+      "variant_0": {
+        "inputs": {
+          "Input": []
+        }
+      }
     }
   }
 }

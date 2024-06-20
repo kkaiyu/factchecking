@@ -7,7 +7,7 @@
     },
     "outputs": {
       "x": 715,
-      "y": 846,
+      "y": 980,
       "index": -1
     },
     "datetimechecking": {
@@ -68,6 +68,11 @@
     "textualentailment": {
       "x": 800,
       "y": 42,
+      "index": 11
+    },
+    "markdown": {
+      "x": 635,
+      "y": 846,
       "index": 10
     }
   },

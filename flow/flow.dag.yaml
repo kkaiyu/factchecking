@@ -43,7 +43,7 @@ inputs:
 outputs:
   discrepancies:
     type: string
-    reference: ${eventchecking.output}
+    reference: ${markdown.output}
 nodes:
 - name: datetimechecking
   type: llm
@@ -136,6 +136,17 @@ nodes:
     type: code
     path: eventexamples.py
   inputs: {}
+- name: markdown
+  type: llm
+  source:
+    type: code
+    path: markdown.jinja2
+  inputs:
+    temperature: 0.1
+    deployment_name: gpt-4-32k-demo
+    Input: ${eventchecking.output}
+  connection: kkaiyu
+  api: chat
 - name: textualentailment
   type: python
   source:

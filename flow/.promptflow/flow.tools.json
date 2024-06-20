@@ -141,6 +141,17 @@
       "type": "python",
       "source": "textualentailment.py",
       "function": "textualentailment"
+    },
+    "markdown.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "Input": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "markdown.jinja2"
     }
   }
 }
