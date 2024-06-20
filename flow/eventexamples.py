@@ -9,8 +9,8 @@ import json
 def event_examples():
     return [
         {
-            "input1": "Manchester City won an unprecedented fourth straight English top flight title with a 3-1 win over West Ham United on May 19 to pip rivals Arsenal on the final day of a thrilling Premier League season, sending fans onto the pitch in a sea of blue.",
-            "input2": "Imperious Manchester City beat West Ham 3-1 at Old Trafford to become the first team to win the English league title three seasons in a row.",
+            "input": "Input1: Manchester City won an unprecedented fourth straight English top flight title with a 3-1 win over West Ham United on May 19 to pip rivals Arsenal on the final day of a thrilling Premier League season, sending fans onto the pitch in a sea of blue." +
+            "Input2: Imperious Manchester City beat West Ham 3-1 at Old Trafford to become the first team to win the English league title three seasons in a row.",
             "output": "Input1: Manchester City won an unprecedented fourth straight English top flight title with a 3-1 win over West Ham United on May 19 to pip rivals Arsenal on the final day of a thrilling Premier League season, sending fans onto the pitch in a sea of blue." +
             "Input2: Imperious Manchester City beat West Ham 3-1 at Old Trafford to become the first team  to win the English league title three seasons in a row." + 
             json.dumps(
