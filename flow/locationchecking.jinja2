@@ -4,32 +4,21 @@ You are a detective. You will be given an input, which has an Input1 and Input2.
 Your task is to identify discrepancies with respect to LOCATION in Input1 and Input2. 
 You need to evaluate if the locations in Input2 are consistent with the locations in Input1.
 Taking Input1 as the ground truth, identify the locations in Input2 that differs from Input1. 
-You will evaluate by listing all the information regarding locations in Input2 and comparing if each of these locations correspond to 
-what is given in Input1.
 If a location in Input2 does not match the location of the same event in Input1, flag the information out as a discrepancy.
-
-Consider the semantic meaning of the information within the inputs.
-Paraphrased points with similar semantic meaning do not constitute a discrepancy.
-
-Work in a step by step way to ensure that your response is correct. 
 Always ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.
 Do not return information not in the inputs. Do not return information that you do not know. 
-If you are unsure of an answer, you can respond with "I don't know".
 
 You will format the output as follows:
 Input1, Input2 and append any discrepancies related to LOCATION found by this LLM to the json present in the input.
 Even if a sentence contains discrepancies of other types, list of discrepancies found by this LLM should only include discrepancies related to LOCATION.
-Append this list to the existing list if any. If there are discrepancies, the output should only contain DATETIME, and LOCATION discrepancies.
-The discrepancies should be accurately categorised into its type - DATETIME or LOCATION.
-If there are no discrepancies related to LOCATION found, output the input as it is.
-There should be no repetition of discrepancies in more than one discrepancy type.
-Do not add additional or edit any information within the input.
+Append this list to the existing list if any. If there are discrepancies, the output should only contain discrepanices with reasons related to DATETIME and LOCATION.
+If there are no discrepancies related to LOCATION found, output the input as it is. Do not add additional or edit any information within the input.
 
-The list of discrepancies can be added as a json as follows: 
+The list of discrepancies can be added as follows: 
 {"Location": [
     {"Sentence1": "inconsistent sentence from Input1",
      "Sentence2": "inconsistent sentence from Input2",
-     "Reason": "how does Sentence2 differ from Sentence1"
+     "Reason": "how does Sentence2 differ from Sentence1 in terms of LOCATION"
     }
   ]
 }

@@ -1,48 +1,6 @@
 {
   "package": {},
   "code": {
-    "datechecking.jinja2": {
-      "type": "llm",
-      "inputs": {
-        "Input1": {
-          "type": [
-            "string"
-          ]
-        },
-        "Input2": {
-          "type": [
-            "string"
-          ]
-        },
-        "examples": {
-          "type": [
-            "string"
-          ]
-        }
-      },
-      "source": "datechecking.jinja2"
-    },
-    "timechecking.jinja2": {
-      "type": "llm",
-      "inputs": {
-        "Input1": {
-          "type": [
-            "string"
-          ]
-        },
-        "Input2": {
-          "type": [
-            "string"
-          ]
-        },
-        "examples": {
-          "type": [
-            "string"
-          ]
-        }
-      },
-      "source": "timechecking.jinja2"
-    },
     "locationchecking.jinja2": {
       "type": "llm",
       "inputs": {
@@ -94,12 +52,7 @@
     "eventchecking.jinja2": {
       "type": "llm",
       "inputs": {
-        "Input1": {
-          "type": [
-            "string"
-          ]
-        },
-        "Input2": {
+        "Input": {
           "type": [
             "string"
           ]
@@ -178,6 +131,27 @@
       "type": "python",
       "source": "personexamples.py",
       "function": "person_examples"
+    },
+    "eventexamples.py": {
+      "type": "python",
+      "source": "eventexamples.py",
+      "function": "event_examples"
+    },
+    "textualentailment.py": {
+      "type": "python",
+      "source": "textualentailment.py",
+      "function": "textualentailment"
+    },
+    "markdown.jinja2": {
+      "type": "llm",
+      "inputs": {
+        "Input": {
+          "type": [
+            "string"
+          ]
+        }
+      },
+      "source": "markdown.jinja2"
     }
   }
 }

@@ -6,8 +6,8 @@
       "index": -1
     },
     "outputs": {
-      "x": 880,
-      "y": 712,
+      "x": 715,
+      "y": 980,
       "index": -1
     },
     "datetimechecking": {
@@ -31,13 +31,8 @@
       "index": 6
     },
     "eventchecking": {
-      "x": 1130,
-      "y": 42,
-      "index": 9
-    },
-    "actionchecking": {
-      "x": 800,
-      "y": 42,
+      "x": 635,
+      "y": 712,
       "index": 8
     },
     "datetimeexamples": {
@@ -59,6 +54,26 @@
       "x": 965,
       "y": 444,
       "index": 7
+    },
+    "timechecking": {
+      "x": 470,
+      "y": 176,
+      "index": -1
+    },
+    "eventexamples": {
+      "x": 470,
+      "y": 578,
+      "index": 9
+    },
+    "textualentailment": {
+      "x": 800,
+      "y": 42,
+      "index": 11
+    },
+    "markdown": {
+      "x": 635,
+      "y": 846,
+      "index": 10
     }
   },
   "orientation": "Vertical"

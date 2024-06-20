@@ -21,7 +21,9 @@
       "variant_0": {
         "inputs": {
           "Input1": [],
-          "Input2": []
+          "Input2": [],
+          "examples": [],
+          "Input": []
         }
       }
     },
@@ -36,7 +38,9 @@
     "datetimechecking": {
       "variant_0": {
         "inputs": {
-          "examples": []
+          "examples": [],
+          "Input1": [],
+          "Input2": []
         }
       }
     },
@@ -53,6 +57,20 @@
         "inputs": {
           "Input": [],
           "examples": []
+        }
+      }
+    },
+    "textualentailment": {
+      "variant_0": {
+        "inputs": {
+          "input1": []
+        }
+      }
+    },
+    "markdown": {
+      "variant_0": {
+        "inputs": {
+          "Input": []
         }
       }
     }
