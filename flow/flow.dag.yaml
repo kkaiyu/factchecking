@@ -52,7 +52,7 @@ nodes:
     path: datetimechecking.jinja2
   inputs:
     deployment_name: gpt-4-32k-demo
-    temperature: 0.1
+    temperature: 0
     Input1: ${inputs.input1}
     Input2: ${inputs.input2}
     examples: ${datetimeexamples.output}
@@ -71,7 +71,7 @@ nodes:
     path: locationchecking.jinja2
   inputs:
     deployment_name: gpt-4-32k-demo
-    temperature: 0.1
+    temperature: 0
     Input: ${datetimechecking.output}
     examples: ${locationexamples.output}
   connection: kkaiyu
@@ -82,24 +82,6 @@ nodes:
     type: code
     path: locationexamples.py
   inputs: {}
-- name: objectchecking
-  type: llm
-  source:
-    type: code
-    path: objectchecking.jinja2
-  inputs:
-    deployment_name: gpt-4-32k-demo
-    temperature: 0.1
-    Input: ${locationchecking.output}
-    examples: ${objectexamples.output}
-  connection: kkaiyu
-  api: chat
-- name: objectexamples
-  type: python
-  source:
-    type: code
-    path: objectexamples.py
-  inputs: {}
 - name: personchecking
   type: llm
   source:
@@ -107,8 +89,8 @@ nodes:
     path: personchecking.jinja2
   inputs:
     deployment_name: gpt-4-32k-demo
-    temperature: 0.1
-    Input: ${objectchecking.output}
+    temperature: 0
+    Input: ${locationchecking.output}
     examples: ${personexamples.output}
   connection: kkaiyu
   api: chat
@@ -118,6 +100,24 @@ nodes:
     type: code
     path: personexamples.py
   inputs: {}
+- name: objectchecking
+  type: llm
+  source:
+    type: code
+    path: objectchecking.jinja2
+  inputs:
+    deployment_name: gpt-4-32k-demo
+    temperature: 0
+    Input: ${personchecking.output}
+    examples: ${objectexamples.output}
+  connection: kkaiyu
+  api: chat
+- name: objectexamples
+  type: python
+  source:
+    type: code
+    path: objectexamples.py
+  inputs: {}
 - name: eventchecking
   type: llm
   source:
@@ -125,9 +125,9 @@ nodes:
     path: eventchecking.jinja2
   inputs:
     deployment_name: gpt-4-32k-demo
-    temperature: 0.1
+    temperature: 0
     examples: ${eventexamples.output}
-    Input: ${personchecking.output}
+    Input: ${objectchecking.output}
   connection: kkaiyu
   api: chat
 - name: eventexamples
