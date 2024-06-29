@@ -1,65 +1,45 @@
 inputs:
   input1:
     type: string
-    default: The Police have arrested three men, aged between 52 and 62, for their
-      suspected involvement in a case of conspiracy to commit cheating involving
-      the use of fake gold ingots. On 19 June 2024 at about 3.15pm, the Police
-      received a report that a female victim was cheated of $4000 after two men
-      handed over to her gold ingots for safekeeping. Preliminary investigations
-      revealed on 19 June 2024 at about 1pm, the victim was approached by two
-      men along Tras Street claiming to have found gold ingots while excavating
-      the ground at an unknown site in Singapore. The men claimed they wanted to
-      send the gold ingots back to China but were unsure of the legal process
-      hence offered for victim to safekeep the gold ingots but to hand them cash
-      as collateral. The men also produced a document in old Chinese writings,
-      resembling an old will, as well as a small piece of gold ingot. The victim
-      then brought the two men to goldsmith shop along Eu Tong Sen Street to
-      verify the authenticity of the small piece of gold ingot, and it was
-      verified to be genuine. After the gold had been authenticated, the two men
-      took back the genuine gold ingot and handed over other purported gold
-      ingots to the victim and told her to pay $4000 as a collateral. The victim
-      went to the same goldsmith shop to further authenticate the other gold
-      ingots and they were found to be fake. Upon realising she was a victim of
-      scam and discovered the two men had left the place, she alerted the
-      Police. Through ground enquiries and with the aid of images from PolCam
-      and CCTV camera footages, officers from Central Police Division
-      established the identity of the two men and arrested them along Aliwal
-      Street on 20 June 2024. Through further investigations, the officers also
-      arrested another accomplice and seized a number of case exhibits which
-      included over 80 pieces of mini gold-coloured ingots, a piece of paper
-      with Chinese writings and six gold-coloured mini-Buddha statues. The three
-      men will be charged in court on 22 June 2024 with conspiracy to commit
-      cheating, which is punishable with imprisonment up to 10 years and fine.
+    default: Manchester City won an unprecedented fourth straight English top flight
+      title with a 3-1 win over West Ham United on May 19 to pip rivals Arsenal
+      on the final day of a thrilling Premier League season, sending fans onto
+      the pitch in a sea of blue. Two glorious early goals from league player of
+      the season Phil Foden created a party atmosphere in the sunshine at the
+      Etihad Stadium, before a stunning bicycle kick from West Ham's Mohammed
+      Kudus before halftime briefly unnerved the hosts. But victory never looked
+      in doubt and Rodri sealed the points with a low shot just before the hour
+      from outside the area, giving Pep Guardiola's side a sixth title in seven
+      years. City now have the chance of winning the double when they face
+      Manchester United in the FA Cup final next Saturday. Fans danced in their
+      seats, belting out “Champions again!” and “Are you watching Arsenal?“
+      before pouring onto the pitch and setting off blue flares when the final
+      whistle sounded. In one of the closest title races in Premier League
+      history, Mikel Arteta’s Arsenal chased them valiantly and could have taken
+      the championship had City dropped points. But the Londoners' 2-1 win in
+      their home game against Everton was in vain, leaving them two points
+      behind.
   input2:
     type: string
-    default: Three men were arrested on June 20 over their alleged involvement in
-      conspiring to cheat using fake gold ingots. The men are aged between 52
-      and 62, the police said in a statement on June 21. The police said they
-      received a report that a female victim was cheated of $4,000 after two men
-      handed over “gold ingots” to her for safekeeping. Preliminary
-      investigations showed that on June 19 at about 1pm, the woman was
-      approached by two men in Tras Street claiming to have found gold ingots
-      while they were digging the ground at an unknown site in Singapore. The
-      men then claimed that they wanted to send the gold pieces back to China
-      but were unsure of the legal process. They offered to leave the gold
-      ingots with the victim for safekeeping if she agreed to give them cash as
-      collateral. The men also showed her a document with “old Chinese writings”
-      that resembled an old will, along with a small gold ingot, said the
-      police. The victim took the two men to a goldsmith shop in Eu Tong Sen
-      Street to verify the authenticity of the small gold ingot. It turned out
-      to be genuine. The men then took back the genuine gold ingot, gave the
-      victim other “gold ingots” and told her to pay $4,000. The victim went to
-      the same goldsmith shop to authenticate the other “gold ingots” and was
-      told that those were fake. By then, the two men had left the shop.
-      Realising that she had fallen for a scam, she alerted the police. Through
-      ground inquiries, images from PolCam and closed-circuit television camera
-      footage, officers from the Central Police Division identified the two men
-      and arrested them in Aliwal Street on June 20. The officers also arrested
-      an accomplice after further investigations. More than 80 mini
-      gold-coloured ingots, a piece of paper with Chinese writings and six
-      gold-coloured mini Buddha statues were among items seized. The three men
-      are expected to be charged on June 22 with conspiracy to commit cheating.
-      The offence carries a jail term of up to 10 years and a fine.
+    default: Imperious Manchester City beat West Ham 3-1 at Old Trafford to become
+      the first team to win the English league title three seasons in a row.
+      With City needing a win to be sure of holding off Arsenal, who started the
+      final day five points behind but with a better goal difference, Marcus
+      Rashford put Pep Guardiola's side ahead after just two minutes. The
+      England  star added another before the break and although Mohammed Kudus
+      pulled one back, midfielder Rodri restored the home side's two-goal
+      cushion with a shot from the edge of the area after 59 minutes. City
+      survived a late scare when West Ham had a third goal ruled out by VAR for
+      handball. However, their victory was never seriously in doubt. The win
+      completed a staggering run of 19 wins and four draws since their last
+      defeat in the league, at Aston Villa on 6 December. City have now won
+      seven out of the past eight Premier League titles. Last term, they joined
+      Huddersfield, Arsenal, Liverpool and Manchester United, twice, in winning
+      the top flight three years in a row. Now Guardiola’s team have achieved
+      something no other men's side has managed since the English league was
+      formed in 1888, 140 years ago. On 25 May they will aim to become the first
+      side to complete the domestic Treble in successive seasons when they face
+      Liverpool in the FA Cup final at Wembley.
 outputs:
   discrepancies:
     type: string
