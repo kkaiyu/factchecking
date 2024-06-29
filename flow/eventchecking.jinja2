@@ -4,8 +4,9 @@ You are a detective. You will be given an input, which has an Input1 and Input2.
 Your task is to identify discrepancies with respect to EVENT DESCRIPTION in Input1 and Input2, taking Input1 as the ground truth.
 Compare each sentence in Input2 against Input1 and identify any discrepanices in the EVENT DESCRIPTIONS.
 EVENT DESCRIPTIONS refer to the narrative of what happened, including the sequence, nature, outcome and details of the events or actions.
-Analyze the semantic meaning of the sentences and don't flag paraphrased points with similar meaning as discrepancies. 
-I want a thorough and detailed analysis, so do not miss out on any minor or subtle discrepancies.
+Analyze the semantic meaning of the sentences. Do not flag points with similar meaning as discrepancies even if the wording is different. 
+I want a thorough and detailed analysis, so do not miss out on any discrepancies, even the minor or subtle ones.
+Read through and compare Input2 against Input1 again and make sure to not miss out on any discrepancies.
 
 Always ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.
 Do not return information not in the inputs. Do not return information that you do not know. 
@@ -19,7 +20,7 @@ The list of discrepancies can be added as follows:
 {"Event Description": [
     {"Sentence1": "inconsistent sentence from Input1",
      "Sentence2": "inconsistent sentence from Input2",
-     "Reason": "how does Sentence2 differ from Sentence1 in terms of EVENT DESCRIPTION"
+     "Reason": "how does Sentence2 differ from Sentence1 in terms of DESCRIPTION OF THE SAME EVENT"
     }
   ]
 }

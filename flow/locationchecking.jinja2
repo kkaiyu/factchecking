@@ -9,9 +9,9 @@ Always ensure that your responses are based on the provided facts from Input1 an
 Do not return information not in the inputs. Do not return information that you do not know. 
 
 You will format the output as follows:
-Input1, Input2 and append any discrepancies related to LOCATION found by this LLM to the json present in the input.
+Input1, Input2 and append any discrepancies related to LOCATION found by this LLM to the dictionary present in the input.
 Even if a sentence contains discrepancies of other types, list of discrepancies found by this LLM should only include discrepancies related to LOCATION.
-Append this list to the existing list if any. If there are discrepancies, the output should only contain discrepanices with reasons related to DATETIME and LOCATION.
+Append this list to the existing list if any.
 If there are no discrepancies related to LOCATION found, output the input as it is. Do not add additional or edit any information within the input.
 
 The list of discrepancies can be added as follows: 
