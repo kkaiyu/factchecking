@@ -1,45 +1,63 @@
 inputs:
   input1:
     type: string
-    default: Manchester City won an unprecedented fourth straight English top flight
-      title with a 3-1 win over West Ham United on May 19 to pip rivals Arsenal
-      on the final day of a thrilling Premier League season, sending fans onto
-      the pitch in a sea of blue. Two glorious early goals from league player of
-      the season Phil Foden created a party atmosphere in the sunshine at the
-      Etihad Stadium, before a stunning bicycle kick from West Ham's Mohammed
-      Kudus before halftime briefly unnerved the hosts. But victory never looked
-      in doubt and Rodri sealed the points with a low shot just before the hour
-      from outside the area, giving Pep Guardiola's side a sixth title in seven
-      years. City now have the chance of winning the double when they face
-      Manchester United in the FA Cup final next Saturday. Fans danced in their
-      seats, belting out “Champions again!” and “Are you watching Arsenal?“
-      before pouring onto the pitch and setting off blue flares when the final
-      whistle sounded. In one of the closest title races in Premier League
-      history, Mikel Arteta’s Arsenal chased them valiantly and could have taken
-      the championship had City dropped points. But the Londoners' 2-1 win in
-      their home game against Everton was in vain, leaving them two points
-      behind.
+    default: A married woman managed to get three different men to fall in love with
+      her and transfer her large sums of money, with one of them cheating his
+      parents into handing over their life savings. In total, she cheated 10
+      people of more than S$880,000 (US$646,000). Even when she was charged and
+      her trial was pending, 49-year-old Joceyln Kwek Sok Koon managed to cheat
+      her husband's ex-colleague of S$338,600, lying to him that she could help
+      him obtain permanent residency in Singapore. Kwek pleaded guilty on
+      Thursday (Oct 12) to multiple charges of cheating. She was remanded and
+      listened morosely to the proceedings with a mask over her face, appearing
+      haggard. The court heard that Kwek got to know her lover and co-accused
+      Lai Sze Yin in July 2016, when the 24-year-old man delivered a parcel to
+      her home. Even though Kwek was married and had two children, she began
+      dating Lai. To conceal her real identity from Lai's family, she created a
+      persona she assumed - a young woman named Rachel Lam Xin Yi who was
+      studying in the National University of Singapore. She never met Lai's
+      family but would talk to his parents over the phone, gaining their trust
+      that way and buying them gifts. She managed to get Lai to trick his
+      parents and younger sister into handing over a total of S$150,000 on the
+      guise of investments or a car loan. Lai's mother lodged a police report in
+      October 2018 saying her son's girlfriend had cheated her entire savings
+      and had been uncontactable for over a year. While Kwek had no previous
+      convictions, she should not be treated as a first-time offender,
+      considering she's a serial cheat who had scammed at least 10 known victims
+      of a substantial amount of money. Lai was sentenced to 15 months' jail in
+      June 2021 for his role in cheating his family. At the time, he promised
+      his parents that he would work extremely hard to return all their life
+      savings.
   input2:
     type: string
-    default: Imperious Manchester City beat West Ham 3-1 at Old Trafford to become
-      the first team to win the English league title three seasons in a row.
-      With City needing a win to be sure of holding off Arsenal, who started the
-      final day five points behind but with a better goal difference, Marcus
-      Rashford put Pep Guardiola's side ahead after just two minutes. The
-      England  star added another before the break and although Mohammed Kudus
-      pulled one back, midfielder Rodri restored the home side's two-goal
-      cushion with a shot from the edge of the area after 59 minutes. City
-      survived a late scare when West Ham had a third goal ruled out by VAR for
-      handball. However, their victory was never seriously in doubt. The win
-      completed a staggering run of 19 wins and four draws since their last
-      defeat in the league, at Aston Villa on 6 December. City have now won
-      seven out of the past eight Premier League titles. Last term, they joined
-      Huddersfield, Arsenal, Liverpool and Manchester United, twice, in winning
-      the top flight three years in a row. Now Guardiola’s team have achieved
-      something no other men's side has managed since the English league was
-      formed in 1888, 140 years ago. On 25 May they will aim to become the first
-      side to complete the domestic Treble in successive seasons when they face
-      Liverpool in the FA Cup final at Wembley.
+    default: Three men separately thought that they had found the love of their life
+      in Jamie Chua. Instead, two later found their bank accounts emptied and
+      one was cheated his family of their savings after falling for her. Love
+      was not the only tool Kwek used to scam her victims. She sometimes posed
+      as the daughter of a family in the freight trading business and cheated
+      people who trusted her as their god-daughter. She also cheated her
+      husband’s colleague of S$4000 through lies that she had leukaemia, and
+      that she could help him handle his Singapore permanent residency
+      application. In total, Kwek cheated at least 10 victims of at least
+      S$880,448.40, and some of the offences were committed while she was on
+      bail awaiting trial for her crimes. On Thursday (Oct 12), Chua, 49,
+      pleaded guilty to one charge of criminal breach of trust, and six charges
+      of cheating. Sometime in February 2013, Kwek got to know Lai Sze Yin, 28,
+      and they entered a romantic relationship although Kwek was married. In
+      order to conceal her real identity, Kwek was known to Lai’s family as
+      “Rachel Lam”. Lai's family knew that "Rachel" was the same age as him and
+      that she studied at the Nanyang Technological University. Kwek never met
+      Lai’s parents but would speak to them over the phone and buy them gifts.
+      Lai’s parents trusted her so much that his mother asked Kwek to treat her
+      “like her mother” and told her that she was “one of her children”. Lying
+      about a potential investment among other things, Kwek and Lai cheated his
+      parents and younger sister of a total of S$150,454, court documents
+      stated. However, Kwek’s charges related to S$89,000 of the total sum.
+      Lai’s grandmother made a police report on Oct 30, 2018 after Kwek did not
+      return their investment money. After the report was filed, Kwek made
+      multiple phone calls to Lai’s parents, hoping that they would drop the
+      case. Lai was jailed for one year and three months in 2021 for his
+      actions.
 outputs:
   discrepancies:
     type: string
