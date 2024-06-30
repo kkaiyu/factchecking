@@ -24,6 +24,21 @@ def person_examples():
             )
         },
         {
+            "input": "Input1: Lai's mother lodged a police report in October 2018 saying her son's girlfriend had cheated her entire savings and had been uncontactable for over a year.\n\n" +
+            "Input2:  Lai’s grandmother made a police report on Oct 30, 2018 after Kwek did not return their investment money. \n\n",
+            "output": "Lai's mother lodged a police report in October 2018 saying her son's girlfriend had cheated her entire savings and had been uncontactable for over a year.\n\n" +
+            "Input2:  Lai’s grandmother made a police report on Oct 30, 2018 after Kwek did not return their investment money. \n\n" +
+            json.dumps(
+                {"Person Description": [
+                    {"Sentence1": "Lai's mother lodged a police report in October 2018 saying her son's girlfriend had cheated her entire savings and had been uncontactable for over a year.",
+                    "Sentence2": " Lai’s grandmother made a police report on Oct 30, 2018 after Kwek did not return their investment money. ",
+                    "Reason": "Lai's mother made the police report in Sentence1, but in Sentence2, it was made by Lai's grandmother.",
+                    },
+                ]
+                }
+            )
+        },
+        {
             "input": "Input1: A woman was charged on Thursday (May 9) with the murder of a 56-year-old man at a condominium along Beach Road. Li Ye, a 37-year-old Chinese national, is accused of causing the death of Lim Lai Guan in a unit at City Gate Residences at about 1.40am on May 8. Li was arrested at the scene and a knife was seized.\n\n" +
             "Input2: A man was charged on Thursday (May 9) with the murder of a 56-year-old man at a condominium along Beach Road. Xiao Ming, a 40-year-old Burmese national, is accused of causing the death of Lim Lai Guan in a unit at City Gate Residences at about 1.40am on May 8. Li was arrested at the scene and a knife was seized.\n\n",
             "output": "Input1: A woman was charged on Thursday (May 9) with the murder of a 56-year-old man at a condominium along Beach Road. Li Ye, a 37-year-old Chinese national, is accused of causing the death of Lim Lai Guan in a unit at City Gate Residences at about 1.40am on May 8. Li was arrested at the scene and a knife was seized.\n\n" +
