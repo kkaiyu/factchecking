@@ -1,58 +1,60 @@
 inputs:
   input1:
     type: string
-    default: American pop superstar Taylor Swift sent 90,000 fans at London’s
-      Wembley Stadium into a frenzy on June 23 during her Eras Tour concert when
-      she brought her American football player beau Travis Kelce onstage in a
-      surprise appearance. At the singer’s third London show for the Europe leg
-      of her world tour, Kelce strutted onstage in a top hat and a tuxedo, and
-      joined a skit that doubles as an outfit change before her performance of I
-      Can Do It With A Broken Heart. After Swift, 34, pretended to be dead
-      following her track The Smallest Man Who Ever Lived and lay on the floor
-      of the stage, Kelce, also 34, scooped her up in a bridal-carry and brought
-      her to a red couch towards the back of the diamond section of the stage.
-      He set her down, fanned her and even dabbed her face with a powder brush
-      before he finally began to exit the stage. He also did a couple of cute
-      dance moves, which delighted the Swifties in attendance. As she prepared
-      to launch into I Can Do It With A Broken Heart, Swift turned around to
-      blow Kelce a kiss, before he exited the stage with backup dancers Kam
-      Saunders and Jan Ravnik. The skit reflects the lyrics of that track, where
-      Swift sings about performing and releasing music while being deeply
-      depressed and heartbroken over her break-ups with English actor Joe Alwyn
-      and English rocker Matty Healy. His onstage appearance comes hot on the
-      heels of the couple going Instagram-official. Swift posted a backstage
-      selfie of herself, Kelce, as well as Britain’s Prince William and his
-      children – Prince George and Princess Charlotte – on her official
-      Instagram account on June 22. The London show marks the first time Kelce
-      has appeared on The Eras Tour stage since the power couple reportedly
-      started dating in September 2023, although the Kansas City Chiefs player
-      has been spotted in the audience many times.
+    default: A recalcitrant stalker, who filmed students near schools and pestered
+      some of them for personal details, will return to prison after repeating
+      his earlier offences of harassing young girls. In one of the latest
+      incidents, the court heard that Fong Poh Kuen had obtained the information
+      of more than 500 female students in a single day by conducting a fake
+      survey. He also secretly filmed girls outside schools by wearing
+      spyglasses – a pair of spectacles that contained pinhole cameras with a
+      video-recording function. The 46-year-old was on Wednesday sentenced to 18
+      months’ jail after pleading guilty to a total of 13 charges – three for
+      illegally obtaining personal information, one for causing public nuisance
+      and nine under the Protection from Harassment Act. On Jan 8, 2020, while
+      Anglo-Chinese Junior College was holding an open house for prospective
+      students, Fong stood in a public area located between Buona Vista MRT and
+      the school. He had blank forms with him, and he would lie to the students
+      that he represented an educational institution or government body, and
+      deceive them into believing that he was conducting the surveys on their
+      authority. He would often film the students with his spyglasses while
+      conducting the surveys. Fong then used the data he collected to stalk
+      three of them. Fong had visited some of these schools to record video
+      footage of the students, either by placing his phone in his breast pocket
+      with the camera facing away from him, or by holding it in his hand at
+      chest height. These images were then hidden in a password-encrypted mobile
+      application named Vault, which was disguised as a calculator app. He had
+      been convicted of similar offences on Oct 1, 2019, where he was sentenced
+      to three months’ jail and a fine of $8,000. His sentence was backdated to
+      Aug 8, 2019. At least 22 police reports were filed by different members of
+      the public between June 6, 2020 and Aug 31, 2022.
   input2:
     type: string
-    default: On June 23, at the fourth of eight London Eras Tour shows, Travis Kelce
-      graced the famed diamond walkway at Wembley Stadium in his third-ever
-      onstage appearance for the Eras Tour. He performed alongside Taylor Swift
-      during the intro for "I Can Do It With a Broken Heart" in the newly added
-      "Tortured Poets" era of the show. As Swift transitions into the last song
-      of the era, she typically acts out a short skit with two of her dancers,
-      after she appears to "drop dead" during the penultimate song in the set,
-      "The Smallest Man Who Ever Lived". Videos posted to social media showed
-      Kelce first carrying Swift to a heart-shaped couch, then brushing her face
-      with a makeup brush once she was up again. He showed off some dance moves,
-      too, all with a big, goofy smile plastered to his face. Kelce proved to be
-      a fearless lover Sunday, joining the trio onstage in full costume, showing
-      off his acting chops as if he were auditioning to be a mainstay for the
-      rest of the tour. The track, an upbeat pop banger on Swift's latest album,
-      appears to be about the Eras Tour itself and how Swift has been able to
-      put on one of the biggest and most successful concert runs of all time
-      amid a breakup with longtime boyfriend Joe Alwyn last year, shortly after
-      the tour began. It has already been a big Eras weekend for Kelce, who has
-      been to some of the London shows. Swift posted a selfie on Facebook
-      featuring Kelce alongside Prince William, Prince George and Princess
-      Charlotte, who attended the Friday, June 22 night show. They went public
-      with their relationship in September 2023 when Swift attended a Kansas
-      City Chiefs game against the Chicago Bears, and they have been caught
-      supporting each other and their very public careers ever since.
+    default: >
+      While posing as a market researcher, a man would don a pair of blue
+      spectacles with hidden cameras to record female students while collecting
+      personal information about them. In total, Fong Poh Kuen obtained the
+      personal information of more than 200 students. For his offences, the
+      46-year-old was sentenced to 18 months’ jail on Wednesday (Aug 30). Fong
+      had previously been convicted in 2019 for harassment, among other
+      offences, and sentenced to nine months’ jail. Other than using the spy-cam
+      spectacles, Fong would also place his mobile phone in his breast pocket
+      facing outward or hold it in his hand at chest height to record the
+      students. He would then hide the photos and videos in a password-encrypted
+      mobile application disguised as a weather application. The spyglasses were
+      bought by Fong after he was released from prison following his 2019
+      conviction. To collect the personal information of female students, Fong
+      would prepare multiple education survey forms and position himself near
+      educational institutions before approaching them to fill in the forms,
+      focusing on those wearing school uniforms. When asked about the purpose of
+      the survey, Fong would tell the students that he represented a private
+      research firm to deceive them into believing that he was authorised to
+      conduct the surveys. The students would then be induced to provide him
+      with their personal information. He would often wear the spyglasses with
+      the video-recording function turned on while conducting such surveys. Once
+      Fong obtained the personal information, he would use it to stalk the
+      students by repeatedly sending them text messages, keeping them under
+      surveillance or both.
 outputs:
   discrepancies:
     type: string
