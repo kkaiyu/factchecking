@@ -1,63 +1,58 @@
 inputs:
   input1:
     type: string
-    default: A married woman managed to get three different men to fall in love with
-      her and transfer her large sums of money, with one of them cheating his
-      parents into handing over their life savings. In total, she cheated 10
-      people of more than S$880,000 (US$646,000). Even when she was charged and
-      her trial was pending, 49-year-old Joceyln Kwek Sok Koon managed to cheat
-      her husband's ex-colleague of S$338,600, lying to him that she could help
-      him obtain permanent residency in Singapore. Kwek pleaded guilty on
-      Thursday (Oct 12) to multiple charges of cheating. She was remanded and
-      listened morosely to the proceedings with a mask over her face, appearing
-      haggard. The court heard that Kwek got to know her lover and co-accused
-      Lai Sze Yin in July 2016, when the 24-year-old man delivered a parcel to
-      her home. Even though Kwek was married and had two children, she began
-      dating Lai. To conceal her real identity from Lai's family, she created a
-      persona she assumed - a young woman named Rachel Lam Xin Yi who was
-      studying in the National University of Singapore. She never met Lai's
-      family but would talk to his parents over the phone, gaining their trust
-      that way and buying them gifts. She managed to get Lai to trick his
-      parents and younger sister into handing over a total of S$150,000 on the
-      guise of investments or a car loan. Lai's mother lodged a police report in
-      October 2018 saying her son's girlfriend had cheated her entire savings
-      and had been uncontactable for over a year. While Kwek had no previous
-      convictions, she should not be treated as a first-time offender,
-      considering she's a serial cheat who had scammed at least 10 known victims
-      of a substantial amount of money. Lai was sentenced to 15 months' jail in
-      June 2021 for his role in cheating his family. At the time, he promised
-      his parents that he would work extremely hard to return all their life
-      savings.
+    default: American pop superstar Taylor Swift sent 90,000 fans at London’s
+      Wembley Stadium into a frenzy on June 23 during her Eras Tour concert when
+      she brought her American football player beau Travis Kelce onstage in a
+      surprise appearance. At the singer’s third London show for the Europe leg
+      of her world tour, Kelce strutted onstage in a top hat and a tuxedo, and
+      joined a skit that doubles as an outfit change before her performance of I
+      Can Do It With A Broken Heart. After Swift, 34, pretended to be dead
+      following her track The Smallest Man Who Ever Lived and lay on the floor
+      of the stage, Kelce, also 34, scooped her up in a bridal-carry and brought
+      her to a red couch towards the back of the diamond section of the stage.
+      He set her down, fanned her and even dabbed her face with a powder brush
+      before he finally began to exit the stage. He also did a couple of cute
+      dance moves, which delighted the Swifties in attendance. As she prepared
+      to launch into I Can Do It With A Broken Heart, Swift turned around to
+      blow Kelce a kiss, before he exited the stage with backup dancers Kam
+      Saunders and Jan Ravnik. The skit reflects the lyrics of that track, where
+      Swift sings about performing and releasing music while being deeply
+      depressed and heartbroken over her break-ups with English actor Joe Alwyn
+      and English rocker Matty Healy. His onstage appearance comes hot on the
+      heels of the couple going Instagram-official. Swift posted a backstage
+      selfie of herself, Kelce, as well as Britain’s Prince William and his
+      children – Prince George and Princess Charlotte – on her official
+      Instagram account on June 22. The London show marks the first time Kelce
+      has appeared on The Eras Tour stage since the power couple reportedly
+      started dating in September 2023, although the Kansas City Chiefs player
+      has been spotted in the audience many times.
   input2:
     type: string
-    default: Three men separately thought that they had found the love of their life
-      in Jamie Chua. Instead, two later found their bank accounts emptied and
-      one was cheated his family of their savings after falling for her. Love
-      was not the only tool Kwek used to scam her victims. She sometimes posed
-      as the daughter of a family in the freight trading business and cheated
-      people who trusted her as their god-daughter. She also cheated her
-      husband’s neighbour of S$4000 through lies that she had leukaemia, and
-      that she could help him handle his Singapore permanent residency
-      application. In total, Kwek cheated at least 10 victims of at least
-      S$880,448.40, and some of the offences were committed while she was on
-      bail awaiting trial for her crimes. On Thursday (Oct 12), Chua, 49,
-      pleaded guilty to one charge of criminal breach of trust, and six charges
-      of cheating. Sometime in February 2013, Kwek got to know Lai Sze Yin, 28,
-      and they entered a romantic relationship although Kwek was married with no
-      kids. In order to conceal her real identity, Kwek was known to Lai’s
-      family as “Rachel Lam”. Lai's family knew that "Rachel" was the same age
-      as him and that she studied at the Nanyang Technological University. Kwek
-      never met Lai’s parents but would speak to them over the phone and buy
-      them gifts. Lai’s parents trusted her so much that his mother asked Kwek
-      to treat her “like her mother” and told her that she was “one of her
-      children”. Lying about a potential investment among other things, Kwek and
-      Lai cheated his parents and younger sister of a total of S$150,454, court
-      documents stated. However, Kwek’s charges related to S$89,000 of the total
-      sum. Lai’s father made a police report on Oct 30, 2018 after Kwek did not
-      return their investment money. After the report was filed, Kwek made
-      multiple phone calls to Lai’s parents, hoping that they would drop the
-      case. Lai was jailed for one year and three months in 2021 for his
-      actions.
+    default: On June 23, at the fourth of eight London Eras Tour shows, Travis Kelce
+      graced the famed diamond walkway at Wembley Stadium in his third-ever
+      onstage appearance for the Eras Tour. He performed alongside Taylor Swift
+      during the intro for "I Can Do It With a Broken Heart" in the newly added
+      "Tortured Poets" era of the show. As Swift transitions into the last song
+      of the era, she typically acts out a short skit with two of her dancers,
+      after she appears to "drop dead" during the penultimate song in the set,
+      "The Smallest Man Who Ever Lived". Videos posted to social media showed
+      Kelce first carrying Swift to a heart-shaped couch, then brushing her face
+      with a makeup brush once she was up again. He showed off some dance moves,
+      too, all with a big, goofy smile plastered to his face. Kelce proved to be
+      a fearless lover Sunday, joining the trio onstage in full costume, showing
+      off his acting chops as if he were auditioning to be a mainstay for the
+      rest of the tour. The track, an upbeat pop banger on Swift's latest album,
+      appears to be about the Eras Tour itself and how Swift has been able to
+      put on one of the biggest and most successful concert runs of all time
+      amid a breakup with longtime boyfriend Joe Alwyn last year, shortly after
+      the tour began. It has already been a big Eras weekend for Kelce, who has
+      been to some of the London shows. Swift posted a selfie on Facebook
+      featuring Kelce alongside Prince William, Prince George and Princess
+      Charlotte, who attended the Friday, June 22 night show. They went public
+      with their relationship in September 2023 when Swift attended a Kansas
+      City Chiefs game against the Chicago Bears, and they have been caught
+      supporting each other and their very public careers ever since.
 outputs:
   discrepancies:
     type: string
