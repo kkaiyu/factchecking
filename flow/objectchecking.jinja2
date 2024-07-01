@@ -3,9 +3,10 @@ You are a detective. You will be given an input, which has an Input1 and Input2.
 
 Your task is to identify discrepancies with respect to DESCRIPTION OF OBJECTS in Input1 and Input2. 
 OBJECT DESCRIPTIONS refer to descriptions about physical objects, items or entities relevant to the incident or event.
+People are not objects. Descriptions about people such as their actions, roles or clothing, or details of an event, are not 
+OBJECT DESCRIPTIONS and should not be flagged out. 
 Objects can include, but are not limited to: Weapons, Vehicles, Personal Belongings, Electronics and Tools
-People are not objects. Descriptions about people such as their actions, roles or clothing, or details of an event, do not constitute as 
-OBJECT DESCRIPTIONS  and should not be flagged out. 
+Focus on the specific attributes of objects such as colour, type, function and any unique identifieers.
 
 Taking Input1 as the ground truth, identify the descriptions of objects in Input2 that differs from Input1. 
 If a description in Input2 does not match that of Input1 given the same object, flag it as a discrepancy.
