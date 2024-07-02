@@ -9,10 +9,10 @@ import json
 def person_examples():
     return [
         {
-            "input": "Input1: Kwek got to know her lover and co-accused Lai Sze Yin in July 2016, when the 24-year-old man delivered a parcel to her home.\n\n" +
-            "Input2: Kwek got to know Lai Sze Yin, 28, and they entered a romantic relationship.\n\n",
-            "output": "Input1: Kwek got to know her lover and co-accused Lai Sze Yin in July 2016, when the 24-year-old man delivered a parcel to her home.\n\n" +
-            "Input2: Kwek got to know Lai Sze Yin, 28, and they entered a romantic relationship.\n\n" +
+            "input": "Input1: Kwek got to know her lover and co-accused Lai Sze Yin in July 2016, when the 24-year-old man delivered a parcel to her home." +
+            "Input2: Kwek got to know Lai Sze Yin, 28, and they entered a romantic relationship.",
+            "output": "Input1: Kwek got to know her lover and co-accused Lai Sze Yin in July 2016, when the 24-year-old man delivered a parcel to her home." +
+            "Input2: Kwek got to know Lai Sze Yin, 28, and they entered a romantic relationship." +
             json.dumps(
                 {"Person Description": [
                     {"Sentence1": "Kwek got to know her lover and co-accused Lai Sze Yin in July 2016, when the 24-year-old man delivered a parcel to her home.",
@@ -24,14 +24,14 @@ def person_examples():
             )
         },
         {
-            "input": "Input1: Lai's mother lodged a police report in October 2018 saying her son's girlfriend had cheated her entire savings and had been uncontactable for over a year.\n\n" +
-            "Input2:  Lai’s father made a police report on Oct 30, 2018 after Kwek did not return their investment money. \n\n",
-            "output": "Lai's mother lodged a police report in October 2018 saying her son's girlfriend had cheated her entire savings and had been uncontactable for over a year.\n\n" +
-            "Input2:  Lai’s father made a police report on Oct 30, 2018 after Kwek did not return their investment money. \n\n" +
+            "input": "Input1: Lai's mother lodged a police report in October 2018 saying her son's girlfriend had cheated her entire savings and had been uncontactable for over a year." +
+            "Input2: Lai’s father made a police report on Oct 30, 2018 after Kwek did not return their investment money.",
+            "output": "Lai's mother lodged a police report in October 2018 saying her son's girlfriend had cheated her entire savings and had been uncontactable for over a year." +
+            "Input2: Lai’s father made a police report on Oct 30, 2018 after Kwek did not return their investment money." +
             json.dumps(
                 {"Person Description": [
                     {"Sentence1": "Lai's mother lodged a police report in October 2018 saying her son's girlfriend had cheated her entire savings and had been uncontactable for over a year.",
-                    "Sentence2": " Lai’s father made a police report on Oct 30, 2018 after Kwek did not return their investment money. ",
+                    "Sentence2": "Lai’s father made a police report on Oct 30, 2018 after Kwek did not return their investment money.",
                     "Reason": "Lai's mother made the police report in Sentence1, but in Sentence2, it was made by Lai's father.",
                     },
                 ]
@@ -39,10 +39,25 @@ def person_examples():
             )
         },
         {
-            "input": "Input1: A woman was charged on Thursday (May 9) with the murder of a 56-year-old man at a condominium along Beach Road. Li Ye, a 37-year-old Chinese national, is accused of causing the death of Lim Lai Guan in a unit at City Gate Residences at about 1.40am on May 8. Li was arrested at the scene and a knife was seized.\n\n" +
-            "Input2: A man was charged on Thursday (May 9) with the murder of a 56-year-old man at a condominium along Beach Road. Xiao Ming, a 40-year-old Burmese national, is accused of causing the death of Lim Lai Guan in a unit at City Gate Residences at about 1.40am on May 8. Li was arrested at the scene and a knife was seized.\n\n",
-            "output": "Input1: A woman was charged on Thursday (May 9) with the murder of a 56-year-old man at a condominium along Beach Road. Li Ye, a 37-year-old Chinese national, is accused of causing the death of Lim Lai Guan in a unit at City Gate Residences at about 1.40am on May 8. Li was arrested at the scene and a knife was seized.\n\n" +
-            "Input2: A man was charged on Thursday (May 9) with the murder of a 56-year-old man at a condominium along Beach Road. Xiao Ming, a 40-year-old Burmese national, is accused of causing the death of Lim Lai Guan in a unit at City Gate Residences at about 1.40am on May 8. Li was arrested at the scene and a knife was seized.\n\n" +
+            "input": "Input1: John was wearing a blue shirt and white sneakers." +
+            "Input2: John was wearing a maroon shirt and grey running shoes.",
+            "output": "John was wearing a blue shirt and white sneakers." +
+            "Input2: John was wearing a maroon shirt and grey running shoes." +
+            json.dumps(
+                {"Person Description": [
+                    {"Sentence1": "John was wearing a blue shirt and white sneakers.",
+                    "Sentence2": "John was wearing a maroon shirt and grey running shoes.",
+                    "Reason": "John was wearing a blue shirt and white sneakers in Sentence1, but in Sentence2, he was wearing a maroon shirt and grey running shoes.",
+                    },
+                ]
+                }
+            )
+        },
+        {
+            "input": "Input1: A woman was charged on Thursday (May 9) with the murder of a 56-year-old man at a condominium along Beach Road. Li Ye, a 37-year-old Chinese national, is accused of causing the death of Lim Lai Guan in a unit at City Gate Residences at about 1.40am on May 8. Li was arrested at the scene and a knife was seized." +
+            "Input2: A man was charged on Thursday (May 9) with the murder of a 56-year-old man at a condominium along Beach Road. Xiao Ming, a 40-year-old Burmese national, is accused of causing the death of Lim Lai Guan in a unit at City Gate Residences at about 1.40am on May 8. Li was arrested at the scene and a gun was seized.",
+            "output": "Input1: A woman was charged on Thursday (May 9) with the murder of a 56-year-old man at a condominium along Beach Road. Li Ye, a 37-year-old Chinese national, is accused of causing the death of Lim Lai Guan in a unit at City Gate Residences at about 1.40am on May 8. Li was arrested at the scene and a knife was seized." +
+            "Input2: A man was charged on Thursday (May 9) with the murder of a 56-year-old man at a condominium along Beach Road. Xiao Ming, a 40-year-old Burmese national, is accused of causing the death of Lim Lai Guan in a unit at City Gate Residences at about 1.40am on May 8. Li was arrested at the scene and a gun was seized." +
             json.dumps(
                 {"Person Description": [
                     {"Sentence1": "A woman was charged on Thursday (May 9) with the murder of a 56-year-old man at a condominium along Beach Road.",
@@ -59,8 +74,8 @@ def person_examples():
             )
         },
         {
-            "input": "Input1: A 22-year-old man who was arrested earlier this week after allegedly attempting to flee from the police and having a samurai sword in his car, was charged in a district court on May 17.\n\n" +
-            "Input2: A 39-year-old man who was arrested earlier this week after allegedly attempting to flee from the police and having a gun in his van, was charged in a district court on July 2.\n\n" +
+            "input": "Input1: A 22-year-old man who was arrested earlier this week after allegedly attempting to flee from the police and having a samurai sword in his car, was charged in a district court on May 17." +
+            "Input2: A 39-year-old man who was arrested earlier this week after allegedly attempting to flee from the police and having a gun in his van, was charged in a district court on July 2." +
             json.dumps(
                 {"DateTime": [
                     {"Sentence1": "A 22-year-old man who was arrested earlier this week after allegedly attempting to flee from the police and having a samurai sword in his car, was charged in a district court on May 17.",
@@ -70,8 +85,8 @@ def person_examples():
                 }
             ),
 
-            "output": "Input1: A 22-year-old man who was arrested earlier this week after allegedly attempting to flee from the police and having a samurai sword in his car, was charged in a district court on May 17.\n\n" +
-            "Input2: A 39-year-old man who was arrested earlier this week after allegedly attempting to flee from the police and having a gun in his van, was charged in a district court on July 2.\n\n" +
+            "output": "Input1: A 22-year-old man who was arrested earlier this week after allegedly attempting to flee from the police and having a samurai sword in his car, was charged in a district court on May 17." +
+            "Input2: A 39-year-old man who was arrested earlier this week after allegedly attempting to flee from the police and having a gun in his van, was charged in a district court on July 2." +
             json.dumps(
                 {"DateTime": [
                     {"Sentence1": "A 22-year-old man who was arrested earlier this week after allegedly attempting to flee from the police and having a samurai sword in his car, was charged in a district court on May 17.",
