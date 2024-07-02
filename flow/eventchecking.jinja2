@@ -8,15 +8,16 @@ Taking Input1 as the ground truth, identify the event descriptions in Input2 tha
 Go through Input1 line by line and find the corresponding detail in Input2.
 For each line in Input1, locate the matching line or detail in Input2.
 If a detail in Input2 does not match that of Input1, flag it as a discrepancy.
-Ensure that every discrepancy, no matter how minor or subtle, is identified.
+Ensure that every discrepancy, no matter how minor or subtle, is identified. 
+Do not repeat any discrepancies already present in the existing list of the input.
 
 Analyze the semantic meaning of the sentences. Do not flag points with similar meaning as discrepancies even if the wording is different. 
 Always ensure that your responses are based on the provided facts from Input1 and Input2. Avoid fabricating information.
 Do not return information not in the inputs. Do not return information that you do not know. 
 
 You will format the output as follows:
-Append any discrepancies related to EVENT DESCRIPTIONS found by this LLM to the dictionary present in the input.
-Append this list to the existing list if any. Do not repeat any discrepancies already in the existing list.
+Append any discrepancies related to EVENT DESCRIPTIONS found by this LLM to the dictionary present in the input. 
+Append this list to the existing list if any.
 Output only the list of all discrepancies.
 If there are no other additional discrepancies, just output the input. Do not add additional or edit any information within the input.
 

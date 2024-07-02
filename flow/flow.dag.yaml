@@ -1,63 +1,60 @@
 inputs:
   input1:
     type: string
-    default: The Police have arrested three men, aged between 52 and 62, for their
-      suspected involvement in a case of conspiracy to commit cheating involving
-      the use of fake gold ingots. On 19 June 2024 at about 3.15pm, the Police
-      received a report that a female victim was cheated of $4000 after two men
-      handed over to her gold ingots for safekeeping. Preliminary investigations
-      revealed on 19 June 2024 at about 1pm, the victim was approached by two
-      men along Tras Street claiming to have found gold ingots while excavating
-      the ground at an unknown site in Singapore. The men claimed they wanted to
-      send the gold ingots back to China but were unsure of the legal process
-      hence offered for victim to safekeep the gold ingots but to hand them cash
-      as collateral. The men also produced a document in old Chinese writings,
-      resembling an old will, as well as a small piece of gold ingot. The victim
-      then brought the two men to goldsmith shop along Eu Tong Sen Street to
-      verify the authenticity of the small piece of gold ingot, and it was
-      verified to be genuine. After the gold had been authenticated, the two men
-      took back the genuine gold ingot and handed over other purported gold
-      ingots to the victim and told her to pay $4000 as a collateral. The victim
-      went to the same goldsmith shop to further authenticate the other gold
-      ingots and they were found to be fake. Upon realising she was a victim of
-      scam and discovered the two men had left the place, she alerted the
-      Police. Through ground enquiries and with the aid of images from PolCam
-      and CCTV camera footages, officers from Central Police Division
-      established the identity of the two men and arrested them along Aliwal
-      Street on 20 June 2024. Through further investigations, the officers also
-      arrested another accomplice and seized a number of case exhibits which
-      included over 80 pieces of mini gold-coloured ingots, a piece of paper
-      with Chinese writings and six gold-coloured mini-Buddha statues. The three
-      men will be charged in court on 22 June 2024 with conspiracy to commit
-      cheating, which is punishable with imprisonment up to 10 years and fine.
+    default: A man, who filmed students near schools and pestered some of them for
+      personal details, will return to prison after repeating his earlier
+      offences of harassing young girls. In one of the latest incidents, the
+      court heard that Fong Poh Kuen had obtained the information of more than
+      500 female students in a single day by conducting a fake survey. He also
+      secretly filmed girls outside schools by wearing spyglasses – a pair of
+      black spectacles that contained pinhole cameras with a video-recording
+      function. The 46-year-old was on Wednesday sentenced to 18 months’ jail
+      after pleading guilty to a total of 13 charges – three for illegally
+      obtaining personal information, one for causing public nuisance and nine
+      under the Protection from Harassment Act. On Jan 8, 2020, while
+      Anglo-Chinese Junior College was holding an open house for prospective
+      students, Fong stood in a public area located between Buona Vista MRT and
+      the school. He had blank forms with him, and he would lie to the students
+      that he represented an educational institution or government body, and
+      deceive them into believing that he was conducting the surveys on their
+      authority. He would often film the students with his spyglasses while
+      conducting the surveys. Fong then used the data he collected to
+      communicate with three of them. Fong had visited some of these schools to
+      record video footage of the students, either by placing his phone in his
+      breast pocket with the camera facing away from him, or by holding it in
+      his hand at chest height. These images were then hidden in a
+      password-encrypted mobile application named Vault, which was disguised as
+      a calculator app. He had been convicted of similar offences on Oct 1,
+      2019, where he was sentenced to three months’ jail and a fine of $8,000.
+      His sentence was backdated to Aug 8, 2019. At least 22 police reports were
+      filed by different members of the public between June 6, 2020 and Aug 31,
+      2022.
   input2:
     type: string
-    default: Three men have been arrested for allegedly using fake gold ingots to
-      cheat a woman of S$8,000 (US$5,800), police said on Friday (Jun 21).
-      Police received a report at about 3.15pm on Wednesday that a woman was
-      cheated of her money after two men handed her the gold ingots for
-      "safekeeping". Preliminary investigations revealed that the victim was
-      approached by the two men along Tras Street at about 5pm on Wednesday,
-      claiming they had found gold ingots during an excavation at an unknown
-      site in Indonesia. The men said that they wanted to send the gold ingots
-      back to China but were unsure of the legal process. They then offered the
-      gold ingots to the victim for "safekeeping" in exchange for cash as
-      collateral. The men also produced a document in old Chinese writings that
-      resembled an old will, along with a small gold ingot, police said. The
-      victim brought the two men to a goldsmith shop along Eu Tong Sen Street to
-      verify the authenticity of the small gold ingot. The piece was verified to
-      be genuine. The two men then took back the genuine gold ingot and handed
-      over the other gold ingots to the victim, telling her to pay S$8,000 as
-      collateral. When the victim went back to the same goldsmith shop to
-      authenticate the other gold ingots, they were found to be fake. She
-      alerted the police after realising she had been scammed and that the two
-      men had left the area. Police established the identity of the two men and
-      arrested them along Arab Street on Thursday. Further investigations also
-      led them to arrest an accomplice and seize more items, including more than
-      220 pieces of mini gold-coloured ingots, a piece of paper with Chinese
-      writings and two gold-coloured mini Buddha statues. The three men, aged
-      between 35 and 43, will be charged in court on Saturday for conspiring to
-      cheat. If convicted, they may be jailed for up to 10 years and fined.
+    default: While posing as an education surveyor, a man would don a pair of dark
+      blue spectacles with hidden cameras to record female students while
+      collecting personal information about them. In total, Fong Poh Kuen
+      obtained the personal information of more than 200 students. For his
+      offences, the 46-year-old was sentenced to 18 months’ jail on Wednesday
+      (Aug 30). Fong had previously been convicted in 2019 for harassment, among
+      other offences, and sentenced to nine months’ jail. Other than using the
+      spy-cam spectacles, Fong would also place his mobile phone in his breast
+      pocket facing outward or hold it in his hand at chest height to record the
+      students. He would then hide the photos and videos in a password-encrypted
+      mobile application disguised as a weather application. The spyglasses were
+      bought by Fong after he was released from prison following his 2019
+      conviction. To collect the personal information of female students, Fong
+      would prepare multiple market research forms and position himself near
+      educational institutions before approaching them to fill in the forms,
+      focusing on those wearing school uniforms. When asked about the purpose of
+      the survey, Fong would tell the students that he represented an
+      educational institution or government body to deceive them into believing
+      that he was authorised to conduct the surveys. The students would then be
+      induced to provide him with their personal information. He would often
+      wear the spyglasses with the video-recording function turned on while
+      conducting such surveys. Once Fong obtained the personal information, he
+      would use it to communicate with the students by repeatedly sending them
+      text messages, keeping them under surveillance or both.
 outputs:
   discrepancies:
     type: string

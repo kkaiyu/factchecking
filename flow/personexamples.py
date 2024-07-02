@@ -25,14 +25,14 @@ def person_examples():
         },
         {
             "input": "Input1: Lai's mother lodged a police report in October 2018 saying her son's girlfriend had cheated her entire savings and had been uncontactable for over a year.\n\n" +
-            "Input2:  Lai’s grandmother made a police report on Oct 30, 2018 after Kwek did not return their investment money. \n\n",
+            "Input2:  Lai’s father made a police report on Oct 30, 2018 after Kwek did not return their investment money. \n\n",
             "output": "Lai's mother lodged a police report in October 2018 saying her son's girlfriend had cheated her entire savings and had been uncontactable for over a year.\n\n" +
-            "Input2:  Lai’s grandmother made a police report on Oct 30, 2018 after Kwek did not return their investment money. \n\n" +
+            "Input2:  Lai’s father made a police report on Oct 30, 2018 after Kwek did not return their investment money. \n\n" +
             json.dumps(
                 {"Person Description": [
                     {"Sentence1": "Lai's mother lodged a police report in October 2018 saying her son's girlfriend had cheated her entire savings and had been uncontactable for over a year.",
-                    "Sentence2": " Lai’s grandmother made a police report on Oct 30, 2018 after Kwek did not return their investment money. ",
-                    "Reason": "Lai's mother made the police report in Sentence1, but in Sentence2, it was made by Lai's grandmother.",
+                    "Sentence2": " Lai’s father made a police report on Oct 30, 2018 after Kwek did not return their investment money. ",
+                    "Reason": "Lai's mother made the police report in Sentence1, but in Sentence2, it was made by Lai's father.",
                     },
                 ]
                 }

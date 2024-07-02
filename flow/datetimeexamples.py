@@ -68,5 +68,11 @@ def datetime_examples():
                     }]
                 }
             )
+        },
+        {
+            "input1": "A man who stole the equivalent of about S120,000 (US88,700) from a jeweller on a Singapore Airlines flight was sentenced to two-and-a-half years' jail on Friday (Jun 21).",
+            "input2": "In one of the worst cases of theft on board a plane, a man who stole cash worth about $250,000 from a fellow passenger on a Singapore Airlines flight was sentenced to 30 months’ jail on June 21.",
+            "output": "Input1: A man who stole the equivalent of about S120,000 (US88,700) from a jeweller on a Singapore Airlines flight was sentenced to two-and-a-half years' jail on Friday (Jun 21)." +
+            "Input2: In one of the worst cases of theft on board a plane, a man who stole cash worth about $250,000 from a fellow passenger on a Singapore Airlines flight was sentenced to 30 months’ jail on June 21."
         }
     ]
