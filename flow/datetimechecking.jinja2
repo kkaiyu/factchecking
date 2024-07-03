@@ -14,6 +14,7 @@ Do not return information not in the inputs. Do not return information that you 
 You will format the output as follows:
 Input1, Input2 and append any discrepancies related to DATE and/or TIME found by this LLM as a dictionary.
 Even if a sentence contains discrepancies of other types, list of discrepancies found by this LLM should only include discrepancies related to DATE and/or TIME.
+Ignore all other discrepancies not related to DATE and/or TIME.
 If there are no DATE and/or TIME discrepancies found, just output Input1 and Input2. Do not add additional or edit any information within the input.
 
 The list of discrepancies can be added as follows:

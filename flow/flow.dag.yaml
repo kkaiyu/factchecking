@@ -1,60 +1,60 @@
 inputs:
   input1:
     type: string
-    default: A man, who filmed students near schools and pestered some of them for
-      personal details, will return to prison after repeating his earlier
-      offences of harassing young girls. In one of the latest incidents, the
-      court heard that Fong Poh Kuen had obtained the information of more than
-      500 female students in a single day by conducting a fake survey. He also
-      secretly filmed girls outside schools by wearing spyglasses – a pair of
-      black spectacles that contained pinhole cameras with a video-recording
-      function. The 46-year-old was on Wednesday sentenced to 18 months’ jail
-      after pleading guilty to a total of 13 charges – three for illegally
-      obtaining personal information, one for causing public nuisance and nine
-      under the Protection from Harassment Act. On Jan 8, 2020, while
-      Anglo-Chinese Junior College was holding an open house for prospective
-      students, Fong stood in a public area located between Buona Vista MRT and
-      the school. He had blank forms with him, and he would lie to the students
-      that he represented an educational institution or government body, and
-      deceive them into believing that he was conducting the surveys on their
-      authority. He would often film the students with his spyglasses while
-      conducting the surveys. Fong then used the data he collected to
-      communicate with three of them. Fong had visited some of these schools to
-      record video footage of the students, either by placing his phone in his
-      breast pocket with the camera facing away from him, or by holding it in
-      his hand at chest height. These images were then hidden in a
-      password-encrypted mobile application named Vault, which was disguised as
-      a calculator app. He had been convicted of similar offences on Oct 1,
-      2019, where he was sentenced to three months’ jail and a fine of $8,000.
-      His sentence was backdated to Aug 8, 2019. At least 22 police reports were
-      filed by different members of the public between June 6, 2020 and Aug 31,
-      2022.
+    default: >
+      Phoon Chiu Yoke, more popularly known as “Badge Lady”, was convicted of
+      four charges after a trial, three of which were for not wearing a mask in
+      Orchard Road. The first charge was for walking maskless at Mandarin
+      Gallery in Orchard Road from 3.02pm to 3.04pm on March 6, 2022. The second
+      was for not wearing a mask while walking past a Victoria’s Secret shop
+      between 3.35pm and 3.37pm on the same day. Wearing masks outdoors became
+      optional in Singapore only from March 29, 2022. Another charge was for
+      walking within Ion Orchard mall without a mask on Aug 16, 2022.
+      Mask-wearing indoors in places such as malls was made optional only from
+      Aug 29, 2022. On Friday, Phoon, 56, had earlier said in her closing
+      submissions that there was no longer a requirement to wear a mask now, and
+      questioned the need for prosecution. She also cast doubt on the
+      closed-circuit television footage of her not wearing a mask that had been
+      submitted as evidence, describing it as “staged” footage that did not
+      verify her identity. Phoon, who served 12 years in the Republic of
+      Singapore Navy as one of its pioneer female naval commanding officers, was
+      sentenced to 16 weeks’ jail in September 2021 for a separate set of
+      mask-related offences. She first made headlines when she was caught on
+      video not wearing a mask at Marina Bay Sand on May 15, 2021. The video
+      clip, which went viral, showed her telling safe distancing ambassadors:
+      “Who are you? Who are you representing? Where is your badge? Show me your
+      badge." Images of her were circulated on social media as she went around
+      without a mask at several locations, including Jewel Changi Airport and
+      Orchard Road. She will be sentenced on Sept 11. Phoon is liable for
+      stiffer punishment as a repeat offender. For each charge she faces, she
+      could be fined up to $20,000, or imprisoned up to 12 months, or both,
+      which is twice the maximum fine or jail time compared with what a first
+      offender might receive.
   input2:
     type: string
-    default: While posing as an education surveyor, a man would don a pair of dark
-      blue spectacles with hidden cameras to record female students while
-      collecting personal information about them. In total, Fong Poh Kuen
-      obtained the personal information of more than 200 students. For his
-      offences, the 46-year-old was sentenced to 18 months’ jail on Wednesday
-      (Aug 30). Fong had previously been convicted in 2019 for harassment, among
-      other offences, and sentenced to nine months’ jail. Other than using the
-      spy-cam spectacles, Fong would also place his mobile phone in his breast
-      pocket facing outward or hold it in his hand at chest height to record the
-      students. He would then hide the photos and videos in a password-encrypted
-      mobile application disguised as a weather application. The spyglasses were
-      bought by Fong after he was released from prison following his 2019
-      conviction. To collect the personal information of female students, Fong
-      would prepare multiple market research forms and position himself near
-      educational institutions before approaching them to fill in the forms,
-      focusing on those wearing school uniforms. When asked about the purpose of
-      the survey, Fong would tell the students that he represented an
-      educational institution or government body to deceive them into believing
-      that he was authorised to conduct the surveys. The students would then be
-      induced to provide him with their personal information. He would often
-      wear the spyglasses with the video-recording function turned on while
-      conducting such surveys. Once Fong obtained the personal information, he
-      would use it to communicate with the students by repeatedly sending them
-      text messages, keeping them under surveillance or both.
+    default: A woman who shot to notoriety during the COVID-19 pandemic for refusing
+      to wear a mask has been convicted again of charges including going
+      maskless in Stevens Road. Phoon Chiu Yoke, 43, was convicted of eight
+      charges on Friday (Aug 11 2023) for failing to wear a mask and failing to
+      attend an investigation by the Singapore Tourism Board (STB), after the
+      judge found that the prosecution had proven its case. The mask-wearing
+      offences took place on Mar 6 and Aug 16 last year. Wearing a mask outdoors
+      in Singapore was only made optional on Mar 29 last year. That was extended
+      to indoor areas - except on public transport and in healthcare facilities
+      - on Aug 29 last year. This is the second time Phoon has been convicted of
+      mask-wearing offences. She was sentenced to 10 weeks' jail in September
+      2021 for a separate case. In her closing trial submissions, Phoon
+      questioned the legality of being prosecuted in the first place. She said
+      that the court had spent the last 12 days hearing this matter when it was
+      no longer a law to wear a mask in public. She added that the prosecution
+      had used footage that was "at such a far distance there was only a blip".
+      Phoon shot to notoriety in May 2021 and became known as the "badge lady"
+      for demanding to see a safe distancing ambassador's badge after being
+      asked to wear a mask. The judge adjourned mitigation and sentencing to
+      September. For failing to wear a mask when required, Phoon could be jailed
+      for up to a year, fined up to S$20,000 or both as a repeat offender. The
+      penalties are the same for a repeat offence of not complying with an
+      officer during investigations under the Infectious Diseases Act.
 outputs:
   discrepancies:
     type: string
