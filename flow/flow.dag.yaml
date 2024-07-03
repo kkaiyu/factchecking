@@ -1,60 +1,66 @@
 inputs:
   input1:
     type: string
-    default: >
-      Phoon Chiu Yoke, more popularly known as “Badge Lady”, was convicted of
-      four charges after a trial, three of which were for not wearing a mask in
-      Orchard Road. The first charge was for walking maskless at Mandarin
-      Gallery in Orchard Road from 3.02pm to 3.04pm on March 6, 2022. The second
-      was for not wearing a mask while walking past a Victoria’s Secret shop
-      between 3.35pm and 3.37pm on the same day. Wearing masks outdoors became
-      optional in Singapore only from March 29, 2022. Another charge was for
-      walking within Ion Orchard mall without a mask on Aug 16, 2022.
-      Mask-wearing indoors in places such as malls was made optional only from
-      Aug 29, 2022. On Friday, Phoon, 56, had earlier said in her closing
-      submissions that there was no longer a requirement to wear a mask now, and
-      questioned the need for prosecution. She also cast doubt on the
-      closed-circuit television footage of her not wearing a mask that had been
-      submitted as evidence, describing it as “staged” footage that did not
-      verify her identity. Phoon, who served 12 years in the Republic of
-      Singapore Navy as one of its pioneer female naval commanding officers, was
-      sentenced to 16 weeks’ jail in September 2021 for a separate set of
-      mask-related offences. She first made headlines when she was caught on
-      video not wearing a mask at Marina Bay Sand on May 15, 2021. The video
-      clip, which went viral, showed her telling safe distancing ambassadors:
-      “Who are you? Who are you representing? Where is your badge? Show me your
-      badge." Images of her were circulated on social media as she went around
-      without a mask at several locations, including Jewel Changi Airport and
-      Orchard Road. She will be sentenced on Sept 11. Phoon is liable for
-      stiffer punishment as a repeat offender. For each charge she faces, she
-      could be fined up to $20,000, or imprisoned up to 12 months, or both,
-      which is twice the maximum fine or jail time compared with what a first
-      offender might receive.
+    default: A woman who was facing bankruptcy cheated her boss at a real estate
+      firm into giving her a total of S$3.7 million (US$2.8 million), including
+      his life savings and the sales proceeds of two of his properties. The
+      69-year-old man later borrowed from his niece to keep handing money to the
+      woman, and now stays in a rented home with his wife. Lynn Charlotte James,
+      a 47-year-old Singaporean, began working at the unidentified real estate
+      firm around 2006. In 2008, she began having financial difficulties and
+      faced bankruptcy. She devised a plan to cheat the victim and told the
+      victim that she had become bankrupt and lied to him that the Insolvency
+      and Public Trustee's Office (IPTO) had retained funds in her bankruptcy
+      estate. She asked the victim to help her pay various purported fees to
+      IPTO so that IPTO would release the funds to her. The man believed James
+      and gave her sums of money. As time passed, James demanded more and more
+      cash from him, telling him that she would return him all the money he had
+      given her once IPTO released the funds in her bankruptcy estate. The
+      victim was convinced that he had to keep transferring money to James, as
+      she said she could not return the money he had already given her if IPTO
+      did not release her funds, and he wanted to recover the substantial sums.
+      James also created fictitious emails from government agencies such as IPTO
+      and the Ministry of Law to corroborate her lies. In the forged emails, the
+      government agencies purportedly demanded various fees payable to IPTO. She
+      also warned him not to report the matter, saying that IPTO would
+      confiscate her funds if they found out he was helping her and he would not
+      be able to get any money back. For more than nine years between May 2008
+      and October 2017, the victim transferred S$3,677,537.03 to James over
+      2,253 transactions. He depleted his life savings to give money to James
+      and also took money from his wife. He and his wife sold two of their
+      properties to raise funds to give to James, and they now stay in a rented
+      home.
   input2:
     type: string
-    default: A woman who shot to notoriety during the COVID-19 pandemic for refusing
-      to wear a mask has been convicted again of charges including going
-      maskless in Stevens Road. Phoon Chiu Yoke, 43, was convicted of eight
-      charges on Friday (Aug 11 2023) for failing to wear a mask and failing to
-      attend an investigation by the Singapore Tourism Board (STB), after the
-      judge found that the prosecution had proven its case. The mask-wearing
-      offences took place on Mar 6 and Aug 16 last year. Wearing a mask outdoors
-      in Singapore was only made optional on Mar 29 last year. That was extended
-      to indoor areas - except on public transport and in healthcare facilities
-      - on Aug 29 last year. This is the second time Phoon has been convicted of
-      mask-wearing offences. She was sentenced to 10 weeks' jail in September
-      2021 for a separate case. In her closing trial submissions, Phoon
-      questioned the legality of being prosecuted in the first place. She said
-      that the court had spent the last 12 days hearing this matter when it was
-      no longer a law to wear a mask in public. She added that the prosecution
-      had used footage that was "at such a far distance there was only a blip".
-      Phoon shot to notoriety in May 2021 and became known as the "badge lady"
-      for demanding to see a safe distancing ambassador's badge after being
-      asked to wear a mask. The judge adjourned mitigation and sentencing to
-      September. For failing to wear a mask when required, Phoon could be jailed
-      for up to a year, fined up to S$20,000 or both as a repeat offender. The
-      penalties are the same for a repeat offence of not complying with an
-      officer during investigations under the Infectious Diseases Act.
+    default: A woman swindled her boss of more than $3.67 million after saying she
+      was a bankrupt and needed his help to pay “fees” to the Insolvency and
+      Public Trustee’s Office (IPTO). Lynne Charlotte Wilson cheated her boss in
+      2,253 instances from June 2010 to October 2017, and he now lives in a
+      rented home with his wife after depleting his life savings  helping her.
+      The couple had also sold five of their properties to raise money for her.
+      Lynne had used the ill-gotten gains to settle her personal expenses and
+      repay loans that she had taken from moneylenders. Around 2008, she worked
+      at a financial services firm and was the victim’s subordinate. She was
+      facing bankruptcy in 2008 and devised a plan to cheat the victim. She then
+      lied to the victim by stating that IPTO had retained funds in her
+      bankruptcy estate, and that she required the victim to help her pay
+      various fees to IPTO before IPTO would release the funds to her. The man
+      believed her and gave her money. She continued asking for more. Lynne
+      claimed that once the money was paid, IPTO would release the funds in her
+      so-called “bankruptcy estate”, which purportedly included the amount she
+      had paid with his contribution. She told him she would repay everything
+      she had borrowed from him. But Lynne claimed she would not be able to do
+      this if IPTO did not release her money. This convinced the man to continue
+      transferring money to Lynne, in the hope that IPTO would release her
+      “funds”. To corroborate her lies, Lynne created fictitious Whatsapp
+      messages from IPTO and the Ministry of Finance, purportedly demanding from
+      her various fees payable to IPTO. She forwarded these forged Whatsapp
+      messages to the victim. She told the victim the funds he had contributed
+      would be confiscated if she stopped paying the “fees” to IPTO, and that he
+      would be unable to recover the cash. The accused warned the victim not to
+      report the matter to the police or IPTO, (claiming) that if IPTO found out
+      that the victim was helping her with her bankruptcy payments, IPTO would
+      confiscate her funds and there would be no return of monies to the victim.
 outputs:
   discrepancies:
     type: string
