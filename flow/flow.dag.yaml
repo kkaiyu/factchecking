@@ -1,66 +1,60 @@
 inputs:
   input1:
     type: string
-    default: A woman who was facing bankruptcy cheated her boss at a real estate
-      firm into giving her a total of S$3.7 million (US$2.8 million), including
-      his life savings and the sales proceeds of two of his properties. The
-      69-year-old man later borrowed from his niece to keep handing money to the
-      woman, and now stays in a rented home with his wife. Lynn Charlotte James,
-      a 47-year-old Singaporean, began working at the unidentified real estate
-      firm around 2006. In 2008, she began having financial difficulties and
-      faced bankruptcy. She devised a plan to cheat the victim and told the
-      victim that she had become bankrupt and lied to him that the Insolvency
-      and Public Trustee's Office (IPTO) had retained funds in her bankruptcy
-      estate. She asked the victim to help her pay various purported fees to
-      IPTO so that IPTO would release the funds to her. The man believed James
-      and gave her sums of money. As time passed, James demanded more and more
-      cash from him, telling him that she would return him all the money he had
-      given her once IPTO released the funds in her bankruptcy estate. The
-      victim was convinced that he had to keep transferring money to James, as
-      she said she could not return the money he had already given her if IPTO
-      did not release her funds, and he wanted to recover the substantial sums.
-      James also created fictitious emails from government agencies such as IPTO
-      and the Ministry of Law to corroborate her lies. In the forged emails, the
-      government agencies purportedly demanded various fees payable to IPTO. She
-      also warned him not to report the matter, saying that IPTO would
-      confiscate her funds if they found out he was helping her and he would not
-      be able to get any money back. For more than nine years between May 2008
-      and October 2017, the victim transferred S$3,677,537.03 to James over
-      2,253 transactions. He depleted his life savings to give money to James
-      and also took money from his wife. He and his wife sold two of their
-      properties to raise funds to give to James, and they now stay in a rented
-      home.
+    default: A man, who filmed students near schools and pestered some of them for
+      personal details, will return to prison after repeating his earlier
+      offences of harassing young girls. In one of the latest incidents, the
+      court heard that Fong Poh Kuen had obtained the information of more than
+      500 female students in a single day by conducting a fake survey. He also
+      secretly filmed girls outside schools by wearing spyglasses – a pair of
+      black spectacles that contained pinhole cameras with a video-recording
+      function. The 46-year-old was on Wednesday sentenced to 18 months’ jail
+      after pleading guilty to a total of 13 charges – three for illegally
+      obtaining personal information, one for causing public nuisance and nine
+      under the Protection from Harassment Act. On Jan 8, 2020, while
+      Anglo-Chinese Junior College was holding an open house for prospective
+      students, Fong stood in a public area located between Buona Vista MRT and
+      the school. He had blank forms with him, and he would lie to the students
+      that he represented an educational institution or government body, and
+      deceive them into believing that he was conducting the surveys on their
+      authority. He would often film the students with his spyglasses while
+      conducting the surveys. Fong then used the data he collected to
+      communicate with three of them. Fong had visited some of these schools to
+      record video footage of the students, either by placing his phone in his
+      breast pocket with the camera facing away from him, or by holding it in
+      his hand at chest height. These images were then hidden in a
+      password-encrypted mobile application named Vault, which was disguised as
+      a calculator app. He had been convicted of similar offences on Oct 1,
+      2019, where he was sentenced to three months’ jail and a fine of $8,000.
+      His sentence was backdated to Aug 8, 2019. At least 22 police reports were
+      filed by different members of the public between June 6, 2020 and Aug 31,
+      2022.
   input2:
     type: string
-    default: A woman swindled her boss of more than $3.67 million after saying she
-      was a bankrupt and needed his help to pay “fees” to the Insolvency and
-      Public Trustee’s Office (IPTO). Lynne Charlotte Wilson cheated her boss in
-      2,253 instances from June 2010 to October 2017, and he now lives in a
-      rented home with his wife after depleting his life savings  helping her.
-      The couple had also sold five of their properties to raise money for her.
-      Lynne had used the ill-gotten gains to settle her personal expenses and
-      repay loans that she had taken from moneylenders. Around 2008, she worked
-      at a financial services firm and was the victim’s subordinate. She was
-      facing bankruptcy in 2008 and devised a plan to cheat the victim. She then
-      lied to the victim by stating that IPTO had retained funds in her
-      bankruptcy estate, and that she required the victim to help her pay
-      various fees to IPTO before IPTO would release the funds to her. The man
-      believed her and gave her money. She continued asking for more. Lynne
-      claimed that once the money was paid, IPTO would release the funds in her
-      so-called “bankruptcy estate”, which purportedly included the amount she
-      had paid with his contribution. She told him she would repay everything
-      she had borrowed from him. But Lynne claimed she would not be able to do
-      this if IPTO did not release her money. This convinced the man to continue
-      transferring money to Lynne, in the hope that IPTO would release her
-      “funds”. To corroborate her lies, Lynne created fictitious Whatsapp
-      messages from IPTO and the Ministry of Finance, purportedly demanding from
-      her various fees payable to IPTO. She forwarded these forged Whatsapp
-      messages to the victim. She told the victim the funds he had contributed
-      would be confiscated if she stopped paying the “fees” to IPTO, and that he
-      would be unable to recover the cash. The accused warned the victim not to
-      report the matter to the police or IPTO, (claiming) that if IPTO found out
-      that the victim was helping her with her bankruptcy payments, IPTO would
-      confiscate her funds and there would be no return of monies to the victim.
+    default: While posing as an education surveyor, a man would don a pair of dark
+      blue spectacles with hidden cameras to record female students while
+      collecting personal information about them. In total, Fong Poh Kuen
+      obtained the personal information of more than 200 students. For his
+      offences, the 46-year-old was sentenced to 18 months’ jail on Wednesday
+      (Aug 30). Fong had previously been convicted in 2019 for harassment, among
+      other offences, and sentenced to nine months’ jail. Other than using the
+      spy-cam spectacles, Fong would also place his mobile phone in his breast
+      pocket facing outward or hold it in his hand at chest height to record the
+      students. He would then hide the photos and videos in a password-encrypted
+      mobile application disguised as a weather application. The spyglasses were
+      bought by Fong after he was released from prison following his 2019
+      conviction. To collect the personal information of female students, Fong
+      would prepare multiple market research forms and position himself near
+      educational institutions before approaching them to fill in the forms,
+      focusing on those wearing school uniforms. When asked about the purpose of
+      the survey, Fong would tell the students that he represented an
+      educational institution or government body to deceive them into believing
+      that he was authorised to conduct the surveys. The students would then be
+      induced to provide him with their personal information. He would often
+      wear the spyglasses with the video-recording function turned on while
+      conducting such surveys. Once Fong obtained the personal information, he
+      would use it to communicate with the students by repeatedly sending them
+      text messages, keeping them under surveillance or both.
 outputs:
   discrepancies:
     type: string
