@@ -9,10 +9,10 @@ import json
 def object_examples():
     return [
         {
-            "input": "Input1: Li was arrested at the scene and a knife was seized. \n\n" +
-            "Input2: Li was arrested at the scene and a gun was seized. ",
-            "output": "Input1: Li was arrested at the scene and a knife was seized.\n\n" +
-            "Input2: Li was arrested at the scene and a gun was seized.\n\n" +
+            "input": "Input1: Li was arrested at the scene and a knife was seized." +
+            "Input2: Li was arrested at the scene and a gun was seized.",
+            "output": "Input1: Li was arrested at the scene and a knife was seized." +
+            "Input2: Li was arrested at the scene and a gun was seized." +
             json.dumps(
                 {"Object": [          
                     {"Sentence1": "Li was arrested at the scene and a knife was seized.",
@@ -22,4 +22,18 @@ def object_examples():
                 }
             )
         }, 
+        {
+            "input": "Input1: The suspect fled in a black Toyota Corolla." +
+            "Input2: The suspect fled in a red Mazda CX-5.",
+            "output": "Input1: The suspect fled in a black Toyota Corolla." +
+            "Input2: The suspect fled in a red Mazda CX-5." +
+            json.dumps(
+                {"Object": [          
+                    {"Sentence1": "The suspect fled in a black Toyota Corolla.",
+                    "Sentence2": "The suspect fled in a red Mazda CX-5.",
+                    "Reason": "The vehicle the suspect fled in is a black Toyota Corolla in Sentence1, but in Sentence2, it is a red Mazda CX-5."
+                    }]
+                }
+            )
+        }
     ]

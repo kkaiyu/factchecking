@@ -9,10 +9,10 @@ import json
 def location_examples():
     return [
         {
-            "input": "Input1: The incident took place on May 7 just three hours after Eva Air’s BR08 flight left Taipei for San Francisco, according to TVBS News.\n\n" +
+            "input": "Input1: The incident took place on May 7 just three hours after Eva Air’s BR08 flight left Taipei for San Francisco, according to TVBS News." +
             "Input2: The incident took place on May 7 just three hours after Eva Air’s BR08 flight left Singapore for New York, according to TVBS News.",
-            "output": "Input1: The incident took place on May 7 just three hours after Eva Air’s BR08 flight left Taipei for San Francisco, according to TVBS News.\n\n" +
-            "Input2: The incident took place on May 7 just three hours after Eva Air’s BR08 flight left Singapore for New York, according to TVBS News.\n\n" +
+            "output": "Input1: The incident took place on May 7 just three hours after Eva Air’s BR08 flight left Taipei for San Francisco, according to TVBS News." +
+            "Input2: The incident took place on May 7 just three hours after Eva Air’s BR08 flight left Singapore for New York, according to TVBS News." +
             json.dumps(
                 {"Location": [
                     {"Sentence1": "The incident took place on May 7 just three hours after Eva Air’s BR08 flight left Taipei for San Francisco, according to TVBS News.",
@@ -23,10 +23,10 @@ def location_examples():
             )
         }, 
         {
-            "input": "Input1: City now have the chance of winning the double when they face Manchester United in the FA Cup final next Saturday.\n\n" +
+            "input": "Input1: City now have the chance of winning the double when they face Manchester United in the FA Cup final next Saturday." +
             "Input2: On 25 May they will aim to become the first side to complete the domestic Treble in successive seasons when they face Liverpool in the FA Cup final at Wembley.",
-            "output": "Input1: City now have the chance of winning the double when they face Manchester United in the FA Cup final next Saturday.\n\n" +
-            "Input2: On 25 May they will aim to become the first side to complete the domestic Treble in successive seasons when they face Liverpool in the FA Cup final at Wembley.\n\n" +
+            "output": "Input1: City now have the chance of winning the double when they face Manchester United in the FA Cup final next Saturday." +
+            "Input2: On 25 May they will aim to become the first side to complete the domestic Treble in successive seasons when they face Liverpool in the FA Cup final at Wembley." +
             json.dumps(
                 {"Location": [
                     {"Sentence1": "City now have the chance of winning the double when they face Manchester United in the FA Cup final next Saturday.",
@@ -37,8 +37,8 @@ def location_examples():
             )
         }, 
         {
-            "input": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16 to 17 as his first foreign trip after taking office,” the Kremlin said.\n\n" +
-            "Input2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to England on May 1 to 2 as his first foreign trip after taking office,” the Kremlin said.\n\n" +
+            "input": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16 to 17 as his first foreign trip after taking office,” the Kremlin said." +
+            "Input2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to England on May 1 to 2 as his first foreign trip after taking office,” the Kremlin said." +
             json.dumps (
                 {"DateTime": [
                     {"Sentence1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16 to 17 as his first foreign trip after taking office,” the Kremlin said.",
@@ -48,8 +48,8 @@ def location_examples():
                 }
             ),
 
-            "output": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16 to 17 as his first foreign trip after taking office,” the Kremlin said.\n\n" +
-            "Input2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to England on May 1 to 2 as his first foreign trip after taking office,” the Kremlin said.\n\n" +
+            "output": "Input1: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16 to 17 as his first foreign trip after taking office,” the Kremlin said." +
+            "Input2: “At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to England on May 1 to 2 as his first foreign trip after taking office,” the Kremlin said." +
             json.dumps (
                 {"DateTime": [
                     {"Sentence1": "“At the invitation of Chinese President Xi Jinping, Vladimir Putin will pay a state visit to China on May 16 to 17 as his first foreign trip after taking office,” the Kremlin said.",

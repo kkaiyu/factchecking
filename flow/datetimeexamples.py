@@ -10,8 +10,8 @@ def datetime_examples():
         {
             "input1": "The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.",
             "input2": "The community of Willetton in Sydney’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in Low Street before 12.45pm on June 19.",
-            "output": "Input1: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4.\n\n" +
-            "Input2: The community of Willetton in Sydney’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in Low Street before 12.45pm on June 19.\n\n" +
+            "output": "Input1: The community of Willetton in Perth’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in High Street before 11.30pm on May 4." +
+            "Input2: The community of Willetton in Sydney’s south was shaken after reports surfaced on local news platforms. The incident reportedly took place in Low Street before 12.45pm on June 19." +
             json.dumps(
                 {"DateTime": [
                     {"Sentence1": "The incident reportedly took place in High Street before 11.30pm on May 4.",
@@ -22,10 +22,24 @@ def datetime_examples():
             )
         },
         {
+            "input1": "The man has been staying in this house since 2000.",
+            "input2": "The man has been living in this house since 2003.",
+            "output": "Input1: The man has been staying in this house since 2000." +
+            "Input2: The man has been living in this house since 2003." +
+            json.dumps(
+                {"DateTime": [
+                    {"Sentence1": "The man has been staying in this house since 2000.",
+                    "Sentence2": "The man has been living in this house since 2003.",
+                    "Reason": "Sentence1 states the man has been staying since 2000, while Sentence2 states the man has been living since 2003."
+                    }]
+                }
+            )
+        },
+        {
             "input1": "More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.",
             "input2": "More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. BDF intends to install about 800 such lanes across all of Malaysia’s checkpoints by 2020.",
-            "output": "Input1: More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026.\n\n" +
-            "Input2: More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. BDF intends to install about 800 such lanes across all of Malaysia’s checkpoints by 2020.\n\n" +
+            "output": "Input1: More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024. ICA intends to install about 800 such lanes across all of Singapore’s checkpoints by 2026." +
+            "Input2: More than 160 automated lanes were installed in 2015, with another 230 lanes to be set up in 2018. BDF intends to install about 800 such lanes across all of Malaysia’s checkpoints by 2020." +
             json.dumps(
                 {"DateTime": [
                     {"Sentence1": "More than 160 automated lanes were installed in 2023, with another 230 lanes to be set up in 2024.",
@@ -68,5 +82,11 @@ def datetime_examples():
                     }]
                 }
             )
+        },
+        {
+            "input1": "A man who stole the equivalent of about S120,000 (US88,700) from a jeweller on a Singapore Airlines flight was sentenced to two-and-a-half years' jail on Friday (Jun 21).",
+            "input2": "In one of the worst cases of theft on board a plane, a man who stole cash worth about $250,000 from a fellow passenger on a Singapore Airlines flight was sentenced to 30 months’ jail on June 21.",
+            "output": "Input1: A man who stole the equivalent of about S120,000 (US88,700) from a jeweller on a Singapore Airlines flight was sentenced to two-and-a-half years' jail on Friday (Jun 21)." +
+            "Input2: In one of the worst cases of theft on board a plane, a man who stole cash worth about $250,000 from a fellow passenger on a Singapore Airlines flight was sentenced to 30 months’ jail on June 21."
         }
     ]
