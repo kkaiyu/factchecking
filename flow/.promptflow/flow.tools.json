@@ -116,11 +116,6 @@
       "source": "eventexamples.py",
       "function": "event_examples"
     },
-    "textualentailment.py": {
-      "type": "python",
-      "source": "textualentailment.py",
-      "function": "textualentailment"
-    },
     "markdown.jinja2": {
       "type": "llm",
       "inputs": {
