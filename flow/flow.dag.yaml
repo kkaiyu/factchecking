@@ -1,60 +1,61 @@
 inputs:
   input1:
     type: string
-    default: A man, who filmed students near schools and pestered some of them for
-      personal details, will return to prison after repeating his earlier
-      offences of harassing young girls. In one of the latest incidents, the
-      court heard that Fong Poh Kuen had obtained the information of more than
-      500 female students in a single day by conducting a fake survey. He also
-      secretly filmed girls outside schools by wearing spyglasses – a pair of
-      black spectacles that contained pinhole cameras with a video-recording
-      function. The 46-year-old was on Wednesday sentenced to 18 months’ jail
-      after pleading guilty to a total of 13 charges – three for illegally
-      obtaining personal information, one for causing public nuisance and nine
-      under the Protection from Harassment Act. On Jan 8, 2020, while
-      Anglo-Chinese Junior College was holding an open house for prospective
-      students, Fong stood in a public area located between Buona Vista MRT and
-      the school. He had blank forms with him, and he would lie to the students
-      that he represented an educational institution or government body, and
-      deceive them into believing that he was conducting the surveys on their
-      authority. He would often film the students with his spyglasses while
-      conducting the surveys. Fong then used the data he collected to
-      communicate with three of them. Fong had visited some of these schools to
-      record video footage of the students, either by placing his phone in his
-      breast pocket with the camera facing away from him, or by holding it in
-      his hand at chest height. These images were then hidden in a
-      password-encrypted mobile application named Vault, which was disguised as
-      a calculator app. He had been convicted of similar offences on Oct 1,
-      2019, where he was sentenced to three months’ jail and a fine of $8,000.
-      His sentence was backdated to Aug 8, 2019. At least 22 police reports were
-      filed by different members of the public between June 6, 2020 and Aug 31,
-      2022.
+    default: A legal body in Kenya has called for the arrest of a man accused of
+      practising law without proper qualifications. Despite not having any
+      formal legal training, the “lawyer” won 26 cases in various Kenyan courts
+      under the name “Brian N. Mwenda”. The man was a masquerader who had stolen
+      the identity of a real lawyer named Brian Mwenda Ntwiga. The revelation,
+      which has drawn reactions of outrage and amusement in equal parts in
+      Kenya, came to light after the Nairobi Branch of LSK cautioned the public
+      about Mr Njagi in a post on social media platform X. The imposter
+      criminally access the LSK portal, identify an account with a name
+      corresponding to his, tamper with details such as the e-mail address
+      connected with it, and upload his own photo. LSK said it was tipped off to
+      the breach in September, when Mr Ntwiga contacted them after he was unable
+      to access his account on the portal due to the e-mail change, and noted
+      changes in other unspecified details as well. On Aug 5, Brian Mwenda
+      Ntwiga was admitted to the Bar and his correct e-mail address was
+      captured, and an account opened for him in the advocates portal. LSK
+      reached out to advocate Brian Mwenda Ntwiga who confirmed that he had not
+      applied for a practicing certificate since his admission, reason being
+      that he had been working at the Office of the Attorney General and did not
+      require a practising certificate. Despite LSK’s warning of Mr Njagi’s
+      deception, the incident has won him supporters. Mr Njagi was described as
+      a young and brilliant Kenyan who has recently faced condemnation for
+      practising law without the traditional law qualifications. This case is
+      not unique – there has been an increase in cases of unqualified persons
+      pretending to be Advocates of the High Court of Kenya.
   input2:
     type: string
-    default: While posing as an education surveyor, a man would don a pair of dark
-      blue spectacles with hidden cameras to record female students while
-      collecting personal information about them. In total, Fong Poh Kuen
-      obtained the personal information of more than 200 students. For his
-      offences, the 46-year-old was sentenced to 18 months’ jail on Wednesday
-      (Aug 30). Fong had previously been convicted in 2019 for harassment, among
-      other offences, and sentenced to nine months’ jail. Other than using the
-      spy-cam spectacles, Fong would also place his mobile phone in his breast
-      pocket facing outward or hold it in his hand at chest height to record the
-      students. He would then hide the photos and videos in a password-encrypted
-      mobile application disguised as a weather application. The spyglasses were
-      bought by Fong after he was released from prison following his 2019
-      conviction. To collect the personal information of female students, Fong
-      would prepare multiple market research forms and position himself near
-      educational institutions before approaching them to fill in the forms,
-      focusing on those wearing school uniforms. When asked about the purpose of
-      the survey, Fong would tell the students that he represented an
-      educational institution or government body to deceive them into believing
-      that he was authorised to conduct the surveys. The students would then be
-      induced to provide him with their personal information. He would often
-      wear the spyglasses with the video-recording function turned on while
-      conducting such surveys. Once Fong obtained the personal information, he
-      would use it to communicate with the students by repeatedly sending them
-      text messages, keeping them under surveillance or both.
+    default: A man accused of practising law without qualifications has said he is
+      innocent - and thanked people who have come out in support of him. On
+      Thursday, legal officials in Kenya urged police to arrest a man practicing
+      under the name "Brian Mwenda". They said the man was a masquerader who had
+      stolen the identity of a real lawyer, named Brian Mwenda Kevin Ntwiga.
+      Local media reported that a "fake lawyer" had won dozens of lawsuits
+      despite not being trained. The case has captivated the East African
+      country over the past few days, eliciting reactions from outrage to
+      amusement. Despite condemnation by the Law Society of Kenya (LSK) and the
+      country's Director of Public Prosecutions, the alleged imposter has
+      garnered several supporters He has been praised for being a brilliant
+      young mind who has succeeded without traditional qualifications. He
+      allegedly accessed the law society’s portal and tampered with the real
+      lawyer’s details before uploading an image of himself and claiming to be
+      trained in law. The real Brian Mwenda Ntwiga eventually contacted the law
+      society after he successfully logged into his online account and realised
+      his details had been changed. On the 5th Day of August 2022, Brian Mwenda
+      Ntwiga was admitted to the Bar and his correct email address was captured
+      and an Account opened for him in the Advocates portal. Advocate Brian
+      Mwenda Ntwiga confirmed that he had not applied for a practicing
+      certificate since his admission, reason being that he had been working at
+      the Office of the DIrector of Public Prosecutions and did not require a
+      Practicing Certificate. It was only until sometimes in September 2023 when
+      he attempted to login to the system and activate his profile with the
+      intention of applying for his Practising Certificate that he realized his
+      details were changed in his LSK Portal. That’s when the discovery was
+      made. This case is unique – this is the first time an unqualified person
+      pretended to be Advocates of the High Court of Kenya.
 outputs:
   discrepancies:
     type: string
