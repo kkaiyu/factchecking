@@ -84,11 +84,6 @@
       "x": 470,
       "y": 42,
       "index": -1
-    },
-    "textualentailment": {
-      "x": 800,
-      "y": 42,
-      "index": 11
     }
   },
   "orientation": "Vertical"

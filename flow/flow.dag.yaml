@@ -163,9 +163,3 @@ nodes:
     Input: ${eventchecking.output}
   connection: kkaiyu
   api: chat
-- name: textualentailment
-  type: python
-  source:
-    type: code
-    path: textualentailment.py
-  inputs: {}
